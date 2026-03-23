@@ -4,19 +4,30 @@
 
 .moxy-hero-slider {
   position: relative;
+  width: 100%;
+  max-width: none;
 }
 
 .moxy-hero-slides {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: none;
 }
 
 .moxy-hero-slide {
   display: none;
+  margin-top: 0 !important;
 }
 
 .moxy-hero-slide.is-active {
   display: block;
+}
+
+.moxy-hero-slide.alignfull,
+.moxy-hero-slide.wp-block-cover {
+  width: 100%;
+  max-width: none;
 }
 
 .moxy-hero-slide__inner {

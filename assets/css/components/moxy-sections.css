@@ -1,5 +1,16 @@
 .moxy-front-page {
   background: #f4efe5;
+  width: 100%;
+  max-width: none;
+}
+
+.moxy-front-page > .alignfull,
+.moxy-intro,
+.moxy-tabs-section,
+.moxy-carousel-section,
+.moxy-bonvoy {
+  width: 100%;
+  max-width: none;
 }
 
 .moxy-intro {

@@ -9,7 +9,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","className":"moxy-intro","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","className":"moxy-intro","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-intro"><!-- wp:group {"align":"wide","className":"moxy-intro__inner","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide moxy-intro__inner"><!-- wp:columns {"verticalAlignment":"center"} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"42%"} -->

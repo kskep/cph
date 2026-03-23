@@ -9,7 +9,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","anchor":"how-we-play","className":"moxy-tabs-section js-moxy-tabs","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","anchor":"how-we-play","className":"moxy-tabs-section js-moxy-tabs","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-tabs-section js-moxy-tabs" id="how-we-play"><!-- wp:group {"align":"wide","className":"moxy-tabs-section__inner","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide moxy-tabs-section__inner"><!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
 <h2 class="wp-block-heading has-xx-large-font-size">How We Play</h2>

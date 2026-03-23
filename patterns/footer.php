@@ -11,7 +11,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","className":"moxy-footer","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","className":"moxy-footer","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-footer"><!-- wp:group {"align":"wide","className":"moxy-footer__inner","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide moxy-footer__inner"><!-- wp:columns {"verticalAlignment":"top","className":"moxy-footer__columns"} -->
 <div class="wp-block-columns are-vertically-aligned-top moxy-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"36%","className":"moxy-footer__brand-column"} -->

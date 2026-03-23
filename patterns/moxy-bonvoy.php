@@ -9,7 +9,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","anchor":"bonvoy","className":"moxy-bonvoy","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","anchor":"bonvoy","className":"moxy-bonvoy","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-bonvoy" id="bonvoy"><!-- wp:columns {"align":"wide","verticalAlignment":"center","className":"moxy-bonvoy__layout"} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center moxy-bonvoy__layout"><!-- wp:column {"verticalAlignment":"center","width":"54%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:54%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-bonvoy__image"} -->

@@ -9,7 +9,7 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"align":"full","anchor":"now-playing","className":"moxy-carousel-section js-moxy-carousel","layout":{"type":"constrained"}} -->
+<!-- wp:group {"align":"full","anchor":"now-playing","className":"moxy-carousel-section js-moxy-carousel","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-carousel-section js-moxy-carousel" id="now-playing"><!-- wp:group {"align":"wide","className":"moxy-carousel-section__inner","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide moxy-carousel-section__inner"><!-- wp:group {"className":"moxy-carousel-section__header","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
 <div class="wp-block-group moxy-carousel-section__header"><!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
