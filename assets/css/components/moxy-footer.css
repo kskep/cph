@@ -1,0 +1,44 @@
+.moxy-footer {
+  background: #1d1b20;
+  color: #fff;
+}
+
+.moxy-footer__inner {
+  padding-top: clamp(3rem, 7vw, 5rem);
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.moxy-footer__columns {
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.moxy-footer__logo img {
+  width: clamp(8rem, 14vw, 10rem);
+}
+
+.moxy-footer__copy {
+  max-width: 22rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.moxy-footer__nav .wp-block-navigation-item__content {
+  color: #fff;
+  padding: 0.15rem 0;
+}
+
+.moxy-footer__socials {
+  margin: 0 0 1rem;
+}
+
+.moxy-footer__badge img {
+  max-width: 9rem;
+}
+
+.moxy-footer__legal {
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.moxy-footer__powered img {
+  max-width: 8rem;
+}

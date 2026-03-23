@@ -1,0 +1,105 @@
+.moxy-hero-section {
+  background: #1d1b20;
+}
+
+.moxy-hero-slider {
+  position: relative;
+}
+
+.moxy-hero-slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.moxy-hero-slide {
+  display: none;
+}
+
+.moxy-hero-slide.is-active {
+  display: block;
+}
+
+.moxy-hero-slide__inner {
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.moxy-hero__brand img {
+  width: clamp(7rem, 12vw, 9rem);
+}
+
+.moxy-hero__eyebrow,
+.moxy-hero-alt-copy p {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.moxy-hero__headline,
+.moxy-hero-alt-copy h2 {
+  max-width: 10ch;
+  margin: 0.1em 0 0.2em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.moxy-hero__body,
+.moxy-hero-alt-copy .wp-block-paragraph {
+  max-width: 34rem;
+  line-height: 1.35;
+}
+
+.moxy-booking-teaser {
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(244, 239, 229, 0.94);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.moxy-booking-teaser__title {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.moxy-booking-teaser__fields {
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.moxy-booking-teaser__value {
+  margin: 0;
+  font-weight: 700;
+}
+
+.moxy-hero-controls {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  left: 0;
+  gap: 1rem;
+}
+
+.moxy-slider-button .wp-block-button__link {
+  min-width: 5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(244, 239, 229, 0.18);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.moxy-slider-status {
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .moxy-hero-slide .wp-block-cover__inner-container {
+    padding-bottom: 4rem;
+  }
+
+  .moxy-hero-controls {
+    position: static;
+    padding: 1rem 0 1.5rem;
+  }
+}

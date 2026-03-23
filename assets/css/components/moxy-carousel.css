@@ -1,0 +1,50 @@
+.moxy-carousel-section {
+  background: #1d1b20;
+  color: #fff;
+}
+
+.moxy-carousel-section .wp-block-heading,
+.moxy-carousel-section .wp-block-paragraph,
+.moxy-carousel-section .wp-block-button__link {
+  color: inherit;
+}
+
+.moxy-carousel-section__header {
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.moxy-carousel-section__controls {
+  gap: 1rem;
+}
+
+.moxy-carousel-slide {
+  display: none;
+}
+
+.moxy-carousel-slide.is-active {
+  display: block;
+}
+
+.moxy-carousel-slide__layout {
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.moxy-carousel-slide__image img {
+  display: block;
+  width: 100%;
+  height: clamp(20rem, 38vw, 34rem);
+  object-fit: cover;
+}
+
+.moxy-carousel-slide__eyebrow {
+  margin-bottom: 0.75rem;
+  color: #ffe285;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.moxy-carousel-slide h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}

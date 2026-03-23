@@ -1,0 +1,62 @@
+.moxy-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(29, 27, 32, 0.92);
+  backdrop-filter: blur(16px);
+  color: #fff;
+}
+
+.moxy-header__inner {
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.moxy-header__brand {
+  gap: 1rem;
+  align-items: center;
+}
+
+.moxy-header__logo img {
+  width: clamp(7rem, 12vw, 9.5rem);
+  height: auto;
+}
+
+.moxy-header__tagline {
+  max-width: 17rem;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.moxy-header__nav {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.moxy-header__nav .wp-block-navigation-item__content {
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.moxy-header__actions {
+  gap: 0.75rem;
+}
+
+.moxy-header__cta .wp-block-button__link {
+  border-color: #ff5c66;
+}
+
+@media (max-width: 900px) {
+  .moxy-header__tagline {
+    display: none;
+  }
+
+  .moxy-header__inner {
+    padding: 0.85rem 0;
+  }
+}

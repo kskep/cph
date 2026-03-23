@@ -1,0 +1,41 @@
+.moxy-front-page {
+  background: #f4efe5;
+}
+
+.moxy-intro {
+  background: linear-gradient(180deg, #f4efe5 0%, #fff8ef 100%);
+}
+
+.moxy-intro__inner,
+.moxy-tabs-section__inner,
+.moxy-carousel-section__inner,
+.moxy-bonvoy__layout {
+  padding-top: clamp(3rem, 8vw, 6rem);
+  padding-bottom: clamp(3rem, 8vw, 6rem);
+}
+
+.moxy-intro h2,
+.moxy-tabs-section h2,
+.moxy-carousel-section h2,
+.moxy-bonvoy h2 {
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.moxy-bonvoy {
+  background: #ffe285;
+}
+
+.moxy-bonvoy__layout {
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.moxy-bonvoy__image img,
+.moxy-bonvoy__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.moxy-bonvoy__logo img {
+  max-width: 13rem;
+}

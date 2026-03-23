@@ -1,0 +1,44 @@
+.moxy-tabs-section {
+  background: #fff;
+}
+
+.moxy-tabs__buttons {
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.moxy-tab-trigger .wp-block-button__link {
+  border-bottom-width: 2px !important;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.moxy-tab-trigger.is-active .wp-block-button__link {
+  opacity: 1;
+  border-color: #ff5c66 !important;
+}
+
+.moxy-tab-panel {
+  display: none;
+}
+
+.moxy-tab-panel.is-active {
+  display: block;
+}
+
+.moxy-tab-panel__layout {
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.moxy-tab-panel__image img {
+  display: block;
+  width: 100%;
+  height: clamp(20rem, 40vw, 34rem);
+  object-fit: cover;
+}
+
+.moxy-tab-panel h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
