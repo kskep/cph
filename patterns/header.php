@@ -16,11 +16,7 @@
 <div class="wp-block-group alignwide moxy-header__inner"><!-- wp:group {"className":"moxy-header__brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group moxy-header__brand"><!-- wp:image {"sizeSlug":"full","linkDestination":"home","className":"moxy-header__logo"} -->
 <figure class="wp-block-image size-full moxy-header__logo"><a href="/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/Moxy_logo_Reversed.svg' ) ); ?>" alt="Moxy Hotels"/></a></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"moxy-header__tagline","fontSize":"xsmall"} -->
-<p class="moxy-header__tagline has-xsmall-font-size">Stylish and playful hotels for anything but ordinary stays.</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:image --></div>
 <!-- /wp:group -->
 
 <!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","className":"moxy-header__nav","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.25rem"}}} -->

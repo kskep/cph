@@ -34,7 +34,17 @@
 }
 
 .moxy-bonvoy {
-  background: #ffe285;
+  background: #f7f0ed;
+}
+
+.moxy-see-all {
+  background: #f7f0ed;
+}
+
+.moxy-see-all__inner {
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  text-align: center;
 }
 
 .moxy-bonvoy__layout {

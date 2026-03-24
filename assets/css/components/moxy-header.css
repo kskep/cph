@@ -22,15 +22,6 @@
   height: auto;
 }
 
-.moxy-header__tagline {
-  max-width: 17rem;
-  margin: 0;
-  line-height: 1.25;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .moxy-header__nav {
   flex: 1 1 auto;
   justify-content: center;
@@ -48,14 +39,10 @@
 }
 
 .moxy-header__cta .wp-block-button__link {
-  border-color: #ff5c66;
+  border-color: #9e237d;
 }
 
 @media (max-width: 900px) {
-  .moxy-header__tagline {
-    display: none;
-  }
-
   .moxy-header__inner {
     padding: 0.85rem 0;
   }

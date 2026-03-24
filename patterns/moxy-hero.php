@@ -13,9 +13,8 @@
 <div class="wp-block-group alignfull moxy-hero-section" id="book-your-stay"><!-- wp:group {"align":"full","className":"moxy-hero-slider js-moxy-slider","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-hero-slider js-moxy-slider"><!-- wp:group {"align":"full","className":"moxy-hero-slides","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-hero-slides"><!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/ox-cocktails-bar-moxy-1-37112-classic-hor-resized.jpg' ) ); ?>","dimRatio":30,"overlayColor":"moxy-ink","isUserOverlayColor":true,"minHeight":780,"minHeightUnit":"px","align":"full","className":"moxy-hero-slide is-active","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|x-large","left":"min(6vw, 4rem)","right":"min(6vw, 4rem)"}}}} -->
-<div class="wp-block-cover alignfull moxy-hero-slide is-active" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:min(6vw, 4rem);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:min(6vw, 4rem);min-height:780px"><span aria-hidden="true" class="wp-block-cover__background has-moxy-ink-background-color has-background-dim-30 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Couple having cocktails at hotel bar" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/ox-cocktails-bar-moxy-1-37112-classic-hor-resized.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":"bottom","align":"wide","className":"moxy-hero-slide__inner"} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-bottom moxy-hero-slide__inner"><!-- wp:column {"verticalAlignment":"bottom","width":"60%"} -->
-<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:60%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-hero__brand"} -->
+<div class="wp-block-cover alignfull moxy-hero-slide is-active" style="padding-top:var(--wp--preset--spacing--xx-large);padding-right:min(6vw, 4rem);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:min(6vw, 4rem);min-height:780px"><span aria-hidden="true" class="wp-block-cover__background has-moxy-ink-background-color has-background-dim-30 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Couple having cocktails at hotel bar" src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/ox-cocktails-bar-moxy-1-37112-classic-hor-resized.jpg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"wide","className":"moxy-hero-slide__inner","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide moxy-hero-slide__inner"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-hero__brand"} -->
 <figure class="wp-block-image size-full moxy-hero__brand"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/Moxy_logo_Color.svg' ) ); ?>" alt="Moxy Hotels"/></figure>
 <!-- /wp:image -->
 
@@ -40,42 +39,7 @@
 <div class="wp-block-button is-style-text-btn"><a class="wp-block-button__link wp-element-button" href="#how-we-play">How We Play</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"verticalAlignment":"bottom","width":"40%"} -->
-<div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:40%"><!-- wp:group {"className":"moxy-booking-teaser js-booking-open","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-booking-teaser js-booking-open"><!-- wp:heading {"level":3,"className":"moxy-booking-teaser__title"} -->
-<h3 class="wp-block-heading moxy-booking-teaser__title">Book Your Stay</h3>
-<!-- /wp:heading -->
-
-<!-- wp:columns {"className":"moxy-booking-teaser__fields"} -->
-<div class="wp-block-columns moxy-booking-teaser__fields"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"fontSize":"xsmall"} -->
-<p class="has-xsmall-font-size">Destination</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"moxy-booking-teaser__value"} -->
-<p class="moxy-booking-teaser__value">Where to?</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"fontSize":"xsmall"} -->
-<p class="has-xsmall-font-size">Stay Dates</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"moxy-booking-teaser__value"} -->
-<p class="moxy-booking-teaser__value">Tue, Mar 10 - Wed, Mar 11</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
-
-<!-- wp:button {"backgroundColor":"moxy-butter","textColor":"moxy-ink","className":"moxy-booking-teaser__button"} -->
-<div class="wp-block-button moxy-booking-teaser__button"><a class="wp-block-button__link has-moxy-ink-color has-moxy-butter-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Hotel Search</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div>
+<!-- /wp:group --></div></div>
 <!-- /wp:cover -->
 
 <!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/ox-lifestyle-dog-at-check-in-15980-wide-hor-scaled.jpg' ) ); ?>","dimRatio":40,"overlayColor":"moxy-charcoal","isUserOverlayColor":true,"minHeight":780,"minHeightUnit":"px","align":"full","className":"moxy-hero-slide","style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|x-large","left":"min(6vw, 4rem)","right":"min(6vw, 4rem)"}}}} -->
@@ -125,6 +89,44 @@
 <!-- wp:paragraph {"className":"moxy-slider-status js-moxy-status","fontSize":"xsmall"} -->
 <p class="moxy-slider-status js-moxy-status has-xsmall-font-size">1 / 3</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","className":"moxy-booking-bar","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull moxy-booking-bar"><!-- wp:group {"className":"moxy-booking-bar__inner","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group moxy-booking-bar__inner"><!-- wp:group {"className":"moxy-booking-bar__field","layout":{"type":"default"}} -->
+<div class="wp-block-group moxy-booking-bar__field"><!-- wp:paragraph {"fontSize":"xsmall","className":"moxy-booking-bar__label"} -->
+<p class="moxy-booking-bar__label has-xsmall-font-size">Destination</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"moxy-booking-bar__value"} -->
+<p class="moxy-booking-bar__value">Where to?</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"moxy-booking-bar__field","layout":{"type":"default"}} -->
+<div class="wp-block-group moxy-booking-bar__field"><!-- wp:paragraph {"fontSize":"xsmall","className":"moxy-booking-bar__label"} -->
+<p class="moxy-booking-bar__label has-xsmall-font-size">Stay Dates</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"moxy-booking-bar__value"} -->
+<p class="moxy-booking-bar__value">Tue, Mar 10 – Wed, Mar 11</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"moxy-booking-bar__field","layout":{"type":"default"}} -->
+<div class="wp-block-group moxy-booking-bar__field"><!-- wp:paragraph {"fontSize":"xsmall","className":"moxy-booking-bar__label"} -->
+<p class="moxy-booking-bar__label has-xsmall-font-size">Rooms &amp; Guests</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"moxy-booking-bar__value"} -->
+<p class="moxy-booking-bar__value">1 Room, 1 Adult</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:button {"backgroundColor":"moxy-coral","textColor":"custom-white","className":"js-booking-open moxy-booking-bar__cta"} -->
+<div class="wp-block-button js-booking-open moxy-booking-bar__cta"><a class="wp-block-button__link has-custom-white-color has-moxy-coral-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Hotel Search</a></div>
+<!-- /wp:button --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
