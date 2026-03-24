@@ -1,6 +1,6 @@
 .moxy-hero-section {
   background: #fff;
-  padding-top: var(--moxy-header-height, 6.7rem);
+  padding-top: 0;
 }
 
 .moxy-hero {
@@ -175,7 +175,7 @@
 
 @media (max-width: 640px) {
   .moxy-hero-section {
-    padding-top: 5rem;
+    padding-top: 0;
   }
 
   .moxy-booking-bar {

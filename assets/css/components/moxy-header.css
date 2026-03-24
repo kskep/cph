@@ -6,9 +6,17 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
-  background: #fff;
-  color: #111827;
-  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.08);
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
+.moxy-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0));
+  pointer-events: none;
 }
 
 body.admin-bar .moxy-header {
@@ -16,17 +24,17 @@ body.admin-bar .moxy-header {
 }
 
 .moxy-header__utility {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 0;
 }
 
 .moxy-header__utility-inner {
-  gap: 1rem;
-  padding: 0.55rem 0;
+  gap: 0.8rem;
+  padding: 0.75rem 0 0.45rem;
+  position: relative;
+  z-index: 1;
 }
 
-.moxy-header__utility-item,
-.moxy-header__utility-divider,
-.moxy-header__utility-brand {
+.moxy-header__utility-item {
   margin: 0;
   font-size: 0.75rem;
   font-weight: 700;
@@ -39,13 +47,12 @@ body.admin-bar .moxy-header {
   position: relative;
 }
 
-.moxy-header__utility-item--language,
-.moxy-header__utility-item--account {
+.moxy-header__utility-item--language {
   padding-left: 1.1rem;
+  padding-right: 1rem;
 }
 
-.moxy-header__utility-item--language::before,
-.moxy-header__utility-item--account::before {
+.moxy-header__utility-item--language::before {
   content: "";
   border: 1.5px solid currentColor;
   border-radius: 999px;
@@ -58,38 +65,23 @@ body.admin-bar .moxy-header {
   width: 0.65rem;
 }
 
-.moxy-header__utility-item--language {
-  padding-right: 1rem;
-}
-
 .moxy-header__utility-item--language::after {
   content: "";
-  border-bottom: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  height: 0.35rem;
-  opacity: 0.7;
+  border-right: 1px solid rgba(255, 255, 255, 0.65);
+  height: 0.95rem;
+  opacity: 1;
   position: absolute;
-  right: 0;
-  top: 45%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 0.35rem;
-}
-
-.moxy-header__utility-item--account::before {
-  border-radius: 50% 50% 45% 45%;
-}
-
-.moxy-header__utility-divider {
-  color: #d1d5db;
-}
-
-.moxy-header__utility-brand {
-  color: #1f2937;
+  right: 0.05rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
 }
 
 .moxy-header__inner {
   gap: 1.5rem;
   min-height: 5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .moxy-header__brand,
@@ -99,7 +91,7 @@ body.admin-bar .moxy-header {
 
 .moxy-header__logo-mark {
   display: inline-flex;
-  color: #111827;
+  color: #fff;
   width: 9.5rem;
 }
 
@@ -115,7 +107,7 @@ body.admin-bar .moxy-header {
 }
 
 .moxy-header__nav .wp-block-navigation-item__content {
-  color: #111827;
+  color: #fff;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -124,7 +116,7 @@ body.admin-bar .moxy-header {
 
 .moxy-header__nav .wp-block-navigation-item__content:hover,
 .moxy-header__utility-item:hover {
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .moxy-header__cta .wp-block-button__link {

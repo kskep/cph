@@ -15,19 +15,7 @@
 <div class="wp-block-group alignfull moxy-header"><!-- wp:group {"align":"full","className":"moxy-header__utility","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-header__utility"><!-- wp:group {"align":"wide","className":"moxy-header__utility-inner","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
 <div class="wp-block-group alignwide moxy-header__utility-inner"><!-- wp:paragraph {"className":"moxy-header__utility-item moxy-header__utility-item--language","fontSize":"xsmall"} -->
-<p class="moxy-header__utility-item moxy-header__utility-item--language has-xsmall-font-size">SELECT LANGUAGE</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"moxy-header__utility-item moxy-header__utility-item--account","fontSize":"xsmall"} -->
-<p class="moxy-header__utility-item moxy-header__utility-item--account has-xsmall-font-size">SIGN IN OR JOIN</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"moxy-header__utility-divider","fontSize":"xsmall"} -->
-<p class="moxy-header__utility-divider has-xsmall-font-size">|</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"className":"moxy-header__utility-brand","fontSize":"xsmall"} -->
-<p class="moxy-header__utility-brand has-xsmall-font-size">MARRIOTT BONVOY</p>
+<p class="moxy-header__utility-item moxy-header__utility-item--language has-xsmall-font-size">English</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
