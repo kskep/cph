@@ -9,6 +9,12 @@
   background: transparent;
   color: #fff;
   box-shadow: none;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.moxy-header.is-scrolled {
+  background: rgba(17, 24, 39, 0.94);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .moxy-header::before {
@@ -17,6 +23,11 @@
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0));
   pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.moxy-header.is-scrolled::before {
+  opacity: 0;
 }
 
 body.admin-bar .moxy-header {
@@ -28,6 +39,9 @@ body.admin-bar .moxy-header {
 }
 
 .moxy-header__utility-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 0.8rem;
   padding: 0.75rem 0 0.45rem;
   position: relative;
@@ -45,6 +59,15 @@ body.admin-bar .moxy-header {
 
 .moxy-header__utility-item {
   position: relative;
+}
+
+.moxy-header__utility-item--email a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.moxy-header__utility-item--email a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .moxy-header__utility-item--language {
@@ -99,6 +122,14 @@ body.admin-bar .moxy-header {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.moxy-header__logo-mark--image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 2.2rem;
+  object-fit: contain;
 }
 
 .moxy-header__nav {

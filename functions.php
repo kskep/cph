@@ -271,6 +271,8 @@ add_action( 'init', 'starter_register_block_pattern_categories' );
 
 function cph_register_custom_blocks() {
     $block_paths = array(
+        get_template_directory() . '/blocks/header',
+        get_template_directory() . '/blocks/footer',
         get_template_directory() . '/blocks/hero',
         get_template_directory() . '/blocks/tabs',
         get_template_directory() . '/blocks/carousel',

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/header",
+  "version": "1.0.0",
+  "title": "CPH Header",
+  "category": "design",
+  "icon": "menu",
+  "description": "Locked site header with logo control, navigation menu selection, and scroll background behavior.",
+  "textdomain": "cph",
+  "attributes": {
+    "logoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "logoAlt": {
+      "type": "string",
+      "default": "Citi Plus Hotels"
+    },
+    "navigationRef": {
+      "type": "number",
+      "default": 0
+    },
+    "languageLabel": {
+      "type": "string",
+      "default": "English"
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "info@citiplushotels.gr"
+    },
+    "emailUrl": {
+      "type": "string",
+      "default": "mailto:info@citiplushotels.gr"
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Get a Room"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#book-your-stay"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/moxy-header.css",
+  "render": "file:./render.php"
+}

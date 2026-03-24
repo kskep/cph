@@ -1,4 +1,17 @@
 (function () {
+	function setupHeaderScroll(root) {
+		if (!root) {
+			return;
+		}
+
+		function updateState() {
+			root.classList.toggle('is-scrolled', window.scrollY > 24);
+		}
+
+		updateState();
+		window.addEventListener('scroll', updateState, { passive: true });
+	}
+
 	function setupTabs(root) {
 		if (!root) {
 			return;
@@ -109,6 +122,7 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
+		setupHeaderScroll(document.querySelector('.js-moxy-header'));
 		setupTabs(document.querySelector('.js-moxy-tabs'));
 		setupCarousel(document.querySelector('.js-moxy-carousel'));
 	});

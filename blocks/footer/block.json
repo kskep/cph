@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/footer",
+  "version": "1.0.0",
+  "title": "CPH Footer",
+  "category": "design",
+  "icon": "editor-kitchensink",
+  "description": "Locked site footer with controlled content fields and menu fallbacks.",
+  "textdomain": "cph",
+  "attributes": {
+    "menuOneRef": {
+      "type": "number",
+      "default": 0
+    },
+    "menuTwoRef": {
+      "type": "number",
+      "default": 0
+    },
+    "socialHeading": {
+      "type": "string",
+      "default": "Stay Connected"
+    },
+    "promoCopy": {
+      "type": "string",
+      "default": "Explore the possibilities. What you need, when you need it."
+    },
+    "promoButtonLabel": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "promoButtonUrl": {
+      "type": "string",
+      "default": "https://mobileapp.marriott.com/"
+    },
+    "legalCopy": {
+      "type": "string",
+      "default": "Copyright © 2024 Marriott International, Inc. All Rights Reserved. Marriott Proprietary Information. Terms of Use · Privacy Center · Help · Tracking Preferences · Your Privacy Choices"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/moxy-footer.css",
+  "render": "file:./render.php"
+}

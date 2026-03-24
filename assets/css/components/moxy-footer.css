@@ -58,6 +58,7 @@
 }
 
 .moxy-footer__welcome-cards {
+  display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -87,6 +88,8 @@
 }
 
 .moxy-footer__promo-button .wp-block-button__link {
+  background: #111111;
+  color: #ffffff;
   border: 0;
   font-size: 0.75rem;
   font-weight: 700;
@@ -95,6 +98,8 @@
 }
 
 .moxy-footer__badges {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
@@ -110,6 +115,7 @@
 }
 
 .moxy-footer__legal-copy {
+  text-align: center;
   margin: 0 auto;
   max-width: 78rem;
 }
