@@ -11,127 +11,73 @@
 ?>
 <!-- wp:group {"align":"full","anchor":"now-playing","className":"moxy-carousel-section js-moxy-carousel","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-carousel-section js-moxy-carousel" id="now-playing"><!-- wp:group {"align":"wide","className":"moxy-carousel-section__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide moxy-carousel-section__inner"><!-- wp:group {"className":"moxy-carousel-section__header","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
-<div class="wp-block-group moxy-carousel-section__header"><!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-xx-large-font-size">Now Playing</h2>
-<!-- /wp:heading -->
-
-<!-- wp:group {"className":"moxy-carousel-section__controls","layout":{"type":"flex","verticalAlignment":"center"}} -->
-<div class="wp-block-group moxy-carousel-section__controls"><!-- wp:button {"className":"moxy-slider-button js-carousel-prev"} -->
-<div class="wp-block-button moxy-slider-button js-carousel-prev"><a class="wp-block-button__link wp-element-button" href="#now-playing">Prev</a></div>
-<!-- /wp:button -->
-
-<!-- wp:paragraph {"className":"js-carousel-status","fontSize":"xsmall"} -->
-<p class="js-carousel-status has-xsmall-font-size">1 / 7</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:button {"className":"moxy-slider-button js-carousel-next"} -->
-<div class="wp-block-button moxy-slider-button js-carousel-next"><a class="wp-block-button__link wp-element-button" href="#now-playing">Next</a></div>
-<!-- /wp:button --></div>
+<div class="wp-block-group alignwide moxy-carousel-section__inner"><!-- wp:group {"className":"moxy-carousel-section__label-wrap","layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group moxy-carousel-section__label-wrap"><!-- wp:group {"className":"moxy-section-label","layout":{"type":"constrained"}} -->
+<div class="wp-block-group moxy-section-label"><!-- wp:heading {"level":2,"className":"moxy-section-label__heading","fontSize":"large"} -->
+<h2 class="wp-block-heading moxy-section-label__heading has-large-font-size">Now Playing</h2>
+<!-- /wp:heading --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"moxy-carousel-slides","layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"moxy-carousel-frame","layout":{"type":"constrained"}} -->
+<div class="wp-block-group moxy-carousel-frame"><!-- wp:group {"className":"moxy-carousel-slides","layout":{"type":"constrained"}} -->
 <div class="wp-block-group moxy-carousel-slides"><!-- wp:group {"className":"moxy-carousel-slide is-active","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide is-active"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyBCNOXre.1467189-2500x1867-1.jpg' ) ); ?>" alt="Check-in desk at the playfully decorated, modern bar"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} -->
-<p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p>
+<div class="wp-block-group moxy-carousel-slide is-active"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-carousel-slide__image"} -->
+<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&amp;h=900&amp;fit=crop" alt="Moxy Barcelona"/></figure>
+<!-- /wp:image -->
+<!-- wp:group {"className":"moxy-carousel-slide__overlay","layout":{"type":"constrained"}} -->
+<div class="wp-block-group moxy-carousel-slide__overlay"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} -->
+<p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-x-large-font-size">Moxy Barcelona</h3>
+<!-- wp:heading {"level":3,"className":"moxy-carousel-slide__title","fontSize":"xx-large"} -->
+<h3 class="wp-block-heading moxy-carousel-slide__title has-xx-large-font-size">Moxy Barcelona</h3>
 <!-- /wp:heading -->
-<!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} -->
-<div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="https://www.marriott.com/en-us/hotels/bcnox-moxy-barcelona/overview/">Visit</a></div>
+<!-- wp:button {"className":"is-style-text-btn moxy-carousel-slide__link"} -->
+<div class="wp-block-button is-style-text-btn moxy-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
+<!-- /wp:group -->
+<!-- wp:paragraph {"className":"moxy-carousel-slide__location","fontSize":"small"} -->
+<p class="moxy-carousel-slide__location has-small-font-size">MOXY BARCELONA</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyTOSOXcl.1185201.jpg' ) ); ?>" alt="Welcome desk and bar area with snowy mountain and ocean view"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} -->
-<p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">Moxy Tromso</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="https://www.marriott.com/en-us/hotels/tosox-moxy-tromso/overview/">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
+<div class="wp-block-group moxy-carousel-slide"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-carousel-slide__image"} -->
+<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&amp;h=900&amp;fit=crop" alt="Moxy NYC"/></figure>
+<!-- /wp:image -->
+<!-- wp:group {"className":"moxy-carousel-slide__overlay","layout":{"type":"constrained"}} -->
+<div class="wp-block-group moxy-carousel-slide__overlay"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} -->
+<p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3,"className":"moxy-carousel-slide__title","fontSize":"xx-large"} -->
+<h3 class="wp-block-heading moxy-carousel-slide__title has-xx-large-font-size">Moxy NYC</h3>
+<!-- /wp:heading -->
+<!-- wp:button {"className":"is-style-text-btn moxy-carousel-slide__link"} -->
+<div class="wp-block-button is-style-text-btn moxy-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>
+<!-- /wp:button --></div>
 <!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyORFVX.1266052.jpg' ) ); ?>" alt="Guest room with platform beds and an ocean view balcony"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} --><p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">Moxy Virginia Beach Oceanfront</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="https://www.marriott.com/en-us/hotels/orfvx-moxy-virginia-beach-oceanfront/overview/">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyLAXOXcl.1235668.jpg' ) ); ?>" alt="Moxy Los Angeles scene"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} --><p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">Moxy Downtown Los Angeles</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="#now-playing">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyNQYPO.1271985.jpg' ) ); ?>" alt="Playful Moxy property"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} --><p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">Moxy Nanjing</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="#now-playing">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxyXIYDO.1238717.jpg' ) ); ?>" alt="Moxy Xi'an Downtown scene"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} --><p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">Moxy Xi'an Downtown</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="#now-playing">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-carousel-slide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group moxy-carousel-slide"><!-- wp:columns {"verticalAlignment":"center","className":"moxy-carousel-slide__layout"} -->
-<div class="wp-block-columns are-vertically-aligned-center moxy-carousel-slide__layout"><!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:image {"sizeSlug":"full","className":"moxy-carousel-slide__image"} -->
-<figure class="wp-block-image size-full moxy-carousel-slide__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/mxy_.1276746.jpg' ) ); ?>" alt="Another Moxy opening"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:paragraph {"className":"moxy-carousel-slide__eyebrow","fontSize":"xsmall"} --><p class="moxy-carousel-slide__eyebrow has-xsmall-font-size">New places to stay and play.</p><!-- /wp:paragraph --><!-- wp:heading {"level":3,"fontSize":"x-large"} --><h3 class="wp-block-heading has-x-large-font-size">A New Moxy Address</h3><!-- /wp:heading --><!-- wp:button {"className":"is-style-text-btn ic-btn-external-link"} --><div class="wp-block-button is-style-text-btn ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="#now-playing">Visit</a></div><!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
+<!-- wp:paragraph {"className":"moxy-carousel-slide__location","fontSize":"small"} -->
+<p class="moxy-carousel-slide__location has-small-font-size">MOXY NYC</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:buttons {"className":"moxy-carousel-frame__arrows","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
+<div class="wp-block-buttons moxy-carousel-frame__arrows"><!-- wp:button {"className":"moxy-carousel-arrow js-carousel-prev"} -->
+<div class="wp-block-button moxy-carousel-arrow js-carousel-prev"><a class="wp-block-button__link wp-element-button" href="#now-playing">Prev</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"moxy-carousel-arrow js-carousel-next"} -->
+<div class="wp-block-button moxy-carousel-arrow js-carousel-next"><a class="wp-block-button__link wp-element-button" href="#now-playing">Next</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:buttons {"className":"moxy-carousel-dots","layout":{"type":"flex","justifyContent":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-buttons moxy-carousel-dots"><!-- wp:button {"className":"moxy-carousel-dot is-active"} -->
+<div class="wp-block-button moxy-carousel-dot is-active"><a class="wp-block-button__link wp-element-button" href="#now-playing">1</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"moxy-carousel-dot"} -->
+<div class="wp-block-button moxy-carousel-dot"><a class="wp-block-button__link wp-element-button" href="#now-playing">2</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

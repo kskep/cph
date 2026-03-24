@@ -14,51 +14,55 @@
 <!-- wp:group {"align":"full","className":"moxy-footer","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-footer"><!-- wp:group {"align":"wide","className":"moxy-footer__inner","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide moxy-footer__inner"><!-- wp:columns {"verticalAlignment":"top","className":"moxy-footer__columns"} -->
-<div class="wp-block-columns are-vertically-aligned-top moxy-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"36%","className":"moxy-footer__brand-column"} -->
-<div class="wp-block-column is-vertically-aligned-top moxy-footer__brand-column" style="flex-basis:36%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-footer__logo"} -->
-<figure class="wp-block-image size-full moxy-footer__logo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/Moxy_logo_Reversed.svg' ) ); ?>" alt="Moxy Hotels"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph {"className":"moxy-footer__copy"} -->
-<p class="moxy-footer__copy">Smart rooms, loud personality, and bars that know how to keep the night moving.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"url","href":"https://mobileapp.marriott.com/","className":"moxy-footer__devices"} -->
-<figure class="wp-block-image size-full moxy-footer__devices"><a href="https://mobileapp.marriott.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/devices.webp' ) ); ?>" alt="Compatible mobile and desktop screens as a montage"/></a></figure>
-<!-- /wp:image --></div>
+<div class="wp-block-columns are-vertically-aligned-top moxy-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"18%","className":"moxy-footer__menu-column"} -->
+<div class="wp-block-column is-vertically-aligned-top moxy-footer__menu-column" style="flex-basis:18%"><!-- wp:navigation {"overlayMenu":"never","className":"moxy-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:navigation-link {"label":"News","url":"https://news.marriott.com/","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Hotel Development","url":"https://hotel-development.marriott.com/brands/moxy-hotels/","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Terms of Use","url":"https://www.marriott.com/about/terms-of-use.mi","kind":"custom"} /-->
+<!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","width":"34%","className":"moxy-footer__links"} -->
-<div class="wp-block-column is-vertically-aligned-top moxy-footer__links" style="flex-basis:34%"><!-- wp:heading {"level":4,"fontSize":"small"} -->
-<h4 class="wp-block-heading has-small-font-size">Explore</h4>
-<!-- /wp:heading -->
-
-<!-- wp:navigation {"overlayMenu":"never","className":"moxy-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
-<!-- wp:navigation-link {"label":"News","url":"https://news.marriott.com/","kind":"custom"} /-->
+<!-- wp:column {"verticalAlignment":"top","width":"18%","className":"moxy-footer__menu-column"} -->
+<div class="wp-block-column is-vertically-aligned-top moxy-footer__menu-column" style="flex-basis:18%"><!-- wp:navigation {"overlayMenu":"never","className":"moxy-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
 <!-- wp:navigation-link {"label":"Jobs","url":"https://jobs.marriott.com/marriott/jobs?page=1&brand=Moxy+Hotels","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Hotel Development","url":"https://hotel-development.marriott.com/brands/moxy-hotels/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"About Moxy Guestbook","url":"https://www.instagram.com/moxyhotels/","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Terms of Use","url":"https://www.marriott.com/about/terms-of-use.mi","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Privacy Statement","url":"https://www.marriott.com/about/privacy.mi","kind":"custom"} /-->
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","width":"30%","className":"moxy-footer__apps"} -->
-<div class="wp-block-column is-vertically-aligned-top moxy-footer__apps" style="flex-basis:30%"><!-- wp:heading {"level":4,"fontSize":"small"} -->
-<h4 class="wp-block-heading has-small-font-size">Stay Connected</h4>
+<!-- wp:column {"verticalAlignment":"top","width":"18%","className":"moxy-footer__social-column"} -->
+<div class="wp-block-column is-vertically-aligned-top moxy-footer__social-column" style="flex-basis:18%"><!-- wp:heading {"level":4,"className":"moxy-footer__heading","fontSize":"xsmall"} -->
+<h4 class="wp-block-heading moxy-footer__heading has-xsmall-font-size">Stay Connected</h4>
 <!-- /wp:heading -->
 
-<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","className":"has-icon-color is-style-logos-only moxy-footer__socials"} -->
-<ul class="wp-block-social-links has-icon-color is-style-logos-only moxy-footer__socials"><!-- wp:social-link {"url":"https://www.instagram.com/moxyhotels/","service":"instagram"} /-->
+<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only moxy-footer__socials"} -->
+<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only moxy-footer__socials"><!-- wp:social-link {"url":"https://www.instagram.com/moxyhotels/","service":"instagram"} /-->
 <!-- wp:social-link {"url":"https://www.facebook.com/moxyhotels","service":"facebook"} /-->
 <!-- wp:social-link {"url":"https://www.youtube.com/","service":"youtube"} /--></ul>
-<!-- /wp:social-links -->
+<!-- /wp:social-links --></div>
+<!-- /wp:column -->
 
-<!-- wp:paragraph {"className":"moxy-footer__app-copy","fontSize":"xsmall"} -->
-<p class="moxy-footer__app-copy has-xsmall-font-size">Download the Marriott Bonvoy app to unlock your room, manage trips, and collect points on the go.</p>
+<!-- wp:column {"verticalAlignment":"top","width":"46%","className":"moxy-footer__promo-column"} -->
+<div class="wp-block-column is-vertically-aligned-top moxy-footer__promo-column" style="flex-basis:46%"><!-- wp:group {"className":"moxy-footer__promo-box","layout":{"type":"constrained"}} -->
+<div class="wp-block-group moxy-footer__promo-box"><!-- wp:group {"className":"moxy-footer__welcome-cards","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group moxy-footer__welcome-cards"><!-- wp:paragraph {"className":"moxy-footer__welcome-card","fontSize":"xsmall"} -->
+<p class="moxy-footer__welcome-card has-xsmall-font-size">WELCOME</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"className":"moxy-footer__badges","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:paragraph {"className":"moxy-footer__welcome-card","fontSize":"xsmall"} -->
+<p class="moxy-footer__welcome-card has-xsmall-font-size">WELCOME</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"moxy-footer__promo-copy","fontSize":"xsmall"} -->
+<p class="moxy-footer__promo-copy has-xsmall-font-size">Explore the possibilities. What you need, when you need it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:button {"className":"moxy-footer__promo-button","backgroundColor":"custom-off-black","textColor":"custom-white"} -->
+<div class="wp-block-button moxy-footer__promo-button"><a class="wp-block-button__link has-custom-white-color has-custom-off-black-background-color has-text-color has-background wp-element-button" href="https://mobileapp.marriott.com/">Learn More</a></div>
+<!-- /wp:button -->
+
+<!-- wp:group {"className":"moxy-footer__badges","layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-group moxy-footer__badges"><!-- wp:image {"sizeSlug":"full","linkDestination":"url","href":"https://apps.apple.com/","className":"moxy-footer__badge"} -->
 <figure class="wp-block-image size-full moxy-footer__badge"><a href="https://apps.apple.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/appstore-apple.webp' ) ); ?>" alt="Download on the App Store"/></a></figure>
 <!-- /wp:image -->
@@ -66,18 +70,17 @@
 <!-- wp:image {"sizeSlug":"full","linkDestination":"url","href":"https://play.google.com/","className":"moxy-footer__badge"} -->
 <figure class="wp-block-image size-full moxy-footer__badge"><a href="https://play.google.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/appstore-google.webp' ) ); ?>" alt="Get it on Google Play"/></a></figure>
 <!-- /wp:image --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"moxy-footer__legal","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
-<div class="wp-block-group moxy-footer__legal"><!-- wp:paragraph {"fontSize":"xsmall"} -->
-<p class="has-xsmall-font-size">Copyright 2026 Moxy Hotels. All rights reserved.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-footer__powered"} -->
-<figure class="wp-block-image size-full moxy-footer__powered"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/powered_by_logo.svg' ) ); ?>" alt="Powered by Marriott"/></figure>
-<!-- /wp:image --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
-<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:pattern {"slug":"cph/moxy-bonvoy"} /-->
+
+<!-- wp:group {"align":"full","className":"moxy-footer__legal-strip","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull moxy-footer__legal-strip"><!-- wp:paragraph {"align":"center","className":"moxy-footer__legal-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-footer__legal-copy has-xsmall-font-size">Copyright © 2024 Marriott International, Inc. All Rights Reserved. Marriott Proprietary Information. Terms of Use · Privacy Center · Help · Tracking Preferences · Your Privacy Choices</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
 <!-- /wp:group -->

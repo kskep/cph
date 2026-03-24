@@ -116,8 +116,8 @@ a {
 }
 
 .wp-block-button .wp-block-button__link:hover {
-  background: var(--wp--preset--color--custom-custom-white);
-  color: var(--wp--preset--color--off-black);
+  background: var(--wp--preset--color--custom-white);
+  color: var(--wp--preset--color--custom-off-black);
   border-color: var(--wp--preset--color--custom-off-black);
 }
 

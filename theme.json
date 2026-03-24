@@ -19,7 +19,7 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"color": "#9e237d",
+					"color": "#D9006E",
 					"name": "Moxy Magenta",
 					"slug": "moxy-coral"
 				},
@@ -29,17 +29,17 @@
 					"slug": "moxy-butter"
 				},
 				{
-					"color": "#f4efe5",
+					"color": "#ffffff",
 					"name": "Moxy Cream",
 					"slug": "moxy-cream"
 				},
 				{
-					"color": "#1d1b20",
+					"color": "#111827",
 					"name": "Moxy Ink",
 					"slug": "moxy-ink"
 				},
 				{
-					"color": "#2d2a32",
+					"color": "#111111",
 					"name": "Moxy Charcoal",
 					"slug": "moxy-charcoal"
 				},
@@ -81,8 +81,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "1200px",
-			"wideSize": "1320px"
+			"contentSize": "1280px",
+			"wideSize": "1440px"
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -138,9 +138,14 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Swiss 721 BT\", \"Arial Narrow\", \"Helvetica Neue\", Arial, sans-serif",
+					"fontFamily": "\"Open Sans\", \"Helvetica Neue\", Arial, sans-serif",
 					"name": "Moxy Sans",
 					"slug": "moxy-sans"
+				},
+				{
+					"fontFamily": "\"Montserrat\", \"Helvetica Neue\", Arial, sans-serif",
+					"name": "Moxy Display",
+					"slug": "moxy-display"
 				},
 				{
 					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
@@ -176,65 +181,65 @@
 			"fontSizes": [
 				{
 					"fluid": {
-						"max": "1rem",
-						"min": ".8rem"
+						"max": "0.875rem",
+						"min": "0.75rem"
 					},
 					"name": "XSmall",
-					"size": "1rem",
+					"size": "0.75rem",
 					"slug": "xsmall"
 				},
 				{
 					"fluid": {
-						"max": "1.25rem",
-						"min": "1.125rem"
+						"max": "1rem",
+						"min": "0.875rem"
 					},
 					"name": "Small",
-					"size": "1.125rem",
+					"size": "0.875rem",
 					"slug": "small"
 				},
 				{
 					"fluid": {
-						"max": "1.5rem",
-						"min": "1.25rem"
+						"max": "1.125rem",
+						"min": "1rem"
 					},
 					"name": "Medium",
-					"size": "1.5rem",
+					"size": "1rem",
 					"slug": "medium"
 				},
 				{
 					"fluid": {
-						"max": "2rem",
-						"min": "1.75rem"
+						"max": "1.75rem",
+						"min": "1.5rem"
 					},
 					"name": "Large",
-					"size": "2rem",
+					"size": "1.5rem",
 					"slug": "large"
 				},
 				{
 					"fluid": {
-						"max": "2.75rem",
-						"min": "2.25rem"
+						"max": "2.25rem",
+						"min": "2rem"
 					},
 					"name": "XL",
-					"size": "2.75rem",
+					"size": "2rem",
 					"slug": "x-large"
 				},
 				{
 					"fluid": {
-						"max": "3.75rem",
-						"min": "3rem"
+						"max": "3rem",
+						"min": "2.5rem"
 					},
 					"name": "XXL",
-					"size": "3.75rem",
+					"size": "3rem",
 					"slug": "xx-large"
 				},
 				{
 					"fluid": {
-						"max": "5.5rem",
-						"min": "3.5rem"
+						"max": "4rem",
+						"min": "3rem"
 					},
 					"name": "Display",
-					"size": "5.5rem",
+					"size": "4rem",
 					"slug": "display"
 				}
 			]
@@ -243,11 +248,20 @@
 	},
 	"styles": {
 		"color": {
-			"background": "var(--wp--preset--color--moxy-cream)",
+			"background": "#ffffff",
 			"text": "var(--wp--preset--color--moxy-ink)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--moxy-sans)"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--moxy-display)",
+					"fontWeight": "800",
+					"lineHeight": "1"
+				}
+			}
 		},
 		"blocks": {
 			"core/button": {

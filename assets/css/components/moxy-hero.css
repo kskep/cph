@@ -1,190 +1,188 @@
 .moxy-hero-section {
-  background: #1d1b20;
+  background: #fff;
+  padding-top: var(--moxy-header-height, 6.7rem);
 }
 
-.moxy-hero-slider {
-  position: relative;
-  width: 100%;
-  max-width: none;
-}
-
-.moxy-hero-slides {
-  position: relative;
+.moxy-hero {
   overflow: hidden;
+}
+
+.moxy-hero .wp-block-cover__image-background {
+  transform: scale(1.01);
+}
+
+.moxy-hero .wp-block-cover__inner-container {
+  position: relative;
   width: 100%;
-  max-width: none;
+  height: 100%;
 }
 
-.moxy-hero-slide {
-  display: none;
-  margin-top: 0 !important;
+.moxy-hero__inner {
+  position: relative;
+  min-height: 100%;
 }
 
-.moxy-hero-slide.is-active {
-  display: block;
-}
-
-.moxy-hero-slide.alignfull,
-.moxy-hero-slide.wp-block-cover {
-  width: 100%;
-  max-width: none;
-}
-
-.moxy-hero-slide__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 56rem;
-  margin: 0 auto;
-}
-
-.moxy-hero__brand img {
-  width: clamp(7rem, 12vw, 9rem);
-}
-
-.moxy-hero__eyebrow,
-.moxy-hero-alt-copy p {
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.moxy-hero__headline,
-.moxy-hero-alt-copy h2 {
-  max-width: 10ch;
-  margin: 0.1em 0 0.2em;
-  line-height: 0.92;
-  text-transform: uppercase;
-}
-
-.moxy-hero__body,
-.moxy-hero-alt-copy .wp-block-paragraph {
-  max-width: 34rem;
-  line-height: 1.35;
-}
-
-.moxy-booking-teaser {
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(244, 239, 229, 0.94);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
-}
-
-.moxy-booking-teaser__title {
-  margin-top: 0;
-  text-transform: uppercase;
-}
-
-.moxy-booking-teaser__fields {
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.moxy-booking-teaser__value {
-  margin: 0;
-  font-weight: 700;
-}
-
-.moxy-hero-controls {
+.moxy-hero__tagline {
   position: absolute;
-  right: 0;
-  bottom: 1.5rem;
-  left: 0;
-  gap: 1rem;
+  top: 5rem;
+  right: 0.5rem;
+  width: min(100%, 20rem);
+  background: #fff;
+  box-shadow: 0 24px 48px rgba(17, 24, 39, 0.25);
+  padding: 1.5rem;
 }
 
-.moxy-slider-button .wp-block-button__link {
-  min-width: 5rem;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  background: rgba(244, 239, 229, 0.18);
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.moxy-slider-status {
-  margin: 0;
-  color: #fff;
-  letter-spacing: 0.18em;
+.moxy-hero__tagline-line {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0 0 0.25rem;
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
-  .moxy-hero-slide .wp-block-cover__inner-container {
-    padding-bottom: 4rem;
-  }
-
-  .moxy-hero-controls {
-    position: static;
-    padding: 1rem 0 1.5rem;
-  }
+.moxy-hero__tagline-line--large {
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 
-/* Booking bar */
+.moxy-hero__divider {
+  background: #d9006e;
+  border: 0;
+  height: 0.25rem;
+  margin: 1rem 0 0.75rem;
+  max-width: 6rem;
+}
+
+.moxy-hero__tagline-brand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
 .moxy-booking-bar {
-  background: #f4efe5;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: -4.5rem;
+  max-width: 80rem;
+  position: relative;
+  z-index: 2;
 }
 
 .moxy-booking-bar__inner {
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(17, 24, 39, 0.2);
+  display: grid;
+  grid-template-columns: minmax(8rem, 2fr) minmax(14rem, 4fr) minmax(14rem, 4fr) minmax(10rem, 2fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  align-items: stretch;
+}
+
+.moxy-booking-bar__title-box {
+  background: #111111;
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0;
-  padding: 1.25rem min(6vw, 4rem);
-  max-width: 1320px;
-  margin: 0 auto;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.moxy-booking-bar__title {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .moxy-booking-bar__field {
-  flex: 1 1 10rem;
-  padding: 0.75rem 2rem 0.75rem 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.14);
-  margin-right: 2rem;
+  border: 1px solid #d1d5db;
+  min-height: 5.125rem;
+  padding: 0.85rem 1rem;
 }
 
 .moxy-booking-bar__label {
-  margin: 0;
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.45rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #6b6873;
 }
 
 .moxy-booking-bar__value {
-  margin: 0.2rem 0 0;
+  color: #111827;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.moxy-booking-bar__value--split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.moxy-booking-bar__dash {
+  color: #9ca3af;
+}
+
+.moxy-booking-bar__cta,
+.moxy-booking-bar__cta .wp-block-button__link {
+  height: 100%;
+}
+
+.moxy-booking-bar__cta .wp-block-button__link {
+  align-items: center;
+  background: #d9006e;
+  border-color: #d9006e;
+  color: #fff;
+  display: inline-flex;
+  font-size: 0.875rem;
   font-weight: 700;
-}
-
-.moxy-booking-bar__cta {
-  flex-shrink: 0;
-  margin-left: auto;
-}
-
-.moxy-hero-slide__inner .wp-block-buttons {
   justify-content: center;
+  letter-spacing: 0.08em;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.moxy-booking-bar__cta .wp-block-button__link:hover {
+  background: #b5005b;
+  border-color: #b5005b;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .moxy-hero__tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .moxy-booking-bar {
+    margin-top: -2rem;
+  }
+
+  .moxy-booking-bar__inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 640px) {
+  .moxy-hero-section {
+    padding-top: 5rem;
+  }
+
+  .moxy-booking-bar {
+    margin-top: 0;
+  }
+
   .moxy-booking-bar__inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-  }
-
-  .moxy-booking-bar__field {
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding-right: 0;
-    margin-right: 0;
-  }
-
-  .moxy-booking-bar__cta {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .moxy-booking-bar__cta .wp-block-button__link {
-    width: 100%;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 }

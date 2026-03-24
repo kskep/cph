@@ -1,44 +1,165 @@
 .moxy-footer {
-  background: #1d1b20;
+  background: #d9006e;
   color: #fff;
-}
-
-.moxy-footer__inner {
-  padding-top: clamp(3rem, 7vw, 5rem);
-  padding-bottom: clamp(3rem, 7vw, 5rem);
+  padding: 4rem 0 2rem;
 }
 
 .moxy-footer__columns {
-  gap: clamp(2rem, 4vw, 4rem);
+  gap: 2rem;
 }
 
-.moxy-footer__logo img {
-  width: clamp(8rem, 14vw, 10rem);
-}
-
-.moxy-footer__copy {
-  max-width: 22rem;
-  color: rgba(255, 255, 255, 0.78);
+.moxy-footer__menu-column,
+.moxy-footer__social-column,
+.moxy-footer__promo-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .moxy-footer__nav .wp-block-navigation-item__content {
   color: #fff;
-  padding: 0.15rem 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+}
+
+.moxy-footer__heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
 }
 
 .moxy-footer__socials {
+  gap: 1rem;
+}
+
+.moxy-footer__socials .wp-social-link {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 2rem;
+  width: 2rem;
+}
+
+.moxy-footer__socials .wp-social-link:hover {
+  background: #fff;
+}
+
+.moxy-footer__socials .wp-social-link:hover a {
+  color: #d9006e;
+}
+
+.moxy-footer__promo-box {
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 1rem;
+}
+
+.moxy-footer__welcome-cards {
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.moxy-footer__welcome-card {
+  align-items: center;
+  background: #1f2937;
+  border: 2px solid #fff;
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 700;
+  height: 6rem;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  margin: 0;
+  width: 4rem;
+}
+
+.moxy-footer__promo-copy {
+  font-size: 0.75rem;
+  line-height: 1.5;
   margin: 0 0 1rem;
 }
 
+.moxy-footer__promo-button {
+  margin-bottom: 1rem;
+}
+
+.moxy-footer__promo-button .wp-block-button__link {
+  border: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.moxy-footer__badges {
+  gap: 0.5rem;
+}
+
 .moxy-footer__badge img {
-  max-width: 9rem;
+  display: block;
+  max-width: 8.5rem;
 }
 
-.moxy-footer__legal {
+.moxy-footer__legal-strip {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 1rem 0;
+}
+
+.moxy-footer__legal-copy {
+  margin: 0 auto;
+  max-width: 78rem;
+}
+
+.moxy-bonvoy {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+  padding: 3rem 0;
+}
+
+.moxy-bonvoy__eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.moxy-bonvoy__heading {
+  font-size: clamp(1.75rem, 3vw, 2rem);
+  margin: 0 0 2rem;
+}
+
+.moxy-bonvoy__cards {
   gap: 1rem;
-  margin-top: 1.5rem;
 }
 
-.moxy-footer__powered img {
-  max-width: 8rem;
+.moxy-bonvoy__card-title {
+  margin: 0 0 0.5rem;
+}
+
+.moxy-bonvoy__card-copy {
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.moxy-bonvoy__card-icons {
+  color: #9ca3af;
+  letter-spacing: 0.25em;
+  margin: 0;
+}
+
+@media (max-width: 782px) {
+  .moxy-footer {
+    padding-top: 3rem;
+  }
+
+  .moxy-footer__promo-box {
+    width: 100%;
+  }
 }

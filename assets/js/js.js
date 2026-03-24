@@ -1,56 +1,4 @@
 (function () {
-	function setupSlider(root, previousSelector, nextSelector, statusSelector, itemSelector) {
-		if (!root) {
-			return;
-		}
-
-		var items = Array.prototype.slice.call(root.querySelectorAll(itemSelector));
-		if (!items.length) {
-			return;
-		}
-
-		var previous = root.querySelector(previousSelector);
-		var next = root.querySelector(nextSelector);
-		var status = root.querySelector(statusSelector);
-		var currentIndex = items.findIndex(function (item) {
-			return item.classList.contains('is-active');
-		});
-
-		if (currentIndex < 0) {
-			currentIndex = 0;
-			items[0].classList.add('is-active');
-		}
-
-		function render() {
-			items.forEach(function (item, index) {
-				item.classList.toggle('is-active', index === currentIndex);
-			});
-
-			if (status) {
-				status.textContent = currentIndex + 1 + ' / ' + items.length;
-			}
-		}
-
-		function onNavigate(step, event) {
-			if (event) {
-				event.preventDefault();
-			}
-
-			currentIndex = (currentIndex + step + items.length) % items.length;
-			render();
-		}
-
-		if (previous) {
-			previous.addEventListener('click', onNavigate.bind(null, -1));
-		}
-
-		if (next) {
-			next.addEventListener('click', onNavigate.bind(null, 1));
-		}
-
-		render();
-	}
-
 	function setupTabs(root) {
 		if (!root) {
 			return;
@@ -59,7 +7,7 @@
 		var triggers = Array.prototype.slice.call(root.querySelectorAll('.moxy-tab-trigger'));
 		var panels = Array.prototype.slice.call(root.querySelectorAll('.moxy-tab-panel'));
 
-		if (!triggers.length || !panels.length) {
+		if (!triggers.length || triggers.length !== panels.length) {
 			return;
 		}
 
@@ -85,72 +33,83 @@
 		}) || 0);
 	}
 
-	function setupBookingModal() {
-		var modal = document.querySelector('.js-booking-modal');
-		if (!modal) {
+	function setupCarousel(root) {
+		if (!root) {
 			return;
 		}
 
-		var openers = Array.prototype.slice.call(document.querySelectorAll('.js-booking-open'));
-		var closers = Array.prototype.slice.call(modal.querySelectorAll('.js-booking-close'));
+		var slides = Array.prototype.slice.call(root.querySelectorAll('.moxy-carousel-slide'));
+		var dots = Array.prototype.slice.call(root.querySelectorAll('.moxy-carousel-dot'));
+		var previous = root.querySelector('.js-carousel-prev');
+		var next = root.querySelector('.js-carousel-next');
+		var currentIndex = slides.findIndex(function (slide) {
+			return slide.classList.contains('is-active');
+		});
+		var intervalId;
 
-		function openModal(event) {
-			if (event) {
-				event.preventDefault();
-			}
-
-			modal.classList.add('is-open');
-			document.body.classList.add('moxy-modal-open');
+		if (!slides.length) {
+			return;
 		}
 
-		function closeModal(event) {
-			if (event) {
-				event.preventDefault();
-			}
-
-			modal.classList.remove('is-open');
-			document.body.classList.remove('moxy-modal-open');
+		if (currentIndex < 0) {
+			currentIndex = 0;
 		}
 
-		openers.forEach(function (opener) {
-			opener.addEventListener('click', openModal);
-		});
+		function render() {
+			slides.forEach(function (slide, index) {
+				slide.classList.toggle('is-active', index === currentIndex);
+			});
 
-		closers.forEach(function (closer) {
-			closer.addEventListener('click', closeModal);
-		});
+			dots.forEach(function (dot, index) {
+				dot.classList.toggle('is-active', index === currentIndex);
+			});
+		}
 
-		modal.addEventListener('click', function (event) {
-			if (event.target === modal) {
-				closeModal();
+		function goTo(index) {
+			currentIndex = (index + slides.length) % slides.length;
+			render();
+		}
+
+		function restartAutoPlay() {
+			if (intervalId) {
+				window.clearInterval(intervalId);
 			}
+
+			intervalId = window.setInterval(function () {
+				goTo(currentIndex + 1);
+			}, 6000);
+		}
+
+		if (previous) {
+			previous.addEventListener('click', function (event) {
+				event.preventDefault();
+				goTo(currentIndex - 1);
+				restartAutoPlay();
+			});
+		}
+
+		if (next) {
+			next.addEventListener('click', function (event) {
+				event.preventDefault();
+				goTo(currentIndex + 1);
+				restartAutoPlay();
+			});
+		}
+
+		dots.forEach(function (dot, index) {
+			dot.addEventListener('click', function (event) {
+				event.preventDefault();
+				goTo(index);
+				restartAutoPlay();
+			});
 		});
 
-		document.addEventListener('keydown', function (event) {
-			if (event.key === 'Escape') {
-				closeModal();
-			}
-		});
+		render();
+		restartAutoPlay();
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
-		setupSlider(
-			document.querySelector('.js-moxy-slider'),
-			'.js-moxy-prev',
-			'.js-moxy-next',
-			'.js-moxy-status',
-			'.moxy-hero-slide'
-		);
-
-		setupSlider(
-			document.querySelector('.js-moxy-carousel'),
-			'.js-carousel-prev',
-			'.js-carousel-next',
-			'.js-carousel-status',
-			'.moxy-carousel-slide'
-		);
-
 		setupTabs(document.querySelector('.js-moxy-tabs'));
-		setupBookingModal();
+		setupCarousel(document.querySelector('.js-moxy-carousel'));
 	});
 })();

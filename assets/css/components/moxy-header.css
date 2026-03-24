@@ -1,24 +1,111 @@
+:root {
+  --moxy-header-height: 6.7rem;
+}
+
 .moxy-header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  background: rgba(29, 27, 32, 0.92);
-  backdrop-filter: blur(16px);
-  color: #fff;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  background: #fff;
+  color: #111827;
+  box-shadow: 0 1px 0 rgba(17, 24, 39, 0.08);
+}
+
+body.admin-bar .moxy-header {
+  top: 32px;
+}
+
+.moxy-header__utility {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.moxy-header__utility-inner {
+  gap: 1rem;
+  padding: 0.55rem 0;
+}
+
+.moxy-header__utility-item,
+.moxy-header__utility-divider,
+.moxy-header__utility-brand {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.moxy-header__utility-item {
+  position: relative;
+}
+
+.moxy-header__utility-item--language,
+.moxy-header__utility-item--account {
+  padding-left: 1.1rem;
+}
+
+.moxy-header__utility-item--language::before,
+.moxy-header__utility-item--account::before {
+  content: "";
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  height: 0.65rem;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.65rem;
+}
+
+.moxy-header__utility-item--language {
+  padding-right: 1rem;
+}
+
+.moxy-header__utility-item--language::after {
+  content: "";
+  border-bottom: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  height: 0.35rem;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 0.35rem;
+}
+
+.moxy-header__utility-item--account::before {
+  border-radius: 50% 50% 45% 45%;
+}
+
+.moxy-header__utility-divider {
+  color: #d1d5db;
+}
+
+.moxy-header__utility-brand {
+  color: #1f2937;
 }
 
 .moxy-header__inner {
   gap: 1.5rem;
-  padding: 1rem 0;
+  min-height: 5rem;
 }
 
-.moxy-header__brand {
-  gap: 1rem;
+.moxy-header__brand,
+.moxy-header__actions {
   align-items: center;
 }
 
-.moxy-header__logo img {
-  width: clamp(7rem, 12vw, 9.5rem);
+.moxy-header__logo-mark {
+  display: inline-flex;
+  color: #111827;
+  width: 9.5rem;
+}
+
+.moxy-header__logo-mark svg {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -28,22 +115,64 @@
 }
 
 .moxy-header__nav .wp-block-navigation-item__content {
-  color: #fff;
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.moxy-header__actions {
-  gap: 0.75rem;
+.moxy-header__nav .wp-block-navigation-item__content:hover,
+.moxy-header__utility-item:hover {
+  color: #4b5563;
 }
 
 .moxy-header__cta .wp-block-button__link {
-  border-color: #9e237d;
+  background: #d9006e;
+  border-color: #d9006e;
+  box-shadow: none;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.85rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.moxy-header__cta .wp-block-button__link:hover {
+  background: #b5005b;
+  border-color: #b5005b;
+  color: #fff;
 }
 
 @media (max-width: 900px) {
   .moxy-header__inner {
-    padding: 0.85rem 0;
+    min-height: 4.5rem;
+  }
+
+  .moxy-header__utility-inner {
+    gap: 0.75rem;
+  }
+
+  .moxy-header__nav {
+    flex: 0 1 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --moxy-header-height: 5rem;
+  }
+
+  body.admin-bar .moxy-header {
+    top: 46px;
+  }
+
+  .moxy-header__utility {
+    display: none;
+  }
+
+  .moxy-header__logo-mark {
+    width: 8rem;
   }
 }

@@ -11,18 +11,12 @@
 ?>
 <!-- wp:group {"align":"full","className":"moxy-intro","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull moxy-intro"><!-- wp:group {"align":"wide","className":"moxy-intro__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide moxy-intro__inner"><!-- wp:columns {"verticalAlignment":"center"} -->
-<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%"><!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-xx-large-font-size">Ready for anything.</h2>
-<!-- /wp:heading --></div>
-<!-- /wp:column -->
+<div class="wp-block-group alignwide moxy-intro__inner"><!-- wp:heading {"textAlign":"center","level":2,"className":"moxy-intro__heading","fontSize":"xx-large"} -->
+<h2 class="wp-block-heading has-text-align-center moxy-intro__heading has-xx-large-font-size">Ready for Anything.</h2>
+<!-- /wp:heading -->
 
-<!-- wp:column {"verticalAlignment":"center","width":"58%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:58%"><!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">At Moxy Hotels, we don’t take ourselves too seriously. But we’re seriously into showing you a good time with small but smart rooms, stylish communal spaces, and bars you’ll actually want to linger in.</p>
+<!-- wp:paragraph {"align":"center","className":"moxy-intro__body","fontSize":"medium"} -->
+<p class="has-text-align-center moxy-intro__body has-medium-font-size">At Moxy Hotels, we don't take ourselves too seriously. But we're seriously into showing you a good time with small but smart rooms, stylish communal spaces and bars you'll love.</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

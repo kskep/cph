@@ -10,35 +10,75 @@
  */
 ?>
 <!-- wp:group {"align":"full","anchor":"bonvoy","className":"moxy-bonvoy","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull moxy-bonvoy" id="bonvoy"><!-- wp:columns {"align":"wide","verticalAlignment":"center","className":"moxy-bonvoy__layout"} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-center moxy-bonvoy__layout"><!-- wp:column {"verticalAlignment":"center","width":"54%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:54%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-bonvoy__image"} -->
-<figure class="wp-block-image size-full moxy-bonvoy__image"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/ox-roof-top-fun-hunter-2-38284-classic-hor-scaled.jpg' ) ); ?>" alt="Two fashionable men posing for picture on hotel rooftop"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"verticalAlignment":"center","width":"46%"} -->
-<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:46%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"moxy-bonvoy__logo"} -->
-<figure class="wp-block-image size-full moxy-bonvoy__logo"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/OBOP_logo_area_mobile.png' ) ); ?>" alt="Marriott Bonvoy logo"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-xx-large-font-size">Where Can We Take You?</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Over 30 hotel brands and 10,000 global destinations. Marriott Bonvoy offers a brand for every type of journey, and Moxy is ready when the trip calls for something louder.</p>
+<div class="wp-block-group alignfull moxy-bonvoy" id="bonvoy"><!-- wp:group {"align":"wide","className":"moxy-bonvoy__inner","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide moxy-bonvoy__inner"><!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__eyebrow","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__eyebrow has-xsmall-font-size">Marriott Bonvoy</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"moxy-coral","textColor":"custom-white","className":"ic-btn-external-link"} -->
-<div class="wp-block-button ic-btn-external-link"><a class="wp-block-button__link has-custom-white-color has-moxy-coral-background-color has-text-color has-background wp-element-button" href="https://www.marriott.com/sign-in.mi">Sign In</a></div>
-<!-- /wp:button -->
+<!-- wp:heading {"textAlign":"center","level":2,"className":"moxy-bonvoy__heading","fontSize":"x-large"} -->
+<h2 class="wp-block-heading has-text-align-center moxy-bonvoy__heading has-x-large-font-size">Your lifelong travel partner for every journey</h2>
+<!-- /wp:heading -->
 
-<!-- wp:button {"className":"is-style-outline ic-btn-external-link"} -->
-<div class="wp-block-button is-style-outline ic-btn-external-link"><a class="wp-block-button__link wp-element-button" href="https://www.marriott.com/loyalty/createAccount/createAccountPage1.mi">Join Now</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
+<!-- wp:columns {"className":"moxy-bonvoy__cards"} -->
+<div class="wp-block-columns moxy-bonvoy__cards"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":4,"className":"moxy-bonvoy__card-title","fontSize":"small"} -->
+<h4 class="wp-block-heading has-text-align-center moxy-bonvoy__card-title has-small-font-size">Luxury</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-copy has-xsmall-font-size">Hotels that bring destinations to life with bespoke programming and unparalleled service</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-icons","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-icons has-xsmall-font-size">◼ ◼ ◼</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":4,"className":"moxy-bonvoy__card-title","fontSize":"small"} -->
+<h4 class="wp-block-heading has-text-align-center moxy-bonvoy__card-title has-small-font-size">Premium</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-copy has-xsmall-font-size">Thoughtfully designed hotels with elevated dining, fitness and meeting experiences</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-icons","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-icons has-xsmall-font-size">◼ ◼</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":4,"className":"moxy-bonvoy__card-title","fontSize":"small"} -->
+<h4 class="wp-block-heading has-text-align-center moxy-bonvoy__card-title has-small-font-size">Select</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-copy has-xsmall-font-size">Modern, consistent, and dependable hotels for every kind of stay</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-icons","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-icons has-xsmall-font-size">◼ ◼</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":4,"className":"moxy-bonvoy__card-title","fontSize":"small"} -->
+<h4 class="wp-block-heading has-text-align-center moxy-bonvoy__card-title has-small-font-size">Midscale</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-copy has-xsmall-font-size">Functional lodging focused on the basics done well for easy travel experiences</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-icons","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-icons has-xsmall-font-size">◼</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":4,"className":"moxy-bonvoy__card-title","fontSize":"small"} -->
+<h4 class="wp-block-heading has-text-align-center moxy-bonvoy__card-title has-small-font-size">Longer Stays</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-copy","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-copy has-xsmall-font-size">Spacious studios, apartments, and homes designed for longer stays</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center","className":"moxy-bonvoy__card-icons","fontSize":"xsmall"} -->
+<p class="has-text-align-center moxy-bonvoy__card-icons has-xsmall-font-size">◻</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
