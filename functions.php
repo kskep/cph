@@ -65,6 +65,69 @@ function starter_block_theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'starter_block_theme_enqueue_scripts' );
 
 
+// Removes custom Site Editor template overrides for this theme when requested by an administrator.
+function cph_reset_block_theme_overrides() {
+    if ( empty( $_GET['cph_reset_fse'] ) || ! is_user_logged_in() || ! current_user_can( 'edit_theme_options' ) ) {
+        return;
+    }
+
+    if ( wp_doing_ajax() ) {
+        return;
+    }
+
+    $theme_slug    = get_stylesheet();
+    $deleted_count = 0;
+    $post_types    = array( 'wp_template', 'wp_template_part' );
+
+    foreach ( $post_types as $post_type ) {
+        $post_ids = get_posts(
+            array(
+                'post_type'      => $post_type,
+                'post_status'    => 'any',
+                'numberposts'    => -1,
+                'fields'         => 'ids',
+                'suppress_filters' => false,
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => 'wp_theme',
+                        'field'    => 'slug',
+                        'terms'    => $theme_slug,
+                    ),
+                ),
+            )
+        );
+
+        foreach ( $post_ids as $post_id ) {
+            if ( wp_delete_post( $post_id, true ) ) {
+                $deleted_count++;
+            }
+        }
+    }
+
+    $redirect_url = remove_query_arg( 'cph_reset_fse' );
+    $redirect_url = add_query_arg( 'cph_reset_fse_done', $deleted_count, $redirect_url );
+
+    wp_safe_redirect( $redirect_url );
+    exit;
+}
+add_action( 'init', 'cph_reset_block_theme_overrides' );
+
+
+function cph_render_block_theme_reset_notice() {
+    if ( ! is_admin() || ! current_user_can( 'edit_theme_options' ) || ! isset( $_GET['cph_reset_fse_done'] ) ) {
+        return;
+    }
+
+    $count = absint( $_GET['cph_reset_fse_done'] );
+    ?>
+    <div class="notice notice-success is-dismissible">
+        <p><?php echo esc_html( sprintf( 'CPH Moxy reset complete. Removed %d custom template override(s).', $count ) ); ?></p>
+    </div>
+    <?php
+}
+add_action( 'admin_notices', 'cph_render_block_theme_reset_notice' );
+
+
 // Include CSS Class Manager Info to remind folk to install that plugin
 require_once get_template_directory() . '/inc/css-class-manager-info.php';
 
