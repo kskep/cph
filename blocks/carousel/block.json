@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/carousel",
+  "version": "1.0.0",
+  "title": "CPH Carousel",
+  "category": "design",
+  "icon": "images-alt2",
+  "description": "Locked Moxy carousel section with editable text, image, and link fields only.",
+  "textdomain": "cph",
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Now Playing"
+    },
+    "slides": {
+      "type": "array",
+      "default": [
+        {
+          "eyebrow": "New Places to Stay and Play.",
+          "title": "Moxy Barcelona",
+          "location": "MOXY BARCELONA",
+          "imageUrl": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop",
+          "imageAlt": "Moxy Barcelona",
+          "ctaLabel": "Visit",
+          "ctaUrl": "#"
+        },
+        {
+          "eyebrow": "New Places to Stay and Play.",
+          "title": "Moxy NYC",
+          "location": "MOXY NYC",
+          "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop",
+          "imageAlt": "Moxy NYC",
+          "ctaLabel": "Visit",
+          "ctaUrl": "#"
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/moxy-carousel.css",
+  "render": "file:./render.php"
+}

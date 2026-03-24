@@ -268,3 +268,18 @@ function starter_register_block_pattern_categories() {
     
 }
 add_action( 'init', 'starter_register_block_pattern_categories' );
+
+function cph_register_custom_blocks() {
+    $block_paths = array(
+        get_template_directory() . '/blocks/hero',
+        get_template_directory() . '/blocks/tabs',
+        get_template_directory() . '/blocks/carousel',
+    );
+
+    foreach ( $block_paths as $block_path ) {
+        if ( file_exists( $block_path . '/block.json' ) ) {
+            register_block_type( $block_path );
+        }
+    }
+}
+add_action( 'init', 'cph_register_custom_blocks' );

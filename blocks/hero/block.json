@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/hero",
+  "version": "1.0.0",
+  "title": "CPH Hero",
+  "category": "design",
+  "icon": "cover-image",
+  "description": "Locked Moxy hero section with editable text, image, and link fields only.",
+  "textdomain": "cph",
+  "attributes": {
+    "heroImageUrl": {
+      "type": "string",
+      "default": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1920&h=1080&fit=crop"
+    },
+    "heroImageAlt": {
+      "type": "string",
+      "default": "Moxy hotel exterior"
+    },
+    "taglineLineOne": {
+      "type": "string",
+      "default": "Play On"
+    },
+    "taglineLineTwo": {
+      "type": "string",
+      "default": "#AtTheMoxy"
+    },
+    "brandLabel": {
+      "type": "string",
+      "default": "Moxy Hotels"
+    },
+    "bookingTitle": {
+      "type": "string",
+      "default": "Book\\nYour\\nStay"
+    },
+    "destinationLabel": {
+      "type": "string",
+      "default": "Destination"
+    },
+    "destinationValue": {
+      "type": "string",
+      "default": "Where to?"
+    },
+    "datesLabel": {
+      "type": "string",
+      "default": "Stay Dates"
+    },
+    "checkInValue": {
+      "type": "string",
+      "default": "Tue, Mar 24"
+    },
+    "checkOutValue": {
+      "type": "string",
+      "default": "Wed, Mar 25"
+    },
+    "ctaLabel": {
+      "type": "string",
+      "default": "Hotel Search"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/moxy-hero.css",
+  "render": "file:./render.php"
+}
