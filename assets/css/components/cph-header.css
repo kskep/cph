@@ -166,10 +166,10 @@ body.admin-bar .cph-header {
 }
 
 .cph-header__cta .wp-block-button__link {
-  background: #d9006e;
-  border-color: #d9006e;
+  background: var(--wp--preset--color--cph-coral);
+  border-color: var(--wp--preset--color--cph-coral);
   box-shadow: none;
-  color: #fff;
+  color: var(--wp--preset--color--custom-off-black);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -178,9 +178,9 @@ body.admin-bar .cph-header {
 }
 
 .cph-header__cta .wp-block-button__link:hover {
-  background: #b5005b;
-  border-color: #b5005b;
-  color: #fff;
+  background: var(--wp--preset--color--cph-coral-dark);
+  border-color: var(--wp--preset--color--cph-coral-dark);
+  color: var(--wp--preset--color--custom-off-black);
 }
 
 /* ─────────────────────────────────────────

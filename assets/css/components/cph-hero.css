@@ -49,7 +49,7 @@
 }
 
 .cph-hero__divider {
-  background: #d9006e;
+  background: var(--wp--preset--color--cph-coral);
   border: 0;
   height: 0.25rem;
   margin: 1rem auto 0.75rem;
@@ -79,7 +79,7 @@
 }
 
 .cph-booking-bar__title-box {
-  background: #111111;
+  background: var(--wp--preset--color--custom-off-black);
   color: #fff;
   display: flex;
   align-items: center;
@@ -98,13 +98,13 @@
 }
 
 .cph-booking-bar__field {
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--wp--preset--color--custom-grey);
   min-height: 5.125rem;
   padding: 0.85rem 1rem;
 }
 
 .cph-booking-bar__label {
-  color: #111827;
+  color: var(--wp--preset--color--cph-ink);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -113,7 +113,7 @@
 }
 
 .cph-booking-bar__value {
-  color: #111827;
+  color: var(--wp--preset--color--cph-ink);
   font-size: 0.875rem;
   margin: 0;
 }
@@ -126,7 +126,7 @@
 }
 
 .cph-booking-bar__dash {
-  color: #9ca3af;
+  color: var(--wp--preset--color--custom-mid-grey);
 }
 
 .cph-booking-bar__cta,
@@ -136,9 +136,9 @@
 
 .cph-booking-bar__cta .wp-block-button__link {
   align-items: center;
-  background: #d9006e;
-  border-color: #d9006e;
-  color: #fff;
+  background: var(--wp--preset--color--cph-coral);
+  border-color: var(--wp--preset--color--cph-coral);
+  color: var(--wp--preset--color--custom-off-black);
   display: inline-flex;
   font-size: 0.875rem;
   font-weight: 700;
@@ -151,9 +151,9 @@
 }
 
 .cph-booking-bar__cta .wp-block-button__link:hover {
-  background: #b5005b;
-  border-color: #b5005b;
-  color: #fff;
+  background: var(--wp--preset--color--cph-coral-dark);
+  border-color: var(--wp--preset--color--cph-coral-dark);
+  color: var(--wp--preset--color--custom-off-black);
 }
 
 @media (max-width: 1024px) {

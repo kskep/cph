@@ -9,7 +9,7 @@
 }
 
 .is-style-text-btn .wp-block-button__link {
-  border-bottom: 1px solid #444 !important;
+  border-bottom: 1px solid var(--wp--preset--color--custom-deep-grey) !important;
   padding-left: 0;
   padding-right: 0;
   border-radius: 0;

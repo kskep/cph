@@ -35,7 +35,7 @@
 <h4 class="wp-block-heading cph-footer__heading has-xsmall-font-size">Stay Connected</h4>
 <!-- /wp:heading -->
 
-<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only cph-footer__socials"} -->
+<!-- wp:social-links {"iconColor":"custom-off-black","iconColorValue":"#161717","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only cph-footer__socials"} -->
 <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only cph-footer__socials"><!-- wp:social-link {"url":"https://www.instagram.com/citiplushotels/","service":"instagram"} /-->
 <!-- wp:social-link {"url":"https://www.facebook.com/citiplushotels","service":"facebook"} /-->
 <!-- wp:social-link {"url":"https://www.youtube.com/","service":"youtube"} /--></ul>

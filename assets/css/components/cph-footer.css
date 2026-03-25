@@ -1,6 +1,6 @@
 .cph-footer {
-  background: #d9006e;
-  color: #fff;
+  background: var(--wp--preset--color--cph-coral);
+  color: var(--wp--preset--color--custom-off-black);
   padding: 4rem 0 2rem;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .cph-footer__nav .wp-block-navigation-item__content {
-  color: #fff;
+  color: var(--wp--preset--color--custom-off-black);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -38,7 +38,7 @@
 }
 
 .cph-footer__socials .wp-social-link {
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(22, 23, 23, 0.35);
   height: 2rem;
   width: 2rem;
 }
@@ -48,7 +48,7 @@
 }
 
 .cph-footer__socials .wp-social-link:hover a {
-  color: #d9006e;
+  color: var(--wp--preset--color--custom-off-black);
 }
 
 .cph-footer__promo-box {
@@ -65,8 +65,9 @@
 
 .cph-footer__welcome-card {
   align-items: center;
-  background: #1f2937;
+  background: var(--wp--preset--color--cph-charcoal);
   border: 2px solid #fff;
+  color: #fff;
   display: flex;
   font-size: 0.75rem;
   font-weight: 700;
@@ -88,7 +89,7 @@
 }
 
 .cph-footer__promo-button .wp-block-button__link {
-  background: #111111;
+  background: var(--wp--preset--color--custom-off-black);
   color: #ffffff;
   border: 0;
   font-size: 0.75rem;
@@ -109,8 +110,8 @@
 }
 
 .cph-footer__legal-strip {
-  background: #f3f4f6;
-  color: #6b7280;
+  background: var(--wp--preset--color--custom-light-gray);
+  color: var(--wp--preset--color--custom-deep-grey);
   padding: 1rem 0;
 }
 
@@ -122,8 +123,8 @@
 
 .cph-bonvoy {
   background: #fff;
-  border-top: 1px solid #e5e7eb;
-  color: #111827;
+  border-top: 1px solid var(--wp--preset--color--custom-grey);
+  color: var(--wp--preset--color--cph-ink);
   padding: 3rem 0;
 }
 
@@ -149,13 +150,13 @@
 }
 
 .cph-bonvoy__card-copy {
-  color: #6b7280;
+  color: var(--wp--preset--color--custom-deep-grey);
   line-height: 1.5;
   margin: 0 0 1rem;
 }
 
 .cph-bonvoy__card-icons {
-  color: #9ca3af;
+  color: var(--wp--preset--color--custom-mid-grey);
   letter-spacing: 0.25em;
   margin: 0;
 }

@@ -39,8 +39,8 @@
 <!-- /wp:navigation -->
 
 <!-- wp:buttons {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"cph-coral","textColor":"custom-white","className":"cph-header__cta js-booking-open"} -->
-<div class="wp-block-button cph-header__cta js-booking-open"><a class="wp-block-button__link has-custom-white-color has-cph-coral-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Get a Room</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"cph-coral","textColor":"custom-off-black","className":"cph-header__cta js-booking-open"} -->
+<div class="wp-block-button cph-header__cta js-booking-open"><a class="wp-block-button__link has-custom-off-black-color has-cph-coral-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Get a Room</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

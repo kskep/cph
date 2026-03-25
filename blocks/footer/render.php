@@ -87,7 +87,7 @@ $fallback_two = array(
                 <h4 class="cph-footer__heading"><?php echo $social_heading; ?></h4>
                 <?php
                 echo do_blocks(
-                    '<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only cph-footer__socials"} -->
+                    '<!-- wp:social-links {"iconColor":"custom-off-black","iconColorValue":"#161717","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only cph-footer__socials"} -->
                     <!-- wp:social-link {"url":"https://www.instagram.com/citiplushotels/","service":"instagram"} /-->
                     <!-- wp:social-link {"url":"https://www.facebook.com/citiplushotels","service":"facebook"} /-->
                     <!-- wp:social-link {"url":"https://www.youtube.com/","service":"youtube"} /-->

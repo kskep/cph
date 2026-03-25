@@ -19,13 +19,18 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"color": "#D9006E",
-					"name": "CPH Magenta",
+					"color": "#F9C740",
+					"name": "CPH Accent",
 					"slug": "cph-coral"
 				},
 				{
-					"color": "#ffe285",
-					"name": "CPH Butter",
+					"color": "#D9AB2F",
+					"name": "CPH Accent Dark",
+					"slug": "cph-coral-dark"
+				},
+				{
+					"color": "#FCE8A1",
+					"name": "CPH Accent Light",
 					"slug": "cph-butter"
 				},
 				{
@@ -34,12 +39,12 @@
 					"slug": "cph-cream"
 				},
 				{
-					"color": "#111827",
+					"color": "#1F2223",
 					"name": "CPH Ink",
 					"slug": "cph-ink"
 				},
 				{
-					"color": "#111111",
+					"color": "#161717",
 					"name": "CPH Charcoal",
 					"slug": "cph-charcoal"
 				},
@@ -49,27 +54,27 @@
 					"slug": "custom-white"
 				},
 				{
-					"color": "#222222",
+					"color": "#161717",
 					"name": "Off Black",
 					"slug": "custom-off-black"
 				},
 				{
-					"color": "#666666",
+					"color": "#5F6466",
 					"name": "Deep Grey",
 					"slug": "custom-deep-grey"
 				},
 				{
-					"color": "#888888",
+					"color": "#8E9496",
 					"name": "Mid Grey",
 					"slug": "custom-mid-grey"
 				},
 				{
-					"color": "#d3d3d3",
+					"color": "#D8DDDF",
 					"name": "Grey",
 					"slug": "custom-grey"
 				},
 				{
-					"color": "#f4f4f4",
+					"color": "#F2F4F5",
 					"name": "Light Gray",
 					"slug": "custom-light-gray"
 				},
@@ -248,7 +253,7 @@
 	},
 	"styles": {
 		"color": {
-			"background": "#ffffff",
+			"background": "var(--wp--preset--color--custom-white)",
 			"text": "var(--wp--preset--color--cph-ink)"
 		},
 		"typography": {
@@ -267,13 +272,13 @@
 			"core/button": {
 				"border": {
 					"bottom": {
-						"color": "#222222",
+						"color": "var(--wp--preset--color--custom-off-black)",
 						"style": "solid",
 						"width": "2px"
 					},
 					"color": null,
 					"left": {
-						"color": "#222222",
+						"color": "var(--wp--preset--color--custom-off-black)",
 						"style": "solid",
 						"width": "2px"
 					},
@@ -284,13 +289,13 @@
 						"topRight": "10px"
 					},
 					"right": {
-						"color": "#222222",
+						"color": "var(--wp--preset--color--custom-off-black)",
 						"style": "solid",
 						"width": "2px"
 					},
 					"style": null,
 					"top": {
-						"color": "#222222",
+						"color": "var(--wp--preset--color--custom-off-black)",
 						"style": "solid",
 						"width": "2px"
 					},
@@ -653,12 +658,12 @@
 			"link": {
 				":active": {
 					"color": {
-						"text": "var(--wp--preset--color--off-black)"
+						"text": "var(--wp--preset--color--custom-off-black)"
 					}
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--preset--color--off-black)"
+						"text": "var(--wp--preset--color--custom-off-black)"
 					}
 				},
 				":hover": {

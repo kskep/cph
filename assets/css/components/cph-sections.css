@@ -33,7 +33,7 @@
 }
 
 .cph-intro__body {
-  color: #4b5563;
+  color: var(--wp--preset--color--custom-deep-grey);
   line-height: 1.7;
   margin: 0 auto;
   max-width: 42rem;
@@ -48,9 +48,9 @@
 }
 
 .cph-see-all__cta .wp-block-button__link {
-  background: #d9006e;
-  border-color: #d9006e;
-  color: #fff;
+  background: var(--wp--preset--color--cph-coral);
+  border-color: var(--wp--preset--color--cph-coral);
+  color: var(--wp--preset--color--custom-off-black);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -59,7 +59,7 @@
 }
 
 .cph-destinations {
-  background: #f9fafb;
+  background: var(--wp--preset--color--custom-light-gray);
   padding: 4rem 0;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .cph-destinations__content-column {
-  background: #111827;
+  background: var(--wp--preset--color--cph-ink);
 }
 
 .cph-destinations__content {
@@ -129,7 +129,7 @@
 }
 
 .cph-destinations__link--accent .wp-block-button__link {
-  color: #d9006e;
+  color: var(--wp--preset--color--cph-coral);
 }
 
 @media (max-width: 782px) {
