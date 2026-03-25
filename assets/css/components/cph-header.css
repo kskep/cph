@@ -35,7 +35,7 @@ body.admin-bar .cph-header {
 }
 
 .cph-header__utility {
-  border-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cph-header__utility-inner {
@@ -43,7 +43,7 @@ body.admin-bar .cph-header {
   justify-content: flex-end;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.75rem 0 0.45rem;
+  padding: 0.75rem 2rem 0.45rem;
   position: relative;
   z-index: 1;
 }
@@ -107,6 +107,7 @@ body.admin-bar .cph-header {
   flex-wrap: nowrap;
   gap: 1.5rem;
   min-height: 5rem;
+  padding: 0 2rem;
   position: relative;
   z-index: 1;
 }
@@ -120,7 +121,7 @@ body.admin-bar .cph-header {
 .cph-header__logo-mark {
   display: inline-flex;
   color: #fff;
-  width: 9.5rem;
+  width: 13rem;
 }
 
 .cph-header__logo-mark svg {
@@ -133,13 +134,14 @@ body.admin-bar .cph-header {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 2.2rem;
+  max-height: 3rem;
   object-fit: contain;
 }
 
 .cph-header__nav {
-  flex: 1 1 auto;
-  justify-content: center;
+  flex: 0 1 auto;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 .cph-header__nav .wp-block-navigation-item__content {
