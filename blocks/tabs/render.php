@@ -55,7 +55,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 );
 ?>
 <section <?php echo $wrapper_attributes; ?> id="how-we-play">
-    <div class="cph-tabs-section__inner alignwide">
+    <div class="cph-tabs-section__inner alignwide cph-container">
         <div class="cph-section-label">
             <h2 class="cph-section-label__heading"><?php echo esc_html( $section_title ); ?></h2>
         </div>

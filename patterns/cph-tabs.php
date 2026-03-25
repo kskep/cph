@@ -11,7 +11,7 @@
 ?>
 <!-- wp:group {"align":"full","anchor":"how-we-play","className":"cph-tabs-section js-cph-tabs","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull cph-tabs-section js-cph-tabs" id="how-we-play"><!-- wp:group {"align":"wide","className":"cph-tabs-section__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide cph-tabs-section__inner"><!-- wp:group {"className":"cph-section-label","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide cph-tabs-section__inner cph-container"><!-- wp:group {"className":"cph-section-label","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-section-label"><!-- wp:heading {"level":2,"className":"cph-section-label__heading","fontSize":"large"} -->
 <h2 class="wp-block-heading cph-section-label__heading has-large-font-size">How We Play</h2>
 <!-- /wp:heading --></div>

@@ -12,16 +12,7 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"cph-header","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-header"><!-- wp:group {"align":"full","className":"cph-header__utility","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-header__utility"><!-- wp:group {"align":"wide","className":"cph-header__utility-inner","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group alignwide cph-header__utility-inner"><!-- wp:paragraph {"className":"cph-header__utility-item cph-header__utility-item--language","fontSize":"xsmall"} -->
-<p class="cph-header__utility-item cph-header__utility-item--language has-xsmall-font-size">English</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"align":"wide","className":"cph-header__inner","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
-<div class="wp-block-group alignwide cph-header__inner"><!-- wp:group {"className":"cph-header__brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group alignfull cph-header"><!-- wp:group {"className":"cph-header__brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group cph-header__brand"><!-- wp:html -->
 <a class="cph-header__logo-mark" href="/" aria-label="CPH Hotels home">
 <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -33,14 +24,21 @@
 <!-- /wp:html --></div>
 <!-- /wp:group -->
 
-<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","className":"cph-header__nav","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1.25rem"}}} -->
+<!-- wp:group {"className":"cph-header__right","layout":{"type":"default"}} -->
+<div class="wp-block-group cph-header__right"><!-- wp:group {"className":"cph-header__utility","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group cph-header__utility"><!-- wp:paragraph {"className":"cph-header__utility-item cph-header__utility-item--language","fontSize":"xsmall"} -->
+<p class="cph-header__utility-item cph-header__utility-item--language has-xsmall-font-size">English</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"cph-header__main","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group cph-header__main"><!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","className":"cph-header__nav","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"1.25rem"}}} -->
 <!-- wp:navigation-link {"label":"Places to Stay","url":"#book-your-stay","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Explore CPH","url":"#how-we-play","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Offers","url":"#bonvoy","kind":"custom"} /-->
 <!-- /wp:navigation -->
 
-<!-- wp:group {"className":"cph-header__actions","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-<div class="wp-block-group cph-header__actions"><!-- wp:buttons {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:buttons {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"cph-coral","textColor":"custom-white","className":"cph-header__cta js-booking-open"} -->
 <div class="wp-block-button cph-header__cta js-booking-open"><a class="wp-block-button__link has-custom-white-color has-cph-coral-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Get a Room</a></div>
 <!-- /wp:button --></div>

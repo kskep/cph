@@ -17,6 +17,7 @@ Tags: Block editor patterns, Block editor styles, Block themes, Template editing
 body {
   --wp--style--global--content-size: 1280px;
   --wp--style--global--wide-size: 1440px;
+  --cph-container-max: 1200px;
 }
 
 html {
@@ -157,6 +158,13 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
   width: min(1200px, calc(100% - 2rem));
 }
 
+.cph-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(var(--cph-container-max), calc(100% - 2rem));
+  width: min(var(--cph-container-max), calc(100% - 2rem));
+}
+
 .site-header .alignwide,
 .site-footer .alignwide {
   margin-left: auto;
@@ -169,6 +177,11 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
   .cph-front-page .alignwide {
     width: min(1200px, calc(100% - 4rem));
     max-width: min(1200px, calc(100% - 4rem));
+  }
+
+  .cph-container {
+    width: min(var(--cph-container-max), calc(100% - 4rem));
+    max-width: min(var(--cph-container-max), calc(100% - 4rem));
   }
 
   .site-header .alignwide,
