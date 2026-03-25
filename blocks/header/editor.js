@@ -89,21 +89,27 @@
                     )
                 ),
                 el('header', { className: 'cph-header js-cph-header', style: { position: 'relative' } },
-                    el('div', { className: 'cph-header__utility' },
-                        el('div', { className: 'cph-header__utility-inner' },
-                            el('p', { className: 'cph-header__utility-item cph-header__utility-item--language' }, attributes.languageLabel || ''),
-                            el('p', { className: 'cph-header__utility-item' }, attributes.emailLabel || '')
-                        )
-                    ),
                     el('div', { className: 'cph-header__inner' },
                         el('div', { className: 'cph-header__brand' },
                             attributes.logoUrl
-                                ? el('img', { src: attributes.logoUrl, alt: attributes.logoAlt || '', style: { width: '160px', height: 'auto' } })
-                                : el('strong', {}, 'CPH')
+                                ? el('a', { className: 'cph-header__logo-mark cph-header__logo-mark--image', href: '#' },
+                                    el('img', { src: attributes.logoUrl, alt: attributes.logoAlt || '', style: { width: '100%', height: 'auto' } })
+                                )
+                                : el('a', { className: 'cph-header__logo-mark', href: '#' }, el('strong', {}, 'CPH'))
                         ),
-                        el('div', { className: 'cph-header__nav' }, 'Selected menu renders on frontend.'),
-                        el('div', { className: 'cph-header__actions' },
-                            el('span', { className: 'wp-block-button__link wp-element-button' }, attributes.ctaLabel || '')
+                        el('div', { className: 'cph-header__right' },
+                            el('div', { className: 'cph-header__utility' },
+                                el('div', { className: 'cph-header__utility-inner' },
+                                    el('p', { className: 'cph-header__utility-item cph-header__utility-item--language' }, attributes.languageLabel || ''),
+                                    el('p', { className: 'cph-header__utility-item cph-header__utility-item--email' }, attributes.emailLabel || '')
+                                )
+                            ),
+                            el('div', { className: 'cph-header__main' },
+                                el('div', { className: 'cph-header__nav' }, 'Selected menu renders on frontend.'),
+                                el('div', { className: 'cph-header__actions' },
+                                    el('span', { className: 'wp-block-button__link wp-element-button' }, attributes.ctaLabel || '')
+                                )
+                            )
                         )
                     )
                 )

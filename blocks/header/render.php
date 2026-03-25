@@ -43,12 +43,6 @@ if ( $has_navigation_ref ) {
 }
 ?>
 <header <?php echo $wrapper_attributes; ?>>
-    <div class="cph-header__utility">
-        <div class="cph-header__utility-inner alignwide">
-            <p class="cph-header__utility-item cph-header__utility-item--language"><?php echo $language_label; ?></p>
-            <p class="cph-header__utility-item cph-header__utility-item--email"><a href="<?php echo $email_url; ?>"><?php echo $email_label; ?></a></p>
-        </div>
-    </div>
     <div class="cph-header__inner alignwide">
         <div class="cph-header__brand">
             <?php if ( $logo_url ) : ?>
@@ -65,10 +59,20 @@ if ( $has_navigation_ref ) {
                 </a>
             <?php endif; ?>
         </div>
-        <?php echo $navigation_markup; ?>
-        <div class="cph-header__actions">
-            <div class="wp-block-button cph-header__cta js-booking-open">
-                <a class="wp-block-button__link wp-element-button" href="<?php echo $cta_url; ?>"><?php echo $cta_label; ?></a>
+        <div class="cph-header__right">
+            <div class="cph-header__utility">
+                <div class="cph-header__utility-inner">
+                    <p class="cph-header__utility-item cph-header__utility-item--language"><?php echo $language_label; ?></p>
+                    <p class="cph-header__utility-item cph-header__utility-item--email"><a href="<?php echo $email_url; ?>"><?php echo $email_label; ?></a></p>
+                </div>
+            </div>
+            <div class="cph-header__main">
+                <?php echo $navigation_markup; ?>
+                <div class="cph-header__actions">
+                    <div class="wp-block-button cph-header__cta js-booking-open">
+                        <a class="wp-block-button__link wp-element-button" href="<?php echo $cta_url; ?>"><?php echo $cta_label; ?></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

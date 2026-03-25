@@ -13,13 +13,7 @@
   color: #fff;
   box-shadow: none;
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
-  /* Two-column flex */
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: stretch !important;
   min-height: var(--cph-header-height);
-  padding: 0 2.5rem;
 }
 
 .cph-header.is-scrolled {
@@ -51,7 +45,6 @@ body.admin-bar .cph-header {
   display: flex !important;
   align-items: center !important;
   flex-shrink: 0;
-  padding-right: 2.5rem;
   position: relative;
   z-index: 1;
 }
@@ -83,19 +76,34 @@ body.admin-bar .cph-header {
   flex: 1 1 auto;
   display: flex !important;
   flex-direction: column !important;
+  justify-content: center;
   position: relative;
   z-index: 1;
 }
 
+.cph-header__inner {
+  display: grid !important;
+  grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr);
+  align-items: stretch !important;
+  column-gap: 2.5rem;
+  min-height: var(--cph-header-height);
+}
+
 /* Row 1 — Language / utility */
 .cph-header__utility {
-  flex: 1 1 50%;
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
-  gap: 0.8rem;
+  min-height: calc(var(--cph-header-height) / 2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding-left: 1.5rem;
+}
+
+.cph-header__utility-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  width: 100%;
 }
 
 .cph-header__utility-item {
@@ -141,16 +149,21 @@ body.admin-bar .cph-header {
 
 /* Row 2 — Nav + CTA */
 .cph-header__main {
-  flex: 1 1 50%;
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
   gap: 1.5rem;
-  padding-left: 1.5rem;
+  min-height: calc(var(--cph-header-height) / 2);
 }
 
 .cph-header__nav {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cph-header__actions {
+  flex: 0 0 auto;
 }
 
 .cph-header__nav .wp-block-navigation-item__content {
@@ -187,16 +200,13 @@ body.admin-bar .cph-header {
    Responsive
 ───────────────────────────────────────── */
 @media (max-width: 900px) {
-  .cph-header {
-    padding: 0 1.5rem;
-  }
-
   .cph-header__logo-mark {
     width: 10rem;
   }
 
-  .cph-header__brand {
-    padding-right: 1.5rem;
+  .cph-header__inner {
+    column-gap: 1.5rem;
+    grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
   }
 }
 
@@ -209,12 +219,9 @@ body.admin-bar .cph-header {
     top: 46px;
   }
 
-  .cph-header {
-    padding: 0 1rem;
-  }
-
   .cph-header__utility {
     display: none !important;
+    border-bottom: none;
   }
 
   .cph-header__logo-mark {
@@ -225,8 +232,13 @@ body.admin-bar .cph-header {
     justify-content: center;
   }
 
+  .cph-header__inner {
+    column-gap: 1rem;
+    grid-template-columns: minmax(7rem, 8rem) minmax(0, 1fr);
+    align-items: center !important;
+  }
+
   .cph-header__main {
-    flex: 1;
-    border-bottom: none;
+    min-height: var(--cph-header-height);
   }
 }

@@ -12,7 +12,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"cph-header","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-header"><!-- wp:group {"className":"cph-header__brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+<div class="wp-block-group alignfull cph-header"><!-- wp:group {"align":"wide","className":"cph-header__inner","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide cph-header__inner"><!-- wp:group {"className":"cph-header__brand","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group cph-header__brand"><!-- wp:html -->
 <a class="cph-header__logo-mark" href="/" aria-label="CPH Hotels home">
 <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -25,10 +26,12 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"cph-header__right","layout":{"type":"default"}} -->
-<div class="wp-block-group cph-header__right"><!-- wp:group {"className":"cph-header__utility","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
-<div class="wp-block-group cph-header__utility"><!-- wp:paragraph {"className":"cph-header__utility-item cph-header__utility-item--language","fontSize":"xsmall"} -->
+<div class="wp-block-group cph-header__right"><!-- wp:group {"className":"cph-header__utility","layout":{"type":"default"}} -->
+<div class="wp-block-group cph-header__utility"><!-- wp:group {"className":"cph-header__utility-inner","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group cph-header__utility-inner"><!-- wp:paragraph {"className":"cph-header__utility-item cph-header__utility-item--language","fontSize":"xsmall"} -->
 <p class="cph-header__utility-item cph-header__utility-item--language has-xsmall-font-size">English</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"cph-header__main","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
@@ -43,6 +46,7 @@
 <div class="wp-block-button cph-header__cta js-booking-open"><a class="wp-block-button__link has-custom-off-black-color has-cph-coral-background-color has-text-color has-background wp-element-button" href="#book-your-stay">Get a Room</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
