@@ -14,9 +14,9 @@
         {
             tabLabel: 'Check in at the Bar',
             title: 'Check in at the Bar',
-            copy: 'Forget the front desk. Moxy instantly eases you into a playful stay with a cocktail (or mocktail) to go along with your room key when you check in at the bar. We\'re accommodating like that.',
+            copy: 'Forget the front desk. CPH instantly eases you into a playful stay with a cocktail (or mocktail) to go along with your room key when you check in at the bar. We\'re accommodating like that.',
             imageUrl: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=1000&fit=crop',
-            imageAlt: 'Cocktail at the Moxy bar',
+            imageAlt: 'Cocktail at the CPH bar',
             ctaLabel: 'Details',
             ctaUrl: '#'
         },
@@ -25,7 +25,7 @@
             title: 'Your Room',
             copy: 'Our rooms are smartly designed for the way you actually travel. With modular furniture, furiously fast Wi-Fi, and plush bedding that\'ll make you hit snooze at least five times.',
             imageUrl: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=1000&fit=crop',
-            imageAlt: 'Modern Moxy guest room',
+            imageAlt: 'Modern CPH guest room',
             ctaLabel: 'Details',
             ctaUrl: '#'
         },
@@ -34,7 +34,7 @@
             title: 'Not Your Average Lobby',
             copy: 'Our lobbies are designed for socializing. Think chic seating, games, and an atmosphere that makes you want to linger longer and meet someone new.',
             imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1000&fit=crop',
-            imageAlt: 'Moxy lobby',
+            imageAlt: 'CPH lobby',
             ctaLabel: 'Details',
             ctaUrl: '#'
         },
@@ -43,7 +43,7 @@
             title: '24/7 Beverages & Bites',
             copy: 'Hungry at midnight? Thirsty at dawn? Our grab-and-go options and bar service keep you fueled around the clock, because hunger does not check the time.',
             imageUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&h=1000&fit=crop',
-            imageAlt: 'Moxy beverages and bites',
+            imageAlt: 'CPH beverages and bites',
             ctaLabel: 'Details',
             ctaUrl: '#'
         }
@@ -131,22 +131,22 @@
                         );
                     })
                 ),
-                el('section', { className: 'moxy-tabs-section' },
-                    el('div', { className: 'moxy-section-label' },
-                        el('h2', { className: 'moxy-section-label__heading' }, attributes.sectionTitle || '')
+                el('section', { className: 'cph-tabs-section' },
+                    el('div', { className: 'cph-section-label' },
+                        el('h2', { className: 'cph-section-label__heading' }, attributes.sectionTitle || '')
                     ),
-                    el('div', { className: 'moxy-tabs__buttons' },
+                    el('div', { className: 'cph-tabs__buttons' },
                         tabs.map(function (tab, index) {
-                            return el('div', { className: 'wp-block-button moxy-tab-trigger' + (index === 0 ? ' is-active' : ''), key: index },
+                            return el('div', { className: 'wp-block-button cph-tab-trigger' + (index === 0 ? ' is-active' : ''), key: index },
                                 el('span', { className: 'wp-block-button__link wp-element-button' }, tab.tabLabel || '')
                             );
                         })
                     ),
-                    el('div', { className: 'moxy-tabs__panels' },
-                        tabs.length ? el('div', { className: 'moxy-tab-panel is-active' },
-                            el('div', { className: 'moxy-tab-panel__content' },
-                                el('h3', { className: 'moxy-tab-panel__title' }, tabs[0].title || ''),
-                                el('p', { className: 'moxy-tab-panel__copy' }, tabs[0].copy || ''),
+                    el('div', { className: 'cph-tabs__panels' },
+                        tabs.length ? el('div', { className: 'cph-tab-panel is-active' },
+                            el('div', { className: 'cph-tab-panel__content' },
+                                el('h3', { className: 'cph-tab-panel__title' }, tabs[0].title || ''),
+                                el('p', { className: 'cph-tab-panel__copy' }, tabs[0].copy || ''),
                                 el('span', { className: 'wp-block-button__link wp-element-button' }, tabs[0].ctaLabel || '')
                             )
                         ) : null

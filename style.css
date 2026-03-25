@@ -1,9 +1,9 @@
 /*
-Theme Name: CPH Moxy
+Theme Name: CPH CPH
 Theme URI:
 Author: Konstantinos
 Author URI:
-Description: Moxy front-page block theme rebuilt from the supplied reference HTML.
+Description: CPH front-page block theme rebuilt from the supplied reference HTML.
 Requires at least: 6.8
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -15,8 +15,8 @@ Tags: Block editor patterns, Block editor styles, Block themes, Template editing
 
 /*  Smooth Scroll */
 body {
-  --wp--style--global--content-size: 1440px;
-  --wp--style--global--wide-size: 1600px;
+  --wp--style--global--content-size: 1280px;
+  --wp--style--global--wide-size: 1440px;
 }
 
 html {
@@ -137,20 +137,20 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
 }
 
 /* Front-page modules should not inherit the default constrained group width. */
-.moxy-front-page .moxy-tabs__panels,
-.moxy-front-page .moxy-carousel-frame,
-.moxy-front-page .moxy-carousel-slides,
-.moxy-front-page .moxy-booking-bar__inner,
-.moxy-front-page .moxy-destinations__content,
-.moxy-front-page .moxy-bonvoy__inner,
-.site-header .moxy-header__inner,
-.site-header .moxy-header__utility-inner,
-.site-footer .moxy-footer__inner {
+.cph-front-page .cph-tabs__panels,
+.cph-front-page .cph-carousel-frame,
+.cph-front-page .cph-carousel-slides,
+.cph-front-page .cph-booking-bar__inner,
+.cph-front-page .cph-destinations__content,
+.cph-front-page .cph-bonvoy__inner,
+.site-header .cph-header__inner,
+.site-header .cph-header__utility-inner,
+.site-footer .cph-footer__inner {
   max-width: none;
   width: 100%;
 }
 
-.moxy-front-page .alignwide,
+.cph-front-page .alignwide,
 .site-header .alignwide,
 .site-footer .alignwide {
   margin-left: auto;
@@ -160,7 +160,7 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
 }
 
 @media (min-width: 782px) {
-  .moxy-front-page .alignwide,
+  .cph-front-page .alignwide,
   .site-header .alignwide,
   .site-footer .alignwide {
     width: min(1600px, calc(100% - 4rem));

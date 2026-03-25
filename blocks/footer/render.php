@@ -21,14 +21,14 @@ $legal_copy         = esc_html( $attrs['legalCopy'] );
 
 $wrapper_attributes = get_block_wrapper_attributes(
     array(
-        'class' => 'moxy-footer alignfull',
+        'class' => 'cph-footer alignfull',
     )
 );
 
 $footer_nav_markup = static function( $ref, $fallback_links ) {
     if ( $ref > 0 && get_post_type( $ref ) === 'wp_navigation' ) {
         return do_blocks(
-            '<!-- wp:navigation {"ref":' . (int) $ref . ',"overlayMenu":"never","className":"moxy-footer__nav","layout":{"type":"flex","orientation":"vertical"}} /-->'
+            '<!-- wp:navigation {"ref":' . (int) $ref . ',"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} /-->'
         );
     }
 
@@ -38,7 +38,7 @@ $footer_nav_markup = static function( $ref, $fallback_links ) {
     }
 
     return do_blocks(
-        '<!-- wp:navigation {"overlayMenu":"never","className":"moxy-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->' .
+        '<!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->' .
         $items .
         '<!-- /wp:navigation -->'
     );
@@ -51,7 +51,7 @@ $fallback_one = array(
     ),
     array(
         'label' => 'Hotel Development',
-        'url'   => 'https://hotel-development.marriott.com/brands/moxy-hotels/',
+        'url'   => 'https://hotel-development.marriott.com/brands/cph-hotels/',
     ),
     array(
         'label' => 'Terms of Use',
@@ -62,11 +62,11 @@ $fallback_one = array(
 $fallback_two = array(
     array(
         'label' => 'Jobs',
-        'url'   => 'https://jobs.marriott.com/marriott/jobs?page=1&brand=Moxy+Hotels',
+        'url'   => 'https://jobs.marriott.com/marriott/jobs?page=1&brand=CPH+Hotels',
     ),
     array(
-        'label' => 'About Moxy Guestbook',
-        'url'   => 'https://www.instagram.com/moxyhotels/',
+        'label' => 'About CPH Guestbook',
+        'url'   => 'https://www.instagram.com/citiplushotels/',
     ),
     array(
         'label' => 'Privacy Statement',
@@ -75,46 +75,31 @@ $fallback_two = array(
 );
 ?>
 <footer <?php echo $wrapper_attributes; ?>>
-    <div class="moxy-footer__inner alignwide">
-        <div class="wp-block-columns are-vertically-aligned-top moxy-footer__columns">
-            <div class="wp-block-column is-vertically-aligned-top moxy-footer__menu-column" style="flex-basis:18%">
+    <div class="cph-footer__inner alignwide">
+        <div class="wp-block-columns are-vertically-aligned-top cph-footer__columns">
+            <div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:18%">
                 <?php echo $footer_nav_markup( $menu_one_ref, $fallback_one ); ?>
             </div>
-            <div class="wp-block-column is-vertically-aligned-top moxy-footer__menu-column" style="flex-basis:18%">
+            <div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:18%">
                 <?php echo $footer_nav_markup( $menu_two_ref, $fallback_two ); ?>
             </div>
-            <div class="wp-block-column is-vertically-aligned-top moxy-footer__social-column" style="flex-basis:18%">
-                <h4 class="moxy-footer__heading"><?php echo $social_heading; ?></h4>
+            <div class="wp-block-column is-vertically-aligned-top cph-footer__social-column" style="flex-basis:18%">
+                <h4 class="cph-footer__heading"><?php echo $social_heading; ?></h4>
                 <?php
                 echo do_blocks(
-                    '<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only moxy-footer__socials"} -->
-                    <!-- wp:social-link {"url":"https://www.instagram.com/moxyhotels/","service":"instagram"} /-->
-                    <!-- wp:social-link {"url":"https://www.facebook.com/moxyhotels","service":"facebook"} /-->
+                    '<!-- wp:social-links {"iconColor":"custom-white","iconColorValue":"#ffffff","size":"has-small-icon-size","className":"has-icon-color is-style-logos-only cph-footer__socials"} -->
+                    <!-- wp:social-link {"url":"https://www.instagram.com/citiplushotels/","service":"instagram"} /-->
+                    <!-- wp:social-link {"url":"https://www.facebook.com/citiplushotels","service":"facebook"} /-->
                     <!-- wp:social-link {"url":"https://www.youtube.com/","service":"youtube"} /-->
                     <!-- /wp:social-links -->'
                 );
                 ?>
             </div>
-            <div class="wp-block-column is-vertically-aligned-top moxy-footer__promo-column" style="flex-basis:46%">
-                <div class="moxy-footer__promo-box">
-                    <div class="moxy-footer__welcome-cards">
-                        <p class="moxy-footer__welcome-card">WELCOME</p>
-                        <p class="moxy-footer__welcome-card">WELCOME</p>
-                    </div>
-                    <p class="moxy-footer__promo-copy"><?php echo $promo_copy; ?></p>
-                    <div class="wp-block-button moxy-footer__promo-button">
-                        <a class="wp-block-button__link wp-element-button" href="<?php echo $promo_button_url; ?>"><?php echo $promo_button_label; ?></a>
-                    </div>
-                    <div class="moxy-footer__badges">
-                        <a class="moxy-footer__badge" href="https://apps.apple.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/appstore-apple.webp' ) ); ?>" alt="Download on the App Store" /></a>
-                        <a class="moxy-footer__badge" href="https://play.google.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/moxy/appstore-google.webp' ) ); ?>" alt="Get it on Google Play" /></a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
-    <?php echo do_blocks( '<!-- wp:pattern {"slug":"cph/moxy-bonvoy"} /-->' ); ?>
-    <div class="moxy-footer__legal-strip alignfull">
-        <p class="moxy-footer__legal-copy"><?php echo $legal_copy; ?></p>
+   
+    <div class="cph-footer__legal-strip alignfull">
+        <p class="cph-footer__legal-copy"><?php echo $legal_copy; ?></p>
     </div>
 </footer>

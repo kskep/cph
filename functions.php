@@ -35,7 +35,7 @@ add_action( 'after_setup_theme', 'starter_block_theme_setup' );
 function starter_block_theme_enqueue_scripts() {
     
 	wp_enqueue_style( 'starter-css', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory() . '/style.css') );
-    wp_enqueue_style( 'moxy-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600;700&display=swap', array(), null );
+    wp_enqueue_style( 'cph-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600;700&display=swap', array(), null );
 
 	// Disable this if you want don't want to include the CSS Framework
     wp_enqueue_style( 'css-framework', get_stylesheet_directory_uri() . '/assets/css/css-framework.css', [], filemtime(get_stylesheet_directory() . '/assets/css/css-framework.css') );
@@ -43,13 +43,13 @@ function starter_block_theme_enqueue_scripts() {
 	wp_enqueue_style('icons-css',get_stylesheet_directory_uri() . '/assets/css/icon-fonts.css',[],wp_get_theme()->get( 'Version' ));
 
     $component_styles = array(
-        'moxy-header'   => '/assets/css/components/moxy-header.css',
-        'moxy-hero'     => '/assets/css/components/moxy-hero.css',
-        'moxy-sections' => '/assets/css/components/moxy-sections.css',
-        'moxy-tabs'     => '/assets/css/components/moxy-tabs.css',
-        'moxy-carousel' => '/assets/css/components/moxy-carousel.css',
-        'moxy-modal'    => '/assets/css/components/moxy-modal.css',
-        'moxy-footer'   => '/assets/css/components/moxy-footer.css',
+        'cph-header'   => '/assets/css/components/cph-header.css',
+        'cph-hero'     => '/assets/css/components/cph-hero.css',
+        'cph-sections' => '/assets/css/components/cph-sections.css',
+        'cph-tabs'     => '/assets/css/components/cph-tabs.css',
+        'cph-carousel' => '/assets/css/components/cph-carousel.css',
+        'cph-modal'    => '/assets/css/components/cph-modal.css',
+        'cph-footer'   => '/assets/css/components/cph-footer.css',
     );
 
     foreach ( $component_styles as $handle => $relative_path ) {
@@ -121,7 +121,7 @@ function cph_render_block_theme_reset_notice() {
     $count = absint( $_GET['cph_reset_fse_done'] );
     ?>
     <div class="notice notice-success is-dismissible">
-        <p><?php echo esc_html( sprintf( 'CPH Moxy reset complete. Removed %d custom template override(s).', $count ) ); ?></p>
+        <p><?php echo esc_html( sprintf( 'CPH CPH reset complete. Removed %d custom template override(s).', $count ) ); ?></p>
     </div>
     <?php
 }
@@ -260,9 +260,9 @@ function starter_register_block_pattern_categories() {
 		)
 	);
     register_block_pattern_category(
-        'cph/moxy',
+        'cph/cph',
         array(
-            'label'       => __( 'Moxy Front Page', 'cph' ),
+            'label'       => __( 'CPH Front Page', 'cph' ),
         )
     );
     

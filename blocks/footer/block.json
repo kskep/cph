@@ -48,6 +48,6 @@
     "customClassName": false
   },
   "editorScript": "file:./editor.js",
-  "editorStyle": "file:../../assets/css/components/moxy-footer.css",
+  "editorStyle": "file:../../assets/css/components/cph-footer.css",
   "render": "file:./render.php"
 }

@@ -71,8 +71,8 @@
                         })
                     )
                 ),
-                el('footer', { className: 'moxy-footer' },
-                    el('div', { className: 'moxy-footer__inner' },
+                el('footer', { className: 'cph-footer' },
+                    el('div', { className: 'cph-footer__inner' },
                         el('p', {}, 'Locked footer layout. Edit content fields in the sidebar.')
                     )
                 )

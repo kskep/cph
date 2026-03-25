@@ -52,6 +52,6 @@
     "customClassName": false
   },
   "editorScript": "file:./editor.js",
-  "editorStyle": "file:../../assets/css/components/moxy-header.css",
+  "editorStyle": "file:../../assets/css/components/cph-header.css",
   "render": "file:./render.php"
 }

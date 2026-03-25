@@ -96,9 +96,9 @@
                         })
                     )
                 ),
-                el('section', { className: 'moxy-hero-section' },
+                el('section', { className: 'cph-hero-section' },
                     el('div', {
-                        className: 'moxy-hero',
+                        className: 'cph-hero',
                         style: {
                             minHeight: '420px',
                             position: 'relative',
@@ -107,33 +107,33 @@
                             backgroundPosition: 'center'
                         }
                     },
-                        el('div', { className: 'moxy-hero__inner' },
-                            el('div', { className: 'moxy-hero__tagline' },
-                                el('h2', { className: 'moxy-hero__tagline-line moxy-hero__tagline-line--large' }, attributes.taglineLineOne || ''),
-                                el('h2', { className: 'moxy-hero__tagline-line' }, attributes.taglineLineTwo || ''),
-                                el('hr', { className: 'moxy-hero__divider' }),
-                                el('p', { className: 'moxy-hero__tagline-brand' }, attributes.brandLabel || '')
+                        el('div', { className: 'cph-hero__inner' },
+                            el('div', { className: 'cph-hero__tagline' },
+                                el('h2', { className: 'cph-hero__tagline-line cph-hero__tagline-line--large' }, attributes.taglineLineOne || ''),
+                                el('h2', { className: 'cph-hero__tagline-line' }, attributes.taglineLineTwo || ''),
+                                el('hr', { className: 'cph-hero__divider' }),
+                                el('p', { className: 'cph-hero__tagline-brand' }, attributes.brandLabel || '')
                             )
                         )
                     ),
-                    el('div', { className: 'moxy-booking-bar' },
-                        el('div', { className: 'moxy-booking-bar__inner' },
-                            el('div', { className: 'moxy-booking-bar__title-box' },
-                                el('h3', { className: 'moxy-booking-bar__title' }, attributes.bookingTitle || '')
+                    el('div', { className: 'cph-booking-bar' },
+                        el('div', { className: 'cph-booking-bar__inner' },
+                            el('div', { className: 'cph-booking-bar__title-box' },
+                                el('h3', { className: 'cph-booking-bar__title' }, attributes.bookingTitle || '')
                             ),
-                            el('div', { className: 'moxy-booking-bar__field' },
-                                el('p', { className: 'moxy-booking-bar__label' }, attributes.destinationLabel || ''),
-                                el('p', { className: 'moxy-booking-bar__value' }, attributes.destinationValue || '')
+                            el('div', { className: 'cph-booking-bar__field' },
+                                el('p', { className: 'cph-booking-bar__label' }, attributes.destinationLabel || ''),
+                                el('p', { className: 'cph-booking-bar__value' }, attributes.destinationValue || '')
                             ),
-                            el('div', { className: 'moxy-booking-bar__field moxy-booking-bar__field--dates' },
-                                el('p', { className: 'moxy-booking-bar__label' }, attributes.datesLabel || ''),
-                                el('p', { className: 'moxy-booking-bar__value moxy-booking-bar__value--split' },
+                            el('div', { className: 'cph-booking-bar__field cph-booking-bar__field--dates' },
+                                el('p', { className: 'cph-booking-bar__label' }, attributes.datesLabel || ''),
+                                el('p', { className: 'cph-booking-bar__value cph-booking-bar__value--split' },
                                     el('span', {}, attributes.checkInValue || ''),
-                                    el('span', { className: 'moxy-booking-bar__dash' }, '-'),
+                                    el('span', { className: 'cph-booking-bar__dash' }, '-'),
                                     el('span', {}, attributes.checkOutValue || '')
                                 )
                             ),
-                            el('div', { className: 'moxy-booking-bar__cta' },
+                            el('div', { className: 'cph-booking-bar__cta' },
                                 el('span', { className: 'wp-block-button__link wp-element-button' }, attributes.ctaLabel || '')
                             )
                         )

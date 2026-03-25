@@ -1,8 +1,8 @@
 :root {
-  --moxy-header-height: 6.7rem;
+  --cph-header-height: 6.7rem;
 }
 
-.moxy-header {
+.cph-header {
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
@@ -12,12 +12,12 @@
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.moxy-header.is-scrolled {
+.cph-header.is-scrolled {
   background: rgba(17, 24, 39, 0.94);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
-.moxy-header::before {
+.cph-header::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -26,19 +26,19 @@
   transition: opacity 0.25s ease;
 }
 
-.moxy-header.is-scrolled::before {
+.cph-header.is-scrolled::before {
   opacity: 0;
 }
 
-body.admin-bar .moxy-header {
+body.admin-bar .cph-header {
   top: 32px;
 }
 
-.moxy-header__utility {
+.cph-header__utility {
   border-bottom: 0;
 }
 
-.moxy-header__utility-inner {
+.cph-header__utility-inner {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -48,7 +48,7 @@ body.admin-bar .moxy-header {
   z-index: 1;
 }
 
-.moxy-header__utility-item {
+.cph-header__utility-item {
   margin: 0;
   font-size: 0.75rem;
   font-weight: 700;
@@ -57,25 +57,25 @@ body.admin-bar .moxy-header {
   white-space: nowrap;
 }
 
-.moxy-header__utility-item {
+.cph-header__utility-item {
   position: relative;
 }
 
-.moxy-header__utility-item--email a {
+.cph-header__utility-item--email a {
   color: inherit;
   text-decoration: none;
 }
 
-.moxy-header__utility-item--email a:hover {
+.cph-header__utility-item--email a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.moxy-header__utility-item--language {
+.cph-header__utility-item--language {
   padding-left: 1.1rem;
   padding-right: 1rem;
 }
 
-.moxy-header__utility-item--language::before {
+.cph-header__utility-item--language::before {
   content: "";
   border: 1.5px solid currentColor;
   border-radius: 999px;
@@ -88,7 +88,7 @@ body.admin-bar .moxy-header {
   width: 0.65rem;
 }
 
-.moxy-header__utility-item--language::after {
+.cph-header__utility-item--language::after {
   content: "";
   border-right: 1px solid rgba(255, 255, 255, 0.65);
   height: 0.95rem;
@@ -100,31 +100,36 @@ body.admin-bar .moxy-header {
   width: 1px;
 }
 
-.moxy-header__inner {
+.cph-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   min-height: 5rem;
   position: relative;
   z-index: 1;
 }
 
-.moxy-header__brand,
-.moxy-header__actions {
+.cph-header__brand,
+.cph-header__actions {
+  display: flex;
   align-items: center;
 }
 
-.moxy-header__logo-mark {
+.cph-header__logo-mark {
   display: inline-flex;
   color: #fff;
   width: 9.5rem;
 }
 
-.moxy-header__logo-mark svg {
+.cph-header__logo-mark svg {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.moxy-header__logo-mark--image img {
+.cph-header__logo-mark--image img {
   display: block;
   width: 100%;
   height: auto;
@@ -132,12 +137,12 @@ body.admin-bar .moxy-header {
   object-fit: contain;
 }
 
-.moxy-header__nav {
+.cph-header__nav {
   flex: 1 1 auto;
   justify-content: center;
 }
 
-.moxy-header__nav .wp-block-navigation-item__content {
+.cph-header__nav .wp-block-navigation-item__content {
   color: #fff;
   font-size: 0.875rem;
   font-weight: 700;
@@ -145,12 +150,12 @@ body.admin-bar .moxy-header {
   text-transform: uppercase;
 }
 
-.moxy-header__nav .wp-block-navigation-item__content:hover,
-.moxy-header__utility-item:hover {
+.cph-header__nav .wp-block-navigation-item__content:hover,
+.cph-header__utility-item:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.moxy-header__cta .wp-block-button__link {
+.cph-header__cta .wp-block-button__link {
   background: #d9006e;
   border-color: #d9006e;
   box-shadow: none;
@@ -162,40 +167,40 @@ body.admin-bar .moxy-header {
   text-transform: uppercase;
 }
 
-.moxy-header__cta .wp-block-button__link:hover {
+.cph-header__cta .wp-block-button__link:hover {
   background: #b5005b;
   border-color: #b5005b;
   color: #fff;
 }
 
 @media (max-width: 900px) {
-  .moxy-header__inner {
+  .cph-header__inner {
     min-height: 4.5rem;
   }
 
-  .moxy-header__utility-inner {
+  .cph-header__utility-inner {
     gap: 0.75rem;
   }
 
-  .moxy-header__nav {
+  .cph-header__nav {
     flex: 0 1 auto;
   }
 }
 
 @media (max-width: 640px) {
   :root {
-    --moxy-header-height: 5rem;
+    --cph-header-height: 5rem;
   }
 
-  body.admin-bar .moxy-header {
+  body.admin-bar .cph-header {
     top: 46px;
   }
 
-  .moxy-header__utility {
+  .cph-header__utility {
     display: none;
   }
 
-  .moxy-header__logo-mark {
+  .cph-header__logo-mark {
     width: 8rem;
   }
 }

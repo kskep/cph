@@ -6,7 +6,7 @@
   "title": "CPH Hero",
   "category": "design",
   "icon": "cover-image",
-  "description": "Locked Moxy hero section with editable text, image, and link fields only.",
+  "description": "Locked CPH hero section with editable text, image, and link fields only.",
   "textdomain": "cph",
   "attributes": {
     "heroImageUrl": {
@@ -15,7 +15,7 @@
     },
     "heroImageAlt": {
       "type": "string",
-      "default": "Moxy hotel exterior"
+      "default": "CPH hotel exterior"
     },
     "taglineLineOne": {
       "type": "string",
@@ -23,11 +23,11 @@
     },
     "taglineLineTwo": {
       "type": "string",
-      "default": "#AtTheMoxy"
+      "default": "#AtTheCPH"
     },
     "brandLabel": {
       "type": "string",
-      "default": "Moxy Hotels"
+      "default": "CPH Hotels"
     },
     "bookingTitle": {
       "type": "string",
@@ -72,6 +72,6 @@
     "customClassName": false
   },
   "editorScript": "file:./editor.js",
-  "editorStyle": "file:../../assets/css/components/moxy-hero.css",
+  "editorStyle": "file:../../assets/css/components/cph-hero.css",
   "render": "file:./render.php"
 }

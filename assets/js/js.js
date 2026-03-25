@@ -17,8 +17,8 @@
 			return;
 		}
 
-		var triggers = Array.prototype.slice.call(root.querySelectorAll('.moxy-tab-trigger'));
-		var panels = Array.prototype.slice.call(root.querySelectorAll('.moxy-tab-panel'));
+		var triggers = Array.prototype.slice.call(root.querySelectorAll('.cph-tab-trigger'));
+		var panels = Array.prototype.slice.call(root.querySelectorAll('.cph-tab-panel'));
 
 		if (!triggers.length || triggers.length !== panels.length) {
 			return;
@@ -51,8 +51,8 @@
 			return;
 		}
 
-		var slides = Array.prototype.slice.call(root.querySelectorAll('.moxy-carousel-slide'));
-		var dots = Array.prototype.slice.call(root.querySelectorAll('.moxy-carousel-dot'));
+		var slides = Array.prototype.slice.call(root.querySelectorAll('.cph-carousel-slide'));
+		var dots = Array.prototype.slice.call(root.querySelectorAll('.cph-carousel-dot'));
 		var previous = root.querySelector('.js-carousel-prev');
 		var next = root.querySelector('.js-carousel-next');
 		var currentIndex = slides.findIndex(function (slide) {
@@ -122,8 +122,8 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
-		setupHeaderScroll(document.querySelector('.js-moxy-header'));
-		setupTabs(document.querySelector('.js-moxy-tabs'));
-		setupCarousel(document.querySelector('.js-moxy-carousel'));
+		setupHeaderScroll(document.querySelector('.js-cph-header'));
+		setupTabs(document.querySelector('.js-cph-tabs'));
+		setupCarousel(document.querySelector('.js-cph-carousel'));
 	});
 })();

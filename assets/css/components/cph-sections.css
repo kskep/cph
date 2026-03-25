@@ -1,30 +1,30 @@
-.moxy-front-page,
-.moxy-front-page > .alignfull,
-.moxy-intro,
-.moxy-tabs-section,
-.moxy-carousel-section,
-.moxy-see-all,
-.moxy-destinations,
-.moxy-bonvoy {
+.cph-front-page,
+.cph-front-page > .alignfull,
+.cph-intro,
+.cph-tabs-section,
+.cph-carousel-section,
+.cph-see-all,
+.cph-destinations,
+.cph-bonvoy {
   max-width: none;
   width: 100%;
 }
 
-.moxy-intro,
-.moxy-tabs-section,
-.moxy-carousel-section,
-.moxy-see-all,
-.moxy-destinations,
-.moxy-bonvoy {
-  scroll-margin-top: var(--moxy-header-height, 6.7rem);
+.cph-intro,
+.cph-tabs-section,
+.cph-carousel-section,
+.cph-see-all,
+.cph-destinations,
+.cph-bonvoy {
+  scroll-margin-top: var(--cph-header-height, 6.7rem);
 }
 
-.moxy-intro {
+.cph-intro {
   background: #fff;
   padding: 4rem 0;
 }
 
-.moxy-intro__heading {
+.cph-intro__heading {
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -32,22 +32,22 @@
   text-transform: uppercase;
 }
 
-.moxy-intro__body {
+.cph-intro__body {
   color: #4b5563;
   line-height: 1.7;
   margin: 0 auto;
   max-width: 42rem;
 }
 
-.moxy-see-all {
+.cph-see-all {
   background: #fff;
 }
 
-.moxy-see-all__inner {
+.cph-see-all__inner {
   padding-top: 2rem;
 }
 
-.moxy-see-all__cta .wp-block-button__link {
+.cph-see-all__cta .wp-block-button__link {
   background: #d9006e;
   border-color: #d9006e;
   color: #fff;
@@ -58,32 +58,32 @@
   text-transform: uppercase;
 }
 
-.moxy-destinations {
+.cph-destinations {
   background: #f9fafb;
   padding: 4rem 0;
 }
 
-.moxy-destinations__layout {
+.cph-destinations__layout {
   gap: 0;
 }
 
-.moxy-destinations__image,
-.moxy-destinations__image img {
+.cph-destinations__image,
+.cph-destinations__image img {
   height: 100%;
 }
 
-.moxy-destinations__image img {
+.cph-destinations__image img {
   display: block;
   min-height: 31.25rem;
   object-fit: cover;
   width: 100%;
 }
 
-.moxy-destinations__content-column {
+.cph-destinations__content-column {
   background: #111827;
 }
 
-.moxy-destinations__content {
+.cph-destinations__content {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@
   padding: 3rem;
 }
 
-.moxy-destinations__heading {
+.cph-destinations__heading {
   color: inherit;
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 900;
@@ -101,17 +101,17 @@
   text-transform: uppercase;
 }
 
-.moxy-destinations__copy {
+.cph-destinations__copy {
   color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
   margin: 0;
 }
 
-.moxy-destinations__actions {
+.cph-destinations__actions {
   gap: 1.25rem;
 }
 
-.moxy-destinations__link .wp-block-button__link {
+.cph-destinations__link .wp-block-button__link {
   background: transparent;
   border: 0;
   color: #fff;
@@ -122,18 +122,18 @@
   text-transform: uppercase;
 }
 
-.moxy-destinations__link .wp-block-button__link::after {
+.cph-destinations__link .wp-block-button__link::after {
   content: "\2197";
   display: inline-block;
   margin-left: 0.45rem;
 }
 
-.moxy-destinations__link--accent .wp-block-button__link {
+.cph-destinations__link--accent .wp-block-button__link {
   color: #d9006e;
 }
 
 @media (max-width: 782px) {
-  .moxy-destinations__content {
+  .cph-destinations__content {
     min-height: auto;
     padding: 2rem;
   }

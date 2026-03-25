@@ -1,10 +1,10 @@
 <?php
 $defaults = array(
     'heroImageUrl'      => 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1920&h=1080&fit=crop',
-    'heroImageAlt'      => 'Moxy hotel exterior',
+    'heroImageAlt'      => 'CPH hotel exterior',
     'taglineLineOne'    => 'Play On',
-    'taglineLineTwo'    => '#AtTheMoxy',
-    'brandLabel'        => 'Moxy Hotels',
+    'taglineLineTwo'    => '#AtTheCPH',
+    'brandLabel'        => 'CPH Hotels',
     'bookingTitle'      => "Book\nYour\nStay",
     'destinationLabel'  => 'Destination',
     'destinationValue'  => 'Where to?',
@@ -33,39 +33,39 @@ $cta_url        = esc_url( $attrs['ctaUrl'] );
 
 $wrapper_attributes = get_block_wrapper_attributes(
     array(
-        'class' => 'moxy-hero-section',
+        'class' => 'cph-hero-section',
     )
 );
 ?>
 <section <?php echo $wrapper_attributes; ?> id="book-your-stay">
-    <div class="moxy-hero" style="min-height:600px;background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('<?php echo $hero_image_url; ?>');background-size:cover;background-position:center;">
-        <div class="moxy-hero__inner">
-            <div class="moxy-hero__tagline">
-                <h2 class="moxy-hero__tagline-line moxy-hero__tagline-line--large"><?php echo $tagline_one; ?></h2>
-                <h2 class="moxy-hero__tagline-line"><?php echo $tagline_two; ?></h2>
-                <hr class="moxy-hero__divider" />
-                <p class="moxy-hero__tagline-brand"><?php echo $brand_label; ?></p>
+    <div class="cph-hero" style="min-height:600px;background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),url('<?php echo $hero_image_url; ?>');background-size:cover;background-position:center;">
+        <div class="cph-hero__inner">
+            <div class="cph-hero__tagline">
+                <h2 class="cph-hero__tagline-line cph-hero__tagline-line--large"><?php echo $tagline_one; ?></h2>
+                <h2 class="cph-hero__tagline-line"><?php echo $tagline_two; ?></h2>
+                <hr class="cph-hero__divider" />
+                <p class="cph-hero__tagline-brand"><?php echo $brand_label; ?></p>
             </div>
         </div>
     </div>
-    <div class="moxy-booking-bar">
-        <div class="moxy-booking-bar__inner">
-            <div class="moxy-booking-bar__title-box">
-                <h3 class="moxy-booking-bar__title"><?php echo $booking_title; ?></h3>
+    <div class="cph-booking-bar">
+        <div class="cph-booking-bar__inner">
+            <div class="cph-booking-bar__title-box">
+                <h3 class="cph-booking-bar__title"><?php echo $booking_title; ?></h3>
             </div>
-            <div class="moxy-booking-bar__field">
-                <p class="moxy-booking-bar__label"><?php echo $dest_label; ?></p>
-                <p class="moxy-booking-bar__value"><?php echo $dest_value; ?></p>
+            <div class="cph-booking-bar__field">
+                <p class="cph-booking-bar__label"><?php echo $dest_label; ?></p>
+                <p class="cph-booking-bar__value"><?php echo $dest_value; ?></p>
             </div>
-            <div class="moxy-booking-bar__field moxy-booking-bar__field--dates">
-                <p class="moxy-booking-bar__label"><?php echo $dates_label; ?></p>
-                <p class="moxy-booking-bar__value moxy-booking-bar__value--split">
+            <div class="cph-booking-bar__field cph-booking-bar__field--dates">
+                <p class="cph-booking-bar__label"><?php echo $dates_label; ?></p>
+                <p class="cph-booking-bar__value cph-booking-bar__value--split">
                     <span><?php echo $checkin_value; ?></span>
-                    <span class="moxy-booking-bar__dash">&mdash;</span>
+                    <span class="cph-booking-bar__dash">&mdash;</span>
                     <span><?php echo $checkout_value; ?></span>
                 </p>
             </div>
-            <div class="wp-block-button moxy-booking-bar__cta">
+            <div class="wp-block-button cph-booking-bar__cta">
                 <a class="wp-block-button__link wp-element-button" href="<?php echo $cta_url; ?>"><?php echo $cta_label; ?></a>
             </div>
         </div>

@@ -1,4 +1,4 @@
-.moxy-booking-modal {
+.cph-booking-modal {
   position: fixed;
   inset: 0;
   display: none;
@@ -9,37 +9,37 @@
   background: rgba(0, 0, 0, 0.72);
 }
 
-.moxy-booking-modal.is-open {
+.cph-booking-modal.is-open {
   display: flex;
 }
 
-.moxy-booking-modal__dialog {
+.cph-booking-modal__dialog {
   width: min(64rem, 100%);
   padding: clamp(1.5rem, 4vw, 3rem);
   background: #f4efe5;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
 }
 
-.moxy-booking-modal__header {
+.cph-booking-modal__header {
   margin-bottom: 1.5rem;
 }
 
-.moxy-booking-modal__grid {
+.cph-booking-modal__grid {
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-.moxy-booking-field {
+.cph-booking-field {
   padding: 1rem 1.1rem;
   border: 1px solid #2d2a32;
   background: #fff;
 }
 
-.moxy-booking-field p {
+.cph-booking-field p {
   margin: 0;
   font-weight: 700;
 }
 
-body.moxy-modal-open {
+body.cph-modal-open {
   overflow: hidden;
 }

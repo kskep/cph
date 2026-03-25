@@ -1,28 +1,28 @@
-.moxy-hero-section {
+.cph-hero-section {
   background: #fff;
   padding-top: 0;
 }
 
-.moxy-hero {
+.cph-hero {
   overflow: hidden;
 }
 
-.moxy-hero .wp-block-cover__image-background {
+.cph-hero .wp-block-cover__image-background {
   transform: scale(1.01);
 }
 
-.moxy-hero .wp-block-cover__inner-container {
+.cph-hero .wp-block-cover__inner-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.moxy-hero__inner {
+.cph-hero__inner {
   position: relative;
   min-height: 100%;
 }
 
-.moxy-hero__tagline {
+.cph-hero__tagline {
   position: absolute;
   top: 5rem;
   right: 0.5rem;
@@ -32,7 +32,7 @@
   padding: 1.5rem;
 }
 
-.moxy-hero__tagline-line {
+.cph-hero__tagline-line {
   font-size: clamp(2.5rem, 4vw, 3rem);
   font-style: italic;
   font-weight: 900;
@@ -42,11 +42,11 @@
   text-transform: uppercase;
 }
 
-.moxy-hero__tagline-line--large {
+.cph-hero__tagline-line--large {
   font-size: clamp(3rem, 5vw, 4rem);
 }
 
-.moxy-hero__divider {
+.cph-hero__divider {
   background: #d9006e;
   border: 0;
   height: 0.25rem;
@@ -54,7 +54,7 @@
   max-width: 6rem;
 }
 
-.moxy-hero__tagline-brand {
+.cph-hero__tagline-brand {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -62,14 +62,14 @@
   text-transform: uppercase;
 }
 
-.moxy-booking-bar {
+.cph-booking-bar {
   margin-top: -4.5rem;
   max-width: 80rem;
   position: relative;
   z-index: 2;
 }
 
-.moxy-booking-bar__inner {
+.cph-booking-bar__inner {
   background: #fff;
   box-shadow: 0 30px 60px rgba(17, 24, 39, 0.2);
   display: grid;
@@ -79,7 +79,7 @@
   align-items: stretch;
 }
 
-.moxy-booking-bar__title-box {
+.cph-booking-bar__title-box {
   background: #111111;
   color: #fff;
   display: flex;
@@ -88,7 +88,7 @@
   padding: 1rem;
 }
 
-.moxy-booking-bar__title {
+.cph-booking-bar__title {
   color: inherit;
   font-size: 1.5rem;
   font-weight: 800;
@@ -98,13 +98,13 @@
   text-transform: uppercase;
 }
 
-.moxy-booking-bar__field {
+.cph-booking-bar__field {
   border: 1px solid #d1d5db;
   min-height: 5.125rem;
   padding: 0.85rem 1rem;
 }
 
-.moxy-booking-bar__label {
+.cph-booking-bar__label {
   color: #111827;
   font-size: 0.75rem;
   font-weight: 700;
@@ -113,29 +113,29 @@
   text-transform: uppercase;
 }
 
-.moxy-booking-bar__value {
+.cph-booking-bar__value {
   color: #111827;
   font-size: 0.875rem;
   margin: 0;
 }
 
-.moxy-booking-bar__value--split {
+.cph-booking-bar__value--split {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
-.moxy-booking-bar__dash {
+.cph-booking-bar__dash {
   color: #9ca3af;
 }
 
-.moxy-booking-bar__cta,
-.moxy-booking-bar__cta .wp-block-button__link {
+.cph-booking-bar__cta,
+.cph-booking-bar__cta .wp-block-button__link {
   height: 100%;
 }
 
-.moxy-booking-bar__cta .wp-block-button__link {
+.cph-booking-bar__cta .wp-block-button__link {
   align-items: center;
   background: #d9006e;
   border-color: #d9006e;
@@ -151,38 +151,38 @@
   width: 100%;
 }
 
-.moxy-booking-bar__cta .wp-block-button__link:hover {
+.cph-booking-bar__cta .wp-block-button__link:hover {
   background: #b5005b;
   border-color: #b5005b;
   color: #fff;
 }
 
 @media (max-width: 1024px) {
-  .moxy-hero__tagline {
+  .cph-hero__tagline {
     display: none;
   }
 }
 
 @media (max-width: 900px) {
-  .moxy-booking-bar {
+  .cph-booking-bar {
     margin-top: -2rem;
   }
 
-  .moxy-booking-bar__inner {
+  .cph-booking-bar__inner {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .moxy-hero-section {
+  .cph-hero-section {
     padding-top: 0;
   }
 
-  .moxy-booking-bar {
+  .cph-booking-bar {
     margin-top: 0;
   }
 
-  .moxy-booking-bar__inner {
+  .cph-booking-bar__inner {
     grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,169 @@
+.cph-tabs-section {
+  background: #fff;
+  padding: 3rem 0 0;
+}
+
+.cph-section-label {
+  background: #111827;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.85rem 2rem;
+}
+
+.cph-section-label__heading {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cph-tabs__buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 0;
+  margin-bottom: 0;
+}
+
+.cph-tab-trigger {
+  flex: 1 1 auto;
+}
+
+.cph-tab-trigger .wp-block-button__link {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  color: #111827 !important;
+  display: block !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  margin-bottom: 0 !important;
+  padding: 1.15rem 1.5rem !important;
+  text-transform: uppercase !important;
+  white-space: nowrap;
+  width: 100% !important;
+}
+
+.cph-tab-trigger .wp-block-button__link:hover {
+  background: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+  color: #111827 !important;
+}
+
+.cph-tab-trigger.is-active .wp-block-button__link {
+  background: #d9006e !important;
+  border-color: #d9006e !important;
+  color: #fff !important;
+}
+
+.cph-tabs__panels {
+  background: #f3f4f6;
+}
+
+.cph-tab-panel {
+  display: none;
+}
+
+.cph-tab-panel.is-active {
+  display: block;
+}
+
+.cph-tab-panel__layout {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  gap: 0;
+}
+
+.cph-tab-panel__image,
+.cph-tab-panel__image img {
+  height: 100%;
+}
+
+.cph-tab-panel__image {
+  position: relative;
+}
+
+.cph-tab-panel__image img {
+  display: block;
+  width: 100%;
+  height: 31.25rem;
+  object-fit: cover;
+}
+
+.cph-tab-panel__image::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), transparent 55%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.cph-tab-panel__content-column {
+  background: #fff;
+}
+
+.cph-tab-panel__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 32rem;
+  min-height: 31.25rem;
+  padding: 4rem;
+}
+
+.cph-tab-panel__title {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cph-tab-panel__copy {
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cph-tab-panel__link .wp-block-button__link {
+  background: transparent;
+  border: 0;
+  color: #d9006e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.cph-tab-panel__link .wp-block-button__link::after {
+  content: "\203A";
+  display: inline-block;
+  margin-left: 0.35rem;
+}
+
+.cph-tab-panel__link .wp-block-button__link:hover {
+  background: transparent;
+  color: #b5005b;
+}
+
+@media (max-width: 782px) {
+  .cph-tab-trigger {
+    flex-basis: 50%;
+  }
+
+  .cph-tab-panel__content {
+    min-height: auto;
+    padding: 2rem;
+  }
+}

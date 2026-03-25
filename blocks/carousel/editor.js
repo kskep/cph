@@ -12,19 +12,19 @@
     var DEFAULT_SLIDES = [
         {
             eyebrow: 'New Places to Stay and Play.',
-            title: 'Moxy Barcelona',
-            location: 'MOXY BARCELONA',
+            title: 'CPH Barcelona',
+            location: 'CPH BARCELONA',
             imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop',
-            imageAlt: 'Moxy Barcelona',
+            imageAlt: 'CPH Barcelona',
             ctaLabel: 'Visit',
             ctaUrl: '#'
         },
         {
             eyebrow: 'New Places to Stay and Play.',
-            title: 'Moxy NYC',
-            location: 'MOXY NYC',
+            title: 'CPH NYC',
+            location: 'CPH NYC',
             imageUrl: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop',
-            imageAlt: 'Moxy NYC',
+            imageAlt: 'CPH NYC',
             ctaLabel: 'Visit',
             ctaUrl: '#'
         }
@@ -112,20 +112,20 @@
                         );
                     })
                 ),
-                el('section', { className: 'moxy-carousel-section' },
-                    el('div', { className: 'moxy-carousel-section__label-wrap' },
-                        el('div', { className: 'moxy-section-label' },
-                            el('h2', { className: 'moxy-section-label__heading' }, attributes.sectionTitle || '')
+                el('section', { className: 'cph-carousel-section' },
+                    el('div', { className: 'cph-carousel-section__label-wrap' },
+                        el('div', { className: 'cph-section-label' },
+                            el('h2', { className: 'cph-section-label__heading' }, attributes.sectionTitle || '')
                         )
                     ),
-                    el('div', { className: 'moxy-carousel-slides', style: { height: '420px' } },
-                        slides.length ? el('div', { className: 'moxy-carousel-slide is-active', style: { position: 'relative', opacity: 1 } },
-                            el('div', { className: 'moxy-carousel-slide__overlay' },
-                                el('p', { className: 'moxy-carousel-slide__eyebrow' }, slides[0].eyebrow || ''),
-                                el('h3', { className: 'moxy-carousel-slide__title' }, slides[0].title || ''),
+                    el('div', { className: 'cph-carousel-slides', style: { height: '420px' } },
+                        slides.length ? el('div', { className: 'cph-carousel-slide is-active', style: { position: 'relative', opacity: 1 } },
+                            el('div', { className: 'cph-carousel-slide__overlay' },
+                                el('p', { className: 'cph-carousel-slide__eyebrow' }, slides[0].eyebrow || ''),
+                                el('h3', { className: 'cph-carousel-slide__title' }, slides[0].title || ''),
                                 el('span', { className: 'wp-block-button__link wp-element-button' }, slides[0].ctaLabel || '')
                             ),
-                            el('p', { className: 'moxy-carousel-slide__location' }, slides[0].location || '')
+                            el('p', { className: 'cph-carousel-slide__location' }, slides[0].location || '')
                         ) : null
                     )
                 )
