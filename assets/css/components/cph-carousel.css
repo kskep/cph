@@ -61,10 +61,20 @@
   background: #fff;
   bottom: 5rem;
   box-shadow: 0 24px 48px rgba(17, 24, 39, 0.24);
-  left: clamp(2rem, 6vw, 4rem);
+  left: 0;
   max-width: 22rem;
   padding: 2rem;
   position: absolute;
+  pointer-events: auto;
+  z-index: 3;
+}
+
+.cph-carousel-slide__content {
+  inset: 0;
+  margin: 0 auto;
+  pointer-events: none;
+  position: absolute;
+  width: min(1200px, calc(100% - 2rem));
   z-index: 3;
 }
 
@@ -109,7 +119,7 @@
   letter-spacing: 0.08em;
   margin: 0;
   position: absolute;
-  right: 2rem;
+  right: 0;
   text-transform: uppercase;
   z-index: 3;
 }
@@ -189,13 +199,13 @@
 
   .cph-carousel-slide__overlay {
     bottom: 4rem;
-    left: 1rem;
+    left: 0;
     max-width: calc(100% - 2rem);
-    right: 1rem;
+    right: auto;
   }
 
   .cph-carousel-slide__location {
-    left: 1rem;
+    left: 0;
     right: auto;
   }
 }

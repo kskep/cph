@@ -25,7 +25,8 @@
 <div class="wp-block-group cph-carousel-slide is-active"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"cph-carousel-slide__image"} -->
 <figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&amp;h=900&amp;fit=crop" alt="CPH Barcelona"/></figure>
 <!-- /wp:image -->
-<!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"cph-carousel-slide__content","layout":{"type":"constrained"}} -->
+<div class="wp-block-group cph-carousel-slide__content"><!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide__overlay"><!-- wp:paragraph {"className":"cph-carousel-slide__eyebrow","fontSize":"xsmall"} -->
 <p class="cph-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
 <!-- /wp:paragraph -->
@@ -39,13 +40,15 @@
 <!-- wp:paragraph {"className":"cph-carousel-slide__location","fontSize":"small"} -->
 <p class="cph-carousel-slide__location has-small-font-size">CPH BARCELONA</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"cph-carousel-slide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"cph-carousel-slide__image"} -->
 <figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&amp;h=900&amp;fit=crop" alt="CPH NYC"/></figure>
 <!-- /wp:image -->
-<!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"cph-carousel-slide__content","layout":{"type":"constrained"}} -->
+<div class="wp-block-group cph-carousel-slide__content"><!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide__overlay"><!-- wp:paragraph {"className":"cph-carousel-slide__eyebrow","fontSize":"xsmall"} -->
 <p class="cph-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
 <!-- /wp:paragraph -->
@@ -59,6 +62,7 @@
 <!-- wp:paragraph {"className":"cph-carousel-slide__location","fontSize":"small"} -->
 <p class="cph-carousel-slide__location has-small-font-size">CPH NYC</p>
 <!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 

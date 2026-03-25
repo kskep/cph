@@ -50,14 +50,16 @@ $wrapper_attributes = get_block_wrapper_attributes(
                         <div class="cph-carousel-slide__image">
                             <img src="<?php echo esc_url( $slide['imageUrl'] ); ?>" alt="<?php echo esc_attr( $slide['imageAlt'] ); ?>" />
                         </div>
-                        <div class="cph-carousel-slide__overlay">
-                            <p class="cph-carousel-slide__eyebrow"><?php echo esc_html( $slide['eyebrow'] ); ?></p>
-                            <h3 class="cph-carousel-slide__title"><?php echo esc_html( $slide['title'] ); ?></h3>
-                            <div class="wp-block-button is-style-text-btn cph-carousel-slide__link">
-                                <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $slide['ctaUrl'] ); ?>"><?php echo esc_html( $slide['ctaLabel'] ); ?></a>
+                        <div class="cph-carousel-slide__content">
+                            <div class="cph-carousel-slide__overlay">
+                                <p class="cph-carousel-slide__eyebrow"><?php echo esc_html( $slide['eyebrow'] ); ?></p>
+                                <h3 class="cph-carousel-slide__title"><?php echo esc_html( $slide['title'] ); ?></h3>
+                                <div class="wp-block-button is-style-text-btn cph-carousel-slide__link">
+                                    <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $slide['ctaUrl'] ); ?>"><?php echo esc_html( $slide['ctaLabel'] ); ?></a>
+                                </div>
                             </div>
+                            <p class="cph-carousel-slide__location"><?php echo esc_html( $slide['location'] ); ?></p>
                         </div>
-                        <p class="cph-carousel-slide__location"><?php echo esc_html( $slide['location'] ); ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>

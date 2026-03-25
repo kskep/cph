@@ -20,16 +20,18 @@
 .cph-hero__inner {
   position: relative;
   min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cph-hero__tagline {
-  position: absolute;
-  top: 5rem;
-  right: 0.5rem;
-  width: min(100%, 20rem);
+  position: relative;
+  width: min(100%, 28rem);
   background: #fff;
   box-shadow: 0 24px 48px rgba(17, 24, 39, 0.25);
-  padding: 1.5rem;
+  padding: 2rem 2.5rem;
+  text-align: center;
 }
 
 .cph-hero__tagline-line {
@@ -50,7 +52,7 @@
   background: #d9006e;
   border: 0;
   height: 0.25rem;
-  margin: 1rem 0 0.75rem;
+  margin: 1rem auto 0.75rem;
   max-width: 6rem;
 }
 
@@ -63,10 +65,7 @@
 }
 
 .cph-booking-bar {
-  margin-top: -4.5rem;
-  max-width: 80rem;
-  position: relative;
-  z-index: 2;
+  display: none;
 }
 
 .cph-booking-bar__inner {
