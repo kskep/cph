@@ -102,7 +102,11 @@ body.admin-bar .cph-header {
   align-items: stretch !important;
   column-gap: 2.5rem;
   min-height: var(--cph-header-height);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
   padding: 0 4rem;
+  width: min(1600px, calc(100% - 2rem));
 }
 
 /* Row 1 — Language / utility */
@@ -119,6 +123,7 @@ body.admin-bar .cph-header {
   align-items: center;
   justify-content: flex-end;
   gap: 0.8rem;
+  max-width: none;
   width: 100%;
 }
 
@@ -236,6 +241,12 @@ body.admin-bar .cph-header {
   .cph-header__inner {
     column-gap: 1.5rem;
     grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 782px) {
+  .cph-header__inner {
+    width: min(1600px, calc(100% - 4rem));
   }
 }
 

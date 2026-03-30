@@ -157,8 +157,6 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
 .cph-front-page .cph-booking-bar__inner,
 .cph-front-page .cph-destinations__content,
 .cph-front-page .cph-bonvoy__inner,
-.site-header .cph-header__inner,
-.site-header .cph-header__utility-inner,
 .site-footer .cph-footer__inner {
   max-width: none;
   width: 100%;
@@ -178,13 +176,10 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
   width: min(var(--cph-container-max), calc(100% - 2rem));
 }
 
-.site-header .alignwide,
 .site-footer .alignwide {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: min(1600px, calc(100% - 2rem));
-  width: min(1600px, calc(100% - 2rem));
-}
+        width: min(1200px, calc(100% - 4rem));
+        max-width: min(1200px, calc(100% - 4rem));
+    }
 
 @media (min-width: 782px) {
   .cph-front-page .alignwide {
@@ -197,7 +192,6 @@ a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
     max-width: min(var(--cph-container-max), calc(100% - 4rem));
   }
 
-  .site-header .alignwide,
   .site-footer .alignwide {
     width: min(1600px, calc(100% - 4rem));
     max-width: min(1600px, calc(100% - 4rem));
