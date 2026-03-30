@@ -10,7 +10,7 @@
   inset: 0 0 auto;
   z-index: 50;
   background: transparent;
-  color: #fff;
+  color: var(--wp--preset--color--custom-white);
   box-shadow: none;
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   min-height: var(--cph-header-height);
@@ -51,7 +51,7 @@ body.admin-bar .cph-header {
 
 .cph-header__logo-mark {
   display: inline-flex;
-  color: #fff;
+  color: var(--wp--preset--color--custom-white);
   width: 13rem;
 }
 
@@ -65,7 +65,7 @@ body.admin-bar .cph-header {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 3rem;
+  max-height: 8rem;
   object-fit: contain;
 }
 
@@ -122,6 +122,10 @@ body.admin-bar .cph-header {
 }
 
 .cph-header__utility-item--email a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cph-header__utility-item:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 

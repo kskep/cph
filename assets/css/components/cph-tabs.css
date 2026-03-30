@@ -1,5 +1,5 @@
 .cph-tabs-section {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   padding: 3rem 0 0;
 }
 
@@ -29,6 +29,12 @@
   border-bottom: 1px solid var(--wp--preset--color--custom-grey);
   gap: 0;
   margin-bottom: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cph-tabs__buttons::-webkit-scrollbar {
+  display: none;
 }
 
 .cph-tab-trigger {
@@ -108,7 +114,7 @@
 }
 
 .cph-tab-panel__content-column {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
 }
 
 .cph-tab-panel__content {
@@ -160,6 +166,15 @@
 @media (max-width: 782px) {
   .cph-tab-trigger {
     flex-basis: 50%;
+  }
+
+  .cph-tab-panel__layout {
+    flex-direction: column !important;
+  }
+
+  .cph-tab-panel__image img {
+    height: auto;
+    max-height: 25rem;
   }
 
   .cph-tab-panel__content {

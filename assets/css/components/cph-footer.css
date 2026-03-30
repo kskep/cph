@@ -44,7 +44,7 @@
 }
 
 .cph-footer__socials .wp-social-link:hover {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
 }
 
 .cph-footer__socials .wp-social-link:hover a {
@@ -66,8 +66,8 @@
 .cph-footer__welcome-card {
   align-items: center;
   background: var(--wp--preset--color--cph-charcoal);
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--wp--preset--color--custom-white);
+  color: var(--wp--preset--color--custom-white);
   display: flex;
   font-size: 0.75rem;
   font-weight: 700;
@@ -90,7 +90,7 @@
 
 .cph-footer__promo-button .wp-block-button__link {
   background: var(--wp--preset--color--custom-off-black);
-  color: #ffffff;
+  color: var(--wp--preset--color--custom-white);
   border: 0;
   font-size: 0.75rem;
   font-weight: 700;
@@ -122,7 +122,7 @@
 }
 
 .cph-bonvoy {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   border-top: 1px solid var(--wp--preset--color--custom-grey);
   color: var(--wp--preset--color--cph-ink);
   padding: 3rem 0;

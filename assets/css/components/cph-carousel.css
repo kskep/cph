@@ -1,5 +1,5 @@
 .cph-carousel-section {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   overflow: visible;
   padding: 4rem 0 0;
 }
@@ -14,9 +14,12 @@
 
 .cph-carousel-frame {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
 }
 
 .cph-carousel-slides {
@@ -58,7 +61,7 @@
 }
 
 .cph-carousel-slide__overlay {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   bottom: 5rem;
   box-shadow: 0 24px 48px rgba(17, 24, 39, 0.24);
   left: 0;
@@ -113,7 +116,7 @@
 
 .cph-carousel-slide__location {
   bottom: 2rem;
-  color: #fff;
+  color: var(--wp--preset--color--custom-white);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -149,7 +152,7 @@
 }
 
 .cph-carousel-arrow .wp-block-button__link:hover {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
 }
 
 .cph-carousel-arrow .wp-block-button__link::after {
@@ -189,7 +192,7 @@
 }
 
 .cph-carousel-dot.is-active .wp-block-button__link {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
 }
 
 @media (max-width: 782px) {

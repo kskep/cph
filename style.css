@@ -14,16 +14,28 @@ Text Domain: cph
 Tags: Block editor patterns, Block editor styles, Block themes, Template editing
 */
 
-/*  Smooth Scroll */
+/*  Smooth Scroll & Base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   --wp--style--global--content-size: 1280px;
   --wp--style--global--wide-size: 1440px;
   --cph-container-max: 1200px;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  overflow-x: hidden;
 }
+
+/* z-index utility classes */
+.z-0 {z-index: 0 !important;}
+.z-1 {z-index: 1 !important;}
+.z-100 {z-index: 100 !important;}
+.z-200 {z-index: 200 !important;}
+.z-300 {z-index: 300 !important;}
+.z-99999 {z-index: 99999 !important;}
 
 /*  Reduced motion prefs  */
 @media screen and (prefers-reduced-motion: reduce) {

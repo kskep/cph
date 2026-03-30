@@ -10,8 +10,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"cph-destinations","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-destinations"><!-- wp:columns {"align":"wide","verticalAlignment":"stretch","className":"cph-destinations__layout"} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-stretch cph-destinations__layout"><!-- wp:column {"verticalAlignment":"stretch","width":"50%","className":"cph-destinations__media"} -->
+<div class="wp-block-group alignfull cph-destinations"><!-- wp:columns {"align":"wide","verticalAlignment":"stretch","className":"cph-destinations__layout cph-container"} -->
+<div class="wp-block-columns alignwide are-vertically-aligned-stretch cph-destinations__layout cph-container"><!-- wp:column {"verticalAlignment":"stretch","width":"50%","className":"cph-destinations__media"} -->
 <div class="wp-block-column is-vertically-aligned-stretch cph-destinations__media" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"cph-destinations__image"} -->
 <figure class="wp-block-image size-full cph-destinations__image"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&amp;h=1000&amp;fit=crop" alt="Travelers enjoying a city break"/></figure>
 <!-- /wp:image --></div>

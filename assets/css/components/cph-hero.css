@@ -1,5 +1,5 @@
 .cph-hero-section {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   padding-top: 0;
 }
 
@@ -28,7 +28,7 @@
 .cph-hero__tagline {
   position: relative;
   width: min(100%, 28rem);
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   box-shadow: 0 24px 48px rgba(17, 24, 39, 0.25);
   padding: 2rem 2.5rem;
   text-align: center;
@@ -69,7 +69,7 @@
 }
 
 .cph-booking-bar__inner {
-  background: #fff;
+  background: var(--wp--preset--color--custom-white);
   box-shadow: 0 30px 60px rgba(17, 24, 39, 0.2);
   display: grid;
   grid-template-columns: minmax(8rem, 2fr) minmax(14rem, 4fr) minmax(14rem, 4fr) minmax(10rem, 2fr);
@@ -80,7 +80,7 @@
 
 .cph-booking-bar__title-box {
   background: var(--wp--preset--color--custom-off-black);
-  color: #fff;
+  color: var(--wp--preset--color--custom-white);
   display: flex;
   align-items: center;
   justify-content: center;

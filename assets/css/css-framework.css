@@ -193,12 +193,21 @@ Use with https://wordpress.org/plugins/css-class-manager/
 .trans-g { transition: all 0.3s ease-in-out !important; }
 .balance-text {text-wrap: balance !important;}
 
-z-0 {z-index: 0 !important;}
-z-1 {z-index: 1 !important;}
-z-100 {z-index: 100 !important;}
-z-200 {z-index: 200 !important;}
-z-300 {z-index: 300 !important;}
-z-99999 {z-index: 99999 !important;}
+/* --- Scrollbar utilities --- */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.z-0 {z-index: 0 !important;}
+.z-1 {z-index: 1 !important;}
+.z-100 {z-index: 100 !important;}
+.z-200 {z-index: 200 !important;}
+.z-300 {z-index: 300 !important;}
+.z-99999 {z-index: 99999 !important;}
 
 /* =============================================== */
 /* --- 2. TABLET STYLES --- */
@@ -569,7 +578,7 @@ z-99999 {z-index: 99999 !important;}
   .hide-t { display: none !important; }
   .show-t { display: block !important; }
   .vis-t { visibility: visible !important; }
-  .vis-t { visibility: hidden !important; }
+  .hid-t { visibility: hidden !important; }
   .or-t-1 {order: 1}
   .or-t-2 {order: 2}
   .or-t-3 {order: 3}
@@ -603,12 +612,12 @@ z-99999 {z-index: 99999 !important;}
   .ws-nowrap-t { white-space: nowrap !important; }
   .trans-g-t { transition: all 0.3s ease-in-out !important; }
 
-  z-t-0 {z-index: 0 !important;}
-  z-t-1 {z-index: 1 !important;}
-  z-t-100 {z-index: 100 !important;}
-  z-t-200 {z-index: 200 !important;}
-  z-t-300 {z-index: 300 !important;}
-  z-t-99999 {z-index: 99999 !important;}
+  .z-t-0 {z-index: 0 !important;}
+  .z-t-1 {z-index: 1 !important;}
+  .z-t-100 {z-index: 100 !important;}
+  .z-t-200 {z-index: 200 !important;}
+  .z-t-300 {z-index: 300 !important;}
+  .z-t-99999 {z-index: 99999 !important;}
 
 }
 
@@ -982,7 +991,7 @@ z-99999 {z-index: 99999 !important;}
   .hide-m { display: none !important; }
   .show-m { display: block !important; }
   .vis-m { visibility: visible !important; }
-  .vis-m { visibility: hidden !important; }
+  .hid-m { visibility: hidden !important; }
   .or-m-1 {order: 1}
   .or-m-2 {order: 2}
   .or-m-3 {order: 3}
@@ -1016,12 +1025,12 @@ z-99999 {z-index: 99999 !important;}
   .ws-nowrap-m { white-space: nowrap !important; }
   .trans-g-m { transition: all 0.3s ease-in-out !important; }
 
-  z-m-0 {z-index: 0 !important;}
-  z-m-1 {z-index: 1 !important;}
-  z-m-100 {z-index: 100 !important;}
-  z-m-200 {z-index: 200 !important;}
-  z-m-300 {z-index: 300 !important;}
-  z-m-99999 {z-index: 99999 !important;}
+  .z-m-0 {z-index: 0 !important;}
+  .z-m-1 {z-index: 1 !important;}
+  .z-m-100 {z-index: 100 !important;}
+  .z-m-200 {z-index: 200 !important;}
+  .z-m-300 {z-index: 300 !important;}
+  .z-m-99999 {z-index: 99999 !important;}
   
 }
 /* 20260212 */

@@ -10,8 +10,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"cph-intro","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-intro"><!-- wp:group {"align":"wide","className":"cph-intro__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide cph-intro__inner"><!-- wp:heading {"textAlign":"center","level":2,"className":"cph-intro__heading","fontSize":"xx-large"} -->
+<div class="wp-block-group alignfull cph-intro"><!-- wp:group {"align":"wide","className":"cph-intro__inner cph-container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide cph-intro__inner cph-container"><!-- wp:heading {"textAlign":"center","level":2,"className":"cph-intro__heading","fontSize":"xx-large"} -->
 <h2 class="wp-block-heading has-text-align-center cph-intro__heading has-xx-large-font-size">Ready for Anything.</h2>
 <!-- /wp:heading -->
 

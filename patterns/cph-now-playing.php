@@ -10,8 +10,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","anchor":"now-playing","className":"cph-carousel-section js-cph-carousel","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-carousel-section js-cph-carousel" id="now-playing"><!-- wp:group {"align":"wide","className":"cph-carousel-section__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide cph-carousel-section__inner"><!-- wp:group {"className":"cph-carousel-section__label-wrap","layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-group alignfull cph-carousel-section js-cph-carousel" id="now-playing"><!-- wp:group {"align":"wide","className":"cph-carousel-section__inner cph-container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide cph-carousel-section__inner cph-container"><!-- wp:group {"className":"cph-carousel-section__label-wrap","layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-group cph-carousel-section__label-wrap"><!-- wp:group {"className":"cph-section-label","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-section-label"><!-- wp:heading {"level":2,"className":"cph-section-label__heading","fontSize":"large"} -->
 <h2 class="wp-block-heading cph-section-label__heading has-large-font-size">Now Playing</h2>
