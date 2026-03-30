@@ -121,52 +121,63 @@
   max-width: 78rem;
 }
 
-.cph-bonvoy {
-  background: var(--wp--preset--color--custom-white);
-  border-top: 1px solid var(--wp--preset--color--custom-grey);
-  color: var(--wp--preset--color--cph-ink);
-  padding: 3rem 0;
+@media (max-width: 900px) {
+  .cph-footer__columns {
+    flex-wrap: wrap;
+  }
+
+  .cph-footer__menu-column {
+    width: 50% !important;
+    flex-basis: 50% !important;
+  }
+
+  .cph-footer__social-column {
+    width: 50% !important;
+    flex-basis: 50% !important;
+  }
+
+  .cph-footer__promo-column {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    margin-top: 1rem;
+  }
 }
 
-.cph-bonvoy__eyebrow {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  margin: 0 0 0.5rem;
-  text-transform: uppercase;
-}
-
-.cph-bonvoy__heading {
-  font-size: clamp(1.75rem, 3vw, 2rem);
-  margin: 0 0 2rem;
-}
-
-.cph-bonvoy__cards {
-  gap: 1rem;
-}
-
-.cph-bonvoy__card-title {
-  margin: 0 0 0.5rem;
-}
-
-.cph-bonvoy__card-copy {
-  color: var(--wp--preset--color--custom-deep-grey);
-  line-height: 1.5;
-  margin: 0 0 1rem;
-}
-
-.cph-bonvoy__card-icons {
-  color: var(--wp--preset--color--custom-mid-grey);
-  letter-spacing: 0.25em;
-  margin: 0;
-}
-
-@media (max-width: 782px) {
+@media (max-width: 640px) {
   .cph-footer {
-    padding-top: 3rem;
+    padding: 2rem 0 1.5rem;
+  }
+
+  .cph-footer__columns {
+    flex-direction: column;
+  }
+
+  .cph-footer__menu-column,
+  .cph-footer__social-column {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  .cph-footer__promo-column {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .cph-footer__promo-box {
     width: 100%;
+  }
+
+  .cph-footer__welcome-cards {
+    justify-content: center;
+  }
+
+  .cph-footer__badges {
+    justify-content: center;
+  }
+
+  .cph-footer__legal-copy {
+    font-size: 0.7rem;
+    padding: 0 1rem;
   }
 }

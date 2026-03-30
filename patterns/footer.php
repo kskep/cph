@@ -12,8 +12,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"cph-footer","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull cph-footer"><!-- wp:group {"align":"wide","className":"cph-footer__inner","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide cph-footer__inner"><!-- wp:columns {"verticalAlignment":"top","className":"cph-footer__columns"} -->
+<div class="wp-block-group alignfull cph-footer"><!-- wp:group {"align":"wide","className":"cph-footer__inner cph-container","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide cph-footer__inner cph-container"><!-- wp:columns {"verticalAlignment":"top","className":"cph-footer__columns"} -->
 <div class="wp-block-columns are-vertically-aligned-top cph-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"18%","className":"cph-footer__menu-column"} -->
 <div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:18%"><!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
 <!-- wp:navigation-link {"label":"News","url":"https://news.marriott.com/","kind":"custom"} /-->
