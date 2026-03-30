@@ -17,8 +17,19 @@
 }
 
 .cph-header.is-scrolled {
-  background: rgba(17, 24, 39, 0.94);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: var(--wp--preset--color--custom-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.cph-header.is-scrolled,
+.cph-header.is-scrolled .cph-header__logo-mark,
+.cph-header.is-scrolled .cph-header__utility-item,
+.cph-header.is-scrolled .cph-header__nav .wp-block-navigation-item__content {
+  color: var(--wp--preset--color--custom-off-black);
+}
+
+.cph-header.is-scrolled .cph-header__utility {
+  border-bottom-color: rgba(0, 0, 0, 0.15);
 }
 
 .cph-header::before {
@@ -32,6 +43,10 @@
 
 .cph-header.is-scrolled::before {
   opacity: 0;
+}
+
+.cph-header.is-scrolled .cph-header__utility-item--language::before {
+  border-color: var(--wp--preset--color--custom-off-black);
 }
 
 body.admin-bar .cph-header {
@@ -129,6 +144,15 @@ body.admin-bar .cph-header {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.cph-header.is-scrolled .cph-header__utility-item--email a:hover,
+.cph-header.is-scrolled .cph-header__utility-item:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.cph-header.is-scrolled .cph-header__nav .wp-block-navigation-item__content:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .cph-header__utility-item--language {
   padding-left: 1.1rem;
   padding-right: 0;
@@ -171,7 +195,7 @@ body.admin-bar .cph-header {
 }
 
 .cph-header__nav .wp-block-navigation-item__content {
-  color: #fff;
+  color: var(--wp--preset--color--custom-white);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;

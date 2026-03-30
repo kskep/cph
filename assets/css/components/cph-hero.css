@@ -1,6 +1,7 @@
 .cph-hero-section {
   background: var(--wp--preset--color--custom-white);
-  padding-top: 0;
+  padding-top: var(--cph-header-height, 7.5rem);
+  margin-top: calc(-1 * var(--cph-header-height, 7.5rem));
 }
 
 .cph-hero {
