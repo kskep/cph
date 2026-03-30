@@ -102,6 +102,7 @@ body.admin-bar .cph-header {
   align-items: stretch !important;
   column-gap: 2.5rem;
   min-height: var(--cph-header-height);
+  padding: 0 4rem;
 }
 
 /* Row 1 — Language / utility */

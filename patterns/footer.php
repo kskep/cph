@@ -14,24 +14,32 @@
 <!-- wp:group {"align":"full","className":"cph-footer","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull cph-footer"><!-- wp:group {"align":"wide","className":"cph-footer__inner cph-container","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide cph-footer__inner cph-container"><!-- wp:columns {"verticalAlignment":"top","className":"cph-footer__columns"} -->
-<div class="wp-block-columns are-vertically-aligned-top cph-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"18%","className":"cph-footer__menu-column"} -->
-<div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:18%"><!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-columns are-vertically-aligned-top cph-footer__columns"><!-- wp:column {"verticalAlignment":"top","width":"25%","className":"cph-footer__menu-column"} -->
+<div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:25%"><!-- wp:heading {"level":4,"className":"cph-footer__heading","fontSize":"xsmall"} -->
+<h4 class="wp-block-heading cph-footer__heading has-xsmall-font-size">Quick Links</h4>
+<!-- /wp:heading -->
+
+<!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
 <!-- wp:navigation-link {"label":"News","url":"https://news.marriott.com/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Hotel Development","url":"https://hotel-development.marriott.com/brands/cph-hotels/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Terms of Use","url":"https://www.marriott.com/about/terms-of-use.mi","kind":"custom"} /-->
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","width":"18%","className":"cph-footer__menu-column"} -->
-<div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:18%"><!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:column {"verticalAlignment":"top","width":"25%","className":"cph-footer__menu-column"} -->
+<div class="wp-block-column is-vertically-aligned-top cph-footer__menu-column" style="flex-basis:25%"><!-- wp:heading {"level":4,"className":"cph-footer__heading","fontSize":"xsmall"} -->
+<h4 class="wp-block-heading cph-footer__heading has-xsmall-font-size">Company</h4>
+<!-- /wp:heading -->
+
+<!-- wp:navigation {"overlayMenu":"never","className":"cph-footer__nav","layout":{"type":"flex","orientation":"vertical"}} -->
 <!-- wp:navigation-link {"label":"Jobs","url":"https://jobs.marriott.com/marriott/jobs?page=1&brand=CPH+Hotels","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"About CPH Guestbook","url":"https://www.instagram.com/citiplushotels/","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"About CPH","url":"https://www.instagram.com/citiplushotels/","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Privacy Statement","url":"https://www.marriott.com/about/privacy.mi","kind":"custom"} /-->
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","width":"18%","className":"cph-footer__social-column"} -->
-<div class="wp-block-column is-vertically-aligned-top cph-footer__social-column" style="flex-basis:18%"><!-- wp:heading {"level":4,"className":"cph-footer__heading","fontSize":"xsmall"} -->
+<!-- wp:column {"verticalAlignment":"top","width":"25%","className":"cph-footer__social-column"} -->
+<div class="wp-block-column is-vertically-aligned-top cph-footer__social-column" style="flex-basis:25%"><!-- wp:heading {"level":4,"className":"cph-footer__heading","fontSize":"xsmall"} -->
 <h4 class="wp-block-heading cph-footer__heading has-xsmall-font-size">Stay Connected</h4>
 <!-- /wp:heading -->
 
@@ -42,36 +50,22 @@
 <!-- /wp:social-links --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","width":"46%","className":"cph-footer__promo-column"} -->
-<div class="wp-block-column is-vertically-aligned-top cph-footer__promo-column" style="flex-basis:46%"><!-- wp:group {"className":"cph-footer__promo-box","layout":{"type":"constrained"}} -->
-<div class="wp-block-group cph-footer__promo-box"><!-- wp:group {"className":"cph-footer__welcome-cards","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group cph-footer__welcome-cards"><!-- wp:paragraph {"className":"cph-footer__welcome-card","fontSize":"xsmall"} -->
-<p class="cph-footer__welcome-card has-xsmall-font-size">WELCOME</p>
+<!-- wp:column {"verticalAlignment":"top","width":"25%","className":"cph-footer__contact-column"} -->
+<div class="wp-block-column is-vertically-aligned-top cph-footer__contact-column" style="flex-basis:25%"><!-- wp:heading {"level":4,"className":"cph-footer__heading","fontSize":"xsmall"} -->
+<h4 class="wp-block-heading cph-footer__heading has-xsmall-font-size">Contact Us</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"cph-footer__contact-item","fontSize":"xsmall"} -->
+<p class="cph-footer__contact-item has-xsmall-font-size"><strong>Address:</strong><br>123 Hotel Street<br>Rhodes, Greece 85100</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"cph-footer__welcome-card","fontSize":"xsmall"} -->
-<p class="cph-footer__welcome-card has-xsmall-font-size">WELCOME</p>
+<!-- wp:paragraph {"className":"cph-footer__contact-item","fontSize":"xsmall"} -->
+<p class="cph-footer__contact-item has-xsmall-font-size"><strong>Phone:</strong><br>+30 123 456 7890</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"cph-footer__contact-item","fontSize":"xsmall"} -->
+<p class="cph-footer__contact-item has-xsmall-font-size"><strong>Email:</strong><br>info@cityplushotels.gr</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:paragraph {"className":"cph-footer__promo-copy","fontSize":"xsmall"} -->
-<p class="cph-footer__promo-copy has-xsmall-font-size">Explore the possibilities. What you need, when you need it.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:button {"className":"cph-footer__promo-button","backgroundColor":"custom-off-black","textColor":"custom-white"} -->
-<div class="wp-block-button cph-footer__promo-button"><a class="wp-block-button__link has-custom-white-color has-custom-off-black-background-color has-text-color has-background wp-element-button" href="https://mobileapp.marriott.com/">Learn More</a></div>
-<!-- /wp:button -->
-
-<!-- wp:group {"className":"cph-footer__badges","layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-group cph-footer__badges"><!-- wp:image {"sizeSlug":"full","linkDestination":"url","href":"https://apps.apple.com/","className":"cph-footer__badge"} -->
-<figure class="wp-block-image size-full cph-footer__badge"><a href="https://apps.apple.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/cph/appstore-apple.webp' ) ); ?>" alt="Download on the App Store"/></a></figure>
-<!-- /wp:image -->
-
-<!-- wp:image {"sizeSlug":"full","linkDestination":"url","href":"https://play.google.com/","className":"cph-footer__badge"} -->
-<figure class="wp-block-image size-full cph-footer__badge"><a href="https://play.google.com/"><img src="<?php echo esc_url( get_theme_file_uri( '/assets/images/cph/appstore-google.webp' ) ); ?>" alt="Get it on Google Play"/></a></figure>
-<!-- /wp:image --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
