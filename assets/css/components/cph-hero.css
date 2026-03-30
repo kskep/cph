@@ -5,7 +5,10 @@
 }
 
 .cph-hero {
-  overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cph-hero .wp-block-cover__image-background {

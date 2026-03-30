@@ -608,7 +608,7 @@
 					"background": "var(--wp--preset--color--custom-off-black)",
 					"text": "var(--wp--preset--color--custom-grey)"
 				},
-				"shadow": "var(--wp--preset--shadow--natural)",
+				
 				"spacing": {
 					"padding": {
 						"bottom": "var(--wp--preset--spacing--30)",
