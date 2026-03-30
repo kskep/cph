@@ -72,7 +72,7 @@
 
 <!-- wp:group {"align":"full","className":"cph-footer__legal-strip","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull cph-footer__legal-strip"><!-- wp:paragraph {"align":"center","className":"cph-footer__legal-copy","fontSize":"xsmall"} -->
-<p class="has-text-align-center cph-footer__legal-copy has-xsmall-font-size">Copyright © 2024 Marriott International, Inc. All Rights Reserved. Marriott Proprietary Information. Terms of Use · Privacy Center · Help · Tracking Preferences · Your Privacy Choices</p>
+<p class="has-text-align-center cph-footer__legal-copy has-xsmall-font-size">Copyright © 2024 CityPlusHotels. All Rights Reserved. CityPlusHotels Proprietary Information. Terms of Use · Privacy Center · Help · Tracking Preferences · Your Privacy Choices</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 <!-- /wp:group -->
