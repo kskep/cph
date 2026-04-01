@@ -50,12 +50,12 @@
   display: block !important;
   font-size: 0.75rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.1em !important;
-  margin-bottom: 0 !important;
-  padding: 1.15rem 1.5rem !important;
-  text-transform: uppercase !important;
+  letter-spacing: 0.1em;
+  margin-bottom: 0;
+  padding: 1.15rem 1.5rem;
+  text-transform: uppercase;
   white-space: nowrap;
-  width: 100% !important;
+  
 }
 
 .cph-tab-trigger .wp-block-button__link:hover {

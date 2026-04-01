@@ -212,3 +212,11 @@
     right: auto;
   }
 }
+
+.cph-carousel-frame a.wp-block-button__link.wp-element-button {
+  font-size: 0px;
+}
+
+.wp-block-buttons.cph-carousel-frame__arrows {
+  width: 98%;
+}
