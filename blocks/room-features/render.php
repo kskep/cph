@@ -33,14 +33,18 @@ $attrs = wp_parse_args( $attributes, $defaults );
 $room_post = get_post();
 $is_room = $room_post && $room_post->post_type === 'cph_room';
 
-// If in room context and no manual data, try to get from post meta
+// On single room pages, prefer room meta over placeholder block defaults.
 if ( $is_room ) {
-    if ( empty( $attrs['occupancy'] ) ) {
-        $attrs['occupancy'] = get_post_meta( $room_post->ID, 'occupancy', true ) ?: 2;
+    $meta_occupancy = get_post_meta( $room_post->ID, 'occupancy', true );
+    if ( '' !== $meta_occupancy && null !== $meta_occupancy ) {
+        $attrs['occupancy'] = $meta_occupancy;
     }
-    if ( empty( $attrs['bedType'] ) ) {
-        $attrs['bedType'] = get_post_meta( $room_post->ID, 'bed_type', true ) ?: 'King Bed';
+
+    $meta_bed_type = get_post_meta( $room_post->ID, 'bed_type', true );
+    if ( '' !== $meta_bed_type ) {
+        $attrs['bedType'] = $meta_bed_type;
     }
+
     if ( empty( $attrs['roomSize'] ) ) {
         $attrs['roomSize'] = get_post_meta( $room_post->ID, 'room_size', true ) ?: '';
     }

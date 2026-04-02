@@ -318,6 +318,18 @@ function cph_register_room_post_type() {
 }
 add_action( 'init', 'cph_register_room_post_type', 0 );
 
+function cph_flush_room_rewrite_rules_once() {
+    if ( get_option( 'cph_room_rewrite_flushed' ) ) {
+        return;
+    }
+
+    cph_register_room_post_type();
+    cph_register_hotel_location_taxonomy();
+    flush_rewrite_rules( false );
+    update_option( 'cph_room_rewrite_flushed', 1 );
+}
+add_action( 'init', 'cph_flush_room_rewrite_rules_once', 20 );
+
 // Register Hidden Hotel Location Taxonomy
 function cph_register_hotel_location_taxonomy() {
     $labels = array(
@@ -349,6 +361,169 @@ function cph_register_hotel_location_taxonomy() {
     register_taxonomy( 'cph_hotel_location', array( 'cph_room' ), $args );
 }
 add_action( 'init', 'cph_register_hotel_location_taxonomy', 0 );
+
+function cph_add_room_details_meta_box() {
+    add_meta_box(
+        'cph-room-details',
+        __( 'Room Details', 'cph' ),
+        'cph_render_room_details_meta_box',
+        'cph_room',
+        'normal',
+        'default'
+    );
+}
+add_action( 'add_meta_boxes', 'cph_add_room_details_meta_box' );
+
+function cph_render_room_details_meta_box( $post ) {
+    wp_nonce_field( 'cph_save_room_details', 'cph_room_details_nonce' );
+
+    $fields = array(
+        'occupancy'     => get_post_meta( $post->ID, 'occupancy', true ),
+        'bed_type'      => get_post_meta( $post->ID, 'bed_type', true ),
+        'room_size'     => get_post_meta( $post->ID, 'room_size', true ),
+        'view_type'     => get_post_meta( $post->ID, 'view_type', true ),
+        'floor_level'   => get_post_meta( $post->ID, 'floor_level', true ),
+        'booking_url'   => get_post_meta( $post->ID, 'booking_url', true ),
+        'gallery_images'=> get_post_meta( $post->ID, 'gallery_images', true ),
+        'amenities'     => get_post_meta( $post->ID, 'amenities', true ),
+    );
+
+    $amenities_lines = '';
+    if ( is_array( $fields['amenities'] ) ) {
+        $labels = array();
+        foreach ( $fields['amenities'] as $amenity ) {
+            if ( ! empty( $amenity['label'] ) ) {
+                $labels[] = $amenity['label'];
+            }
+        }
+        $amenities_lines = implode( "\n", $labels );
+    }
+
+    $gallery_ids = '';
+    if ( is_array( $fields['gallery_images'] ) ) {
+        $gallery_ids = implode( ',', array_map( 'absint', $fields['gallery_images'] ) );
+    }
+    ?>
+    <p><?php esc_html_e( 'Use the main editor for the full room description, the Excerpt for the short summary, and the Featured Image for the main room image.', 'cph' ); ?></p>
+    <table class="form-table" role="presentation">
+        <tbody>
+            <tr>
+                <th scope="row"><label for="cph-occupancy"><?php esc_html_e( 'Occupancy', 'cph' ); ?></label></th>
+                <td><input type="number" min="1" id="cph-occupancy" name="cph_room_details[occupancy]" value="<?php echo esc_attr( $fields['occupancy'] ); ?>" class="small-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-bed-type"><?php esc_html_e( 'Bed Type', 'cph' ); ?></label></th>
+                <td><input type="text" id="cph-bed-type" name="cph_room_details[bed_type]" value="<?php echo esc_attr( $fields['bed_type'] ); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-room-size"><?php esc_html_e( 'Room Size', 'cph' ); ?></label></th>
+                <td><input type="text" id="cph-room-size" name="cph_room_details[room_size]" value="<?php echo esc_attr( $fields['room_size'] ); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-view-type"><?php esc_html_e( 'View Type', 'cph' ); ?></label></th>
+                <td><input type="text" id="cph-view-type" name="cph_room_details[view_type]" value="<?php echo esc_attr( $fields['view_type'] ); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-floor-level"><?php esc_html_e( 'Floor Level', 'cph' ); ?></label></th>
+                <td><input type="text" id="cph-floor-level" name="cph_room_details[floor_level]" value="<?php echo esc_attr( $fields['floor_level'] ); ?>" class="regular-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-booking-url"><?php esc_html_e( 'Booking URL', 'cph' ); ?></label></th>
+                <td><input type="url" id="cph-booking-url" name="cph_room_details[booking_url]" value="<?php echo esc_attr( $fields['booking_url'] ); ?>" class="large-text"></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-gallery-images"><?php esc_html_e( 'Gallery Image IDs', 'cph' ); ?></label></th>
+                <td>
+                    <input type="text" id="cph-gallery-images" name="cph_room_details[gallery_images]" value="<?php echo esc_attr( $gallery_ids ); ?>" class="large-text">
+                    <p class="description"><?php esc_html_e( 'Optional. Enter media attachment IDs separated by commas for the gallery grid.', 'cph' ); ?></p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="cph-amenities"><?php esc_html_e( 'Amenities', 'cph' ); ?></label></th>
+                <td>
+                    <textarea id="cph-amenities" name="cph_room_details[amenities]" rows="6" class="large-text"><?php echo esc_textarea( $amenities_lines ); ?></textarea>
+                    <p class="description"><?php esc_html_e( 'One amenity per line.', 'cph' ); ?></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <?php
+}
+
+function cph_save_room_details_meta_box( $post_id ) {
+    if ( empty( $_POST['cph_room_details_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['cph_room_details_nonce'] ) ), 'cph_save_room_details' ) ) {
+        return;
+    }
+
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    if ( empty( $_POST['post_type'] ) || 'cph_room' !== $_POST['post_type'] ) {
+        return;
+    }
+
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+
+    $raw_fields = isset( $_POST['cph_room_details'] ) ? wp_unslash( $_POST['cph_room_details'] ) : array();
+
+    $text_fields = array( 'bed_type', 'room_size', 'view_type', 'floor_level' );
+    foreach ( $text_fields as $field ) {
+        $value = isset( $raw_fields[ $field ] ) ? sanitize_text_field( $raw_fields[ $field ] ) : '';
+        if ( '' === $value ) {
+            delete_post_meta( $post_id, $field );
+        } else {
+            update_post_meta( $post_id, $field, $value );
+        }
+    }
+
+    $occupancy = isset( $raw_fields['occupancy'] ) ? absint( $raw_fields['occupancy'] ) : 0;
+    if ( $occupancy > 0 ) {
+        update_post_meta( $post_id, 'occupancy', $occupancy );
+    } else {
+        delete_post_meta( $post_id, 'occupancy' );
+    }
+
+    $booking_url = isset( $raw_fields['booking_url'] ) ? esc_url_raw( $raw_fields['booking_url'] ) : '';
+    if ( '' === $booking_url ) {
+        delete_post_meta( $post_id, 'booking_url' );
+    } else {
+        update_post_meta( $post_id, 'booking_url', $booking_url );
+    }
+
+    $gallery_ids = array();
+    if ( ! empty( $raw_fields['gallery_images'] ) ) {
+        $gallery_ids = array_filter( array_map( 'absint', array_map( 'trim', explode( ',', $raw_fields['gallery_images'] ) ) ) );
+    }
+    if ( ! empty( $gallery_ids ) ) {
+        update_post_meta( $post_id, 'gallery_images', array_values( $gallery_ids ) );
+    } else {
+        delete_post_meta( $post_id, 'gallery_images' );
+    }
+
+    $amenities = array();
+    if ( ! empty( $raw_fields['amenities'] ) ) {
+        $lines = preg_split( '/\r\n|\r|\n/', $raw_fields['amenities'] );
+        foreach ( $lines as $line ) {
+            $label = sanitize_text_field( $line );
+            if ( '' !== $label ) {
+                $amenities[] = array(
+                    'icon'     => '',
+                    'label'    => $label,
+                    'category' => 'general',
+                );
+            }
+        }
+    }
+    if ( ! empty( $amenities ) ) {
+        update_post_meta( $post_id, 'amenities', $amenities );
+    } else {
+        delete_post_meta( $post_id, 'amenities' );
+    }
+}
+add_action( 'save_post_cph_room', 'cph_save_room_details_meta_box' );
 
 function cph_register_custom_blocks() {
     $block_paths = array(

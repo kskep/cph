@@ -45,7 +45,14 @@
 .cph-tab-panel__title--mobile,
 .cph-tab-panel__copy--mobile,
 .cph-tab-trigger__mobile {
-  display: none;
+  display: none !important;
+}
+
+.cph-tab-trigger__desktop,
+.cph-tab-panel__title--desktop,
+.cph-tab-panel__copy--desktop,
+.cph-tab-panel__image--desktop {
+  display: block;
 }
 
 .cph-tab-trigger .wp-block-button__link {
@@ -185,23 +192,23 @@
   }
 
   .cph-tab-panel__image--desktop {
-    display: none;
+    display: none !important;
   }
 
   .cph-tab-panel__image--mobile {
-    display: block;
+    display: block !important;
   }
 
   .cph-tab-panel__title--desktop,
   .cph-tab-panel__copy--desktop,
   .cph-tab-trigger__desktop {
-    display: none;
+    display: none !important;
   }
 
   .cph-tab-panel__title--mobile,
   .cph-tab-panel__copy--mobile,
   .cph-tab-trigger__mobile {
-    display: block;
+    display: block !important;
   }
 }
 
