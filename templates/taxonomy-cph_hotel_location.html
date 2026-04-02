@@ -1,0 +1,81 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"cph-hotel-archive-page"} -->
+<main class="wp-block-group cph-hotel-archive-page">
+
+    <!-- wp:group {"className":"cph-breadcrumb-section","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group cph-breadcrumb-section">
+        
+        <!-- wp:paragraph {"fontSize":"small"} -->
+        <p class="has-small-font-size">
+            <a href="/">Home</a> / <a href="/rooms">Rooms</a> / Hotel Location
+        </p>
+        <!-- /wp:paragraph -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:spacer {"height":"20px"} -->
+    <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+    <!-- wp:group {"className":"cph-container","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group cph-container">
+
+        <!-- wp:query-title {"type":"archive","textAlign":"center","fontSize":"x-large"} /-->
+
+        <!-- wp:term-description {"textAlign":"center"} /-->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:spacer {"height":"40px"} -->
+    <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+    <!-- wp:group {"className":"cph-container","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group cph-container">
+
+        <!-- wp:cph/rooms-query {
+            "postsPerPage": 12,
+            "columns": 3,
+            "orderBy": "menu_order",
+            "order": "asc",
+            "showEmptyState": true,
+            "emptyStateTitle": "No rooms available at this location",
+            "emptyStateMessage": "Please check back later for room availability."
+        } /-->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:spacer {"height":"80px"} -->
+    <div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+    <!-- wp:group {"className":"cph-container","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group cph-container">
+
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+        <div class="wp-block-buttons">
+
+            <!-- wp:button {"className":"is-style-outline"} -->
+            <div class="wp-block-button is-style-outline">
+                <a class="wp-block-button__link wp-element-button" href="/rooms">← View All Hotels</a>
+            </div>
+            <!-- /wp:button -->
+
+        </div>
+        <!-- /wp:buttons -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:spacer {"height":"60px"} -->
+    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

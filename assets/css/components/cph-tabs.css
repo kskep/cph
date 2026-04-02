@@ -177,8 +177,33 @@
     max-height: 25rem;
   }
 
-  .cph-tab-panel__content {
-    min-height: auto;
-    padding: 2rem;
+/* Mobile/Desktop Content Modifiers */
+.cph-tab-panel__image--mobile,
+.cph-tab-panel__title--mobile,
+.cph-tab-panel__copy--mobile,
+.cph-tab-trigger__mobile {
+  display: none;
+}
+
+@media (max-width: 782px) {
+  .cph-tab-panel__image--desktop {
+    display: none;
+  }
+  
+  .cph-tab-panel__image--mobile {
+    display: block;
+  }
+  
+  .cph-tab-panel__title--desktop,
+  .cph-tab-panel__copy--desktop,
+  .cph-tab-trigger__desktop {
+    display: none;
+  }
+  
+  .cph-tab-panel__title--mobile,
+  .cph-tab-panel__copy--mobile,
+  .cph-tab-trigger__mobile {
+    display: block;
   }
 }
+

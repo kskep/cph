@@ -6,7 +6,7 @@ $defaults = array(
     'promoCopy'        => 'Explore the possibilities. What you need, when you need it.',
     'promoButtonLabel' => 'Learn More',
     'promoButtonUrl'   => 'https://mobileapp.marriott.com/',
-    'legalCopy'        => 'Copyright © 2024 Marriott International, Inc. All Rights Reserved. Marriott Proprietary Information. Terms of Use · Privacy Center · Help · Tracking Preferences · Your Privacy Choices',
+    'legalCopy'        => 'Copyright © 2026 CityPlusHotels, Rhodes, Greece',
 );
 
 $attrs = wp_parse_args( $attributes, $defaults );

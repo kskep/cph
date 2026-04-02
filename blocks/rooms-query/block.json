@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/rooms-query",
+  "version": "1.0.0",
+  "title": "Rooms Query",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "Query and display a grid of rooms filtered by hotel location.",
+  "textdomain": "cph",
+  "attributes": {
+    "hotelLocation": {
+      "type": "string",
+      "default": ""
+    },
+    "postsPerPage": {
+      "type": "number",
+      "default": 12
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "orderBy": {
+      "type": "string",
+      "default": "menu_order"
+    },
+    "order": {
+      "type": "string",
+      "default": "asc"
+    },
+    "showEmptyState": {
+      "type": "boolean",
+      "default": true
+    },
+    "emptyStateTitle": {
+      "type": "string",
+      "default": "No rooms available"
+    },
+    "emptyStateMessage": {
+      "type": "string",
+      "default": "Please check back later for room availability."
+    },
+    "showFilters": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "color": false,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-rooms-query.css",
+  "render": "file:./render.php"
+}

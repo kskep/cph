@@ -18,37 +18,57 @@
       "default": [
         {
           "tabLabel": "Check in at the Bar",
+          "tabLabelMobile": "",
           "title": "Check in at the Bar",
+          "titleMobile": "",
           "copy": "Forget the front desk. CPH instantly eases you into a playful stay with a cocktail (or mocktail) to go along with your room key when you check in at the bar. We're accommodating like that.",
+          "copyMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=1000&fit=crop",
           "imageAlt": "Cocktail at the CPH bar",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Details",
           "ctaUrl": "#"
         },
         {
           "tabLabel": "Your Room",
+          "tabLabelMobile": "",
           "title": "Your Room",
+          "titleMobile": "",
           "copy": "Our rooms are smartly designed for the way you actually travel. With modular furniture, furiously fast Wi-Fi, and plush bedding that'll make you hit snooze at least five times.",
+          "copyMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=1000&fit=crop",
           "imageAlt": "Modern CPH guest room",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Details",
           "ctaUrl": "#"
         },
         {
           "tabLabel": "Not Your Average Lobby",
+          "tabLabelMobile": "",
           "title": "Not Your Average Lobby",
+          "titleMobile": "",
           "copy": "Our lobbies are designed for socializing. Think chic seating, games, and an atmosphere that makes you want to linger longer and meet someone new.",
+          "copyMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1000&fit=crop",
           "imageAlt": "CPH lobby",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Details",
           "ctaUrl": "#"
         },
         {
           "tabLabel": "24/7 Beverages & Bites",
+          "tabLabelMobile": "",
           "title": "24/7 Beverages & Bites",
+          "titleMobile": "",
           "copy": "Hungry at midnight? Thirsty at dawn? Our grab-and-go options and bar service keep you fueled around the clock, because hunger doesn't check the time.",
+          "copyMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&h=1000&fit=crop",
           "imageAlt": "CPH beverages and bites",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Details",
           "ctaUrl": "#"
         }

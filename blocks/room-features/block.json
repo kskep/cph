@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/room-features",
+  "version": "1.0.0",
+  "title": "Room Features",
+  "category": "design",
+  "icon": "admin-settings",
+  "description": "Display room specifications, amenities, and features in an organized layout.",
+  "textdomain": "cph",
+  "attributes": {
+    "occupancy": {
+      "type": "number",
+      "default": 2
+    },
+    "bedType": {
+      "type": "string",
+      "default": "King Bed"
+    },
+    "roomSize": {
+      "type": "string",
+      "default": ""
+    },
+    "viewType": {
+      "type": "string",
+      "default": ""
+    },
+    "floorLevel": {
+      "type": "string",
+      "default": ""
+    },
+    "amenities": {
+      "type": "array",
+      "default": [
+        { "icon": "wifi", "label": "Free WiFi", "category": "technology" },
+        { "icon": "ac", "label": "Air Conditioning", "category": "comfort" },
+        { "icon": "tv", "label": "Smart TV", "category": "technology" },
+        { "icon": "minibar", "label": "Minibar", "category": "dining" },
+        { "icon": "safe", "label": "In-Room Safe", "category": "security" },
+        { "icon": "coffee", "label": "Coffee Maker", "category": "dining" }
+      ]
+    },
+    "shortDescription": {
+      "type": "string",
+      "default": ""
+    },
+    "longDescription": {
+      "type": "string",
+      "default": ""
+    },
+    "displayStyle": {
+      "type": "string",
+      "default": "list"
+    },
+    "groupByCategory": {
+      "type": "boolean",
+      "default": false
+    },
+    "showIcons": {
+      "type": "boolean",
+      "default": true
+    },
+    "highlightFeatures": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "color": false,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-room-features.css",
+  "render": "file:./render.php"
+}

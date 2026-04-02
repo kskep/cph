@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/room-gallery",
+  "version": "1.0.0",
+  "title": "Room Gallery",
+  "category": "design",
+  "icon": "format-gallery",
+  "description": "Image gallery for rooms with featured image and gallery images, including mobile fallbacks.",
+  "textdomain": "cph",
+  "attributes": {
+    "featuredImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "featuredImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "featuredImageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "featuredImageMobileUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "featuredImageMobileAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "galleryImages": {
+      "type": "array",
+      "default": []
+    },
+    "mobileGalleryImages": {
+      "type": "array",
+      "default": []
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "featuredFirst": {
+      "type": "boolean",
+      "default": true
+    },
+    "enableLightbox": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCaptions": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "color": false,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-room-gallery.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,236 @@
+/* CPH Contact Form Styles */
+
+.cph-contact-section {
+  background: var(--wp--preset--color--custom-white);
+  padding: var(--wp--preset--spacing--x-large, 4rem) 0;
+}
+
+.cph-contact-section__inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cph-contact__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cph-contact__title {
+  font-family: var(--wp--preset--font-family--cph-display);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--custom-off-black);
+}
+
+.cph-contact__subtitle {
+  color: var(--wp--preset--color--custom-deep-grey);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cph-contact__booking-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--wp--preset--color--cph-butter);
+  color: var(--wp--preset--color--cph-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.cph-contact__note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: var(--wp--preset--color--cph-coral);
+  color: var(--wp--preset--color--custom-off-black);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-style: italic;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Form Layout */
+.cph-contact__form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cph-contact__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cph-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cph-contact__field--message {
+  margin-bottom: 1.5rem;
+}
+
+.cph-contact__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--cph-ink);
+  margin: 0;
+}
+
+.cph-contact__input {
+  appearance: none;
+  background: var(--wp--preset--color--custom-white);
+  border: 1px solid var(--wp--preset--color--custom-grey);
+  border-radius: 0;
+  color: var(--wp--preset--color--cph-ink);
+  font-family: var(--wp--preset--font-family--cph-sans);
+  font-size: 1rem;
+  padding: 0.875rem 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.cph-contact__input:focus {
+  outline: none;
+  border-color: var(--wp--preset--color--cph-coral);
+  box-shadow: 0 0 0 2px var(--wp--preset--color--cph-butter);
+}
+
+.cph-contact__input::placeholder {
+  color: var(--wp--preset--color--custom-mid-grey);
+}
+
+.cph-contact__select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231F2223' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.cph-contact__textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Submit Button */
+.cph-contact__actions {
+  text-align: center;
+}
+
+.cph-contact__submit {
+  appearance: none;
+  background: var(--wp--preset--color--cph-coral);
+  border: 2px solid var(--wp--preset--color--cph-coral);
+  border-radius: 10px;
+  color: var(--wp--preset--color--custom-off-black);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--wp--preset--font-family--cph-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.95rem 2.5rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.cph-contact__submit:hover {
+  background: var(--wp--preset--color--cph-coral-dark);
+  border-color: var(--wp--preset--color--cph-coral-dark);
+}
+
+.cph-contact__submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--wp--preset--color--cph-butter);
+}
+
+.cph-contact__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success Message */
+.cph-contact__success {
+  background: var(--wp--preset--color--cph-butter);
+  border: 1px solid var(--wp--preset--color--cph-coral);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.cph-contact__success p {
+  color: var(--wp--preset--color--cph-ink);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Error States */
+.cph-contact__input:invalid:not(:placeholder-shown) {
+  border-color: #dc3232;
+}
+
+.cph-contact__error {
+  color: #dc3232;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cph-contact-section {
+    padding: 3rem 0;
+  }
+
+  .cph-contact__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cph-contact__title {
+    font-size: 1.75rem;
+  }
+
+  .cph-contact__subtitle {
+    font-size: 1rem;
+  }
+
+  .cph-contact__booking-note {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .cph-contact__submit {
+    width: 100%;
+  }
+}
+
+/* Editor Preview */
+.cph-contact__form-preview {
+  background: var(--wp--preset--color--custom-light-gray);
+  border: 2px dashed var(--wp--preset--color--custom-grey);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}

@@ -18,6 +18,7 @@
             return el(Fragment, {},
                 el(InspectorControls, {},
                     el(PanelBody, { title: 'Hero Content', initialOpen: true },
+                        el('h3', {}, 'Desktop Image'),
                         el(MediaUploadCheck, {},
                             el(MediaUpload, {
                                 onSelect: function (media) {
@@ -37,27 +38,78 @@
                             value: attributes.heroImageAlt || '',
                             onChange: function (value) { setAttributes({ heroImageAlt: value }); }
                         }),
+                        el('hr', { style: { margin: '16px 0' } }),
+                        el('h3', {}, 'Mobile Image (optional)'),
+                        el(MediaUploadCheck, {},
+                            el(MediaUpload, {
+                                onSelect: function (media) {
+                                    setAttributes({
+                                        heroImageMobileUrl: media && media.url ? media.url : attributes.heroImageMobileUrl,
+                                        heroImageMobileAlt: media && media.alt ? media.alt : attributes.heroImageMobileAlt
+                                    });
+                                },
+                                allowedTypes: ['image'],
+                                render: function (mediaProps) {
+                                    return el(Button, { variant: 'secondary', onClick: mediaProps.open }, attributes.heroImageMobileUrl ? 'Replace Mobile Image' : 'Select Mobile Image');
+                                }
+                            })
+                        ),
                         el(TextControl, {
-                            label: 'Tagline Line 1',
+                            label: 'Mobile Image Alt (optional)',
+                            value: attributes.heroImageMobileAlt || '',
+                            onChange: function (value) { setAttributes({ heroImageMobileAlt: value }); }
+                        }),
+                        attributes.heroImageMobileUrl && el(Button, {
+                            variant: 'tertiary',
+                            onClick: function () { setAttributes({ heroImageMobileUrl: '', heroImageMobileAlt: '' }); },
+                            style: { marginTop: '8px' }
+                        }, 'Clear Mobile Image')
+                    ),
+                    el(PanelBody, { title: 'Tagline Text', initialOpen: false },
+                        el('h3', {}, 'Line 1'),
+                        el(TextControl, {
+                            label: 'Desktop',
                             value: attributes.taglineLineOne || '',
                             onChange: function (value) { setAttributes({ taglineLineOne: value }); }
                         }),
                         el(TextControl, {
-                            label: 'Tagline Line 2',
+                            label: 'Mobile (optional - falls back to desktop)',
+                            value: attributes.taglineLineOneMobile || '',
+                            onChange: function (value) { setAttributes({ taglineLineOneMobile: value }); }
+                        }),
+                        el('h3', {}, 'Line 2'),
+                        el(TextControl, {
+                            label: 'Desktop',
                             value: attributes.taglineLineTwo || '',
                             onChange: function (value) { setAttributes({ taglineLineTwo: value }); }
                         }),
                         el(TextControl, {
-                            label: 'Brand Label',
+                            label: 'Mobile (optional - falls back to desktop)',
+                            value: attributes.taglineLineTwoMobile || '',
+                            onChange: function (value) { setAttributes({ taglineLineTwoMobile: value }); }
+                        }),
+                        el('h3', {}, 'Brand Label'),
+                        el(TextControl, {
+                            label: 'Desktop',
                             value: attributes.brandLabel || '',
                             onChange: function (value) { setAttributes({ brandLabel: value }); }
+                        }),
+                        el(TextControl, {
+                            label: 'Mobile (optional - falls back to desktop)',
+                            value: attributes.brandLabelMobile || '',
+                            onChange: function (value) { setAttributes({ brandLabelMobile: value }); }
                         })
                     ),
                     el(PanelBody, { title: 'Booking Bar', initialOpen: false },
                         el(TextareaControl, {
-                            label: 'Booking Title (supports line breaks)',
+                            label: 'Booking Title - Desktop (supports line breaks)',
                             value: attributes.bookingTitle || '',
                             onChange: function (value) { setAttributes({ bookingTitle: value }); }
+                        }),
+                        el(TextareaControl, {
+                            label: 'Booking Title - Mobile (optional - falls back to desktop)',
+                            value: attributes.bookingTitleMobile || '',
+                            onChange: function (value) { setAttributes({ bookingTitleMobile: value }); }
                         }),
                         el(TextControl, {
                             label: 'Destination Label',

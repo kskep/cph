@@ -17,21 +17,45 @@
       "type": "string",
       "default": "CPH hotel exterior"
     },
+    "heroImageMobileUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "heroImageMobileAlt": {
+      "type": "string",
+      "default": ""
+    },
     "taglineLineOne": {
       "type": "string",
       "default": "Play On"
+    },
+    "taglineLineOneMobile": {
+      "type": "string",
+      "default": ""
     },
     "taglineLineTwo": {
       "type": "string",
       "default": "#AtTheCPH"
     },
+    "taglineLineTwoMobile": {
+      "type": "string",
+      "default": ""
+    },
     "brandLabel": {
       "type": "string",
       "default": "CPH Hotels"
     },
+    "brandLabelMobile": {
+      "type": "string",
+      "default": ""
+    },
     "bookingTitle": {
       "type": "string",
       "default": "Book\\nYour\\nStay"
+    },
+    "bookingTitleMobile": {
+      "type": "string",
+      "default": ""
     },
     "destinationLabel": {
       "type": "string",

@@ -1,0 +1,114 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/room-card",
+  "version": "1.0.0",
+  "title": "Room Card",
+  "category": "design",
+  "icon": "building",
+  "description": "Display a single room in a card format with image, details, and booking link.",
+  "textdomain": "cph",
+  "attributes": {
+    "roomId": {
+      "type": "number",
+      "default": 0
+    },
+    "layout": {
+      "type": "string",
+      "default": "vertical"
+    },
+    "showDetails": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAmenitiesPreview": {
+      "type": "boolean",
+      "default": true
+    },
+    "amenitiesPreviewCount": {
+      "type": "number",
+      "default": 4
+    },
+    "desktopImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "desktopImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopImageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileImageId": {
+      "type": "number",
+      "default": 0
+    },
+    "mobileImageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileImageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "shortDescription": {
+      "type": "string",
+      "default": ""
+    },
+    "occupancy": {
+      "type": "number",
+      "default": 2
+    },
+    "bedType": {
+      "type": "string",
+      "default": "King Bed"
+    },
+    "roomSize": {
+      "type": "string",
+      "default": ""
+    },
+    "viewType": {
+      "type": "string",
+      "default": ""
+    },
+    "floorLevel": {
+      "type": "string",
+      "default": ""
+    },
+    "amenities": {
+      "type": "array",
+      "default": [
+        { "icon": "wifi", "label": "Free WiFi" },
+        { "icon": "ac", "label": "Air Conditioning" },
+        { "icon": "tv", "label": "Smart TV" },
+        { "icon": "minibar", "label": "Minibar" }
+      ]
+    },
+    "bookingUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "viewRoomText": {
+      "type": "string",
+      "default": "View Room"
+    },
+    "bookNowText": {
+      "type": "string",
+      "default": "Book Now"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-room-card.css",
+  "render": "file:./render.php"
+}

@@ -43,13 +43,19 @@ function starter_block_theme_enqueue_scripts() {
 	wp_enqueue_style('icons-css',get_stylesheet_directory_uri() . '/assets/css/icon-fonts.css',[],wp_get_theme()->get( 'Version' ));
 
     $component_styles = array(
-        'cph-header'   => '/assets/css/components/cph-header.css',
-        'cph-hero'     => '/assets/css/components/cph-hero.css',
-        'cph-sections' => '/assets/css/components/cph-sections.css',
-        'cph-tabs'     => '/assets/css/components/cph-tabs.css',
-        'cph-carousel' => '/assets/css/components/cph-carousel.css',
-        'cph-modal'    => '/assets/css/components/cph-modal.css',
-        'cph-footer'   => '/assets/css/components/cph-footer.css',
+        'cph-header'        => '/assets/css/components/cph-header.css',
+        'cph-hero'          => '/assets/css/components/cph-hero.css',
+        'cph-sections'      => '/assets/css/components/cph-sections.css',
+        'cph-tabs'          => '/assets/css/components/cph-tabs.css',
+        'cph-carousel'      => '/assets/css/components/cph-carousel.css',
+        'cph-modal'         => '/assets/css/components/cph-modal.css',
+        'cph-footer'        => '/assets/css/components/cph-footer.css',
+        'cph-contact-form'  => '/assets/css/components/cph-contact-form.css',
+        'cph-room-card'     => '/assets/css/components/cph-room-card.css',
+        'cph-rooms-query'   => '/assets/css/components/cph-rooms-query.css',
+        'cph-room-gallery'  => '/assets/css/components/cph-room-gallery.css',
+        'cph-room-features' => '/assets/css/components/cph-room-features.css',
+        'cph-room-booking'  => '/assets/css/components/cph-room-booking.css',
     );
 
     foreach ( $component_styles as $handle => $relative_path ) {
@@ -269,6 +275,81 @@ function starter_register_block_pattern_categories() {
 }
 add_action( 'init', 'starter_register_block_pattern_categories' );
 
+// Register Custom Post Type for Rooms
+function cph_register_room_post_type() {
+    $labels = array(
+        'name'                  => _x( 'Rooms', 'Post type general name', 'cph' ),
+        'singular_name'         => _x( 'Room', 'Post type singular name', 'cph' ),
+        'menu_name'             => _x( 'Rooms', 'Admin Menu text', 'cph' ),
+        'add_new'               => __( 'Add New', 'cph' ),
+        'add_new_item'          => __( 'Add New Room', 'cph' ),
+        'new_item'              => __( 'New Room', 'cph' ),
+        'edit_item'             => __( 'Edit Room', 'cph' ),
+        'view_item'             => __( 'View Room', 'cph' ),
+        'all_items'             => __( 'All Rooms', 'cph' ),
+        'search_items'          => __( 'Search Rooms', 'cph' ),
+        'not_found'             => __( 'No rooms found.', 'cph' ),
+        'not_found_in_trash'    => __( 'No rooms found in Trash.', 'cph' ),
+        'featured_image'        => _x( 'Room Featured Image', 'Overrides the "Featured Image" phrase', 'cph' ),
+        'set_featured_image'    => _x( 'Set room image', 'Overrides the "Set featured image" phrase', 'cph' ),
+        'remove_featured_image' => _x( 'Remove room image', 'Overrides the "Remove featured image" phrase', 'cph' ),
+        'use_featured_image'    => _x( 'Use as room image', 'Overrides the "Use as featured image" phrase', 'cph' ),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'rooms' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-building',
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'revisions', 'page-attributes', 'excerpt' ),
+        'show_in_rest'       => true,
+        'taxonomies'         => array( 'cph_hotel_location' ),
+    );
+
+    register_post_type( 'cph_room', $args );
+}
+add_action( 'init', 'cph_register_room_post_type', 0 );
+
+// Register Hidden Hotel Location Taxonomy
+function cph_register_hotel_location_taxonomy() {
+    $labels = array(
+        'name'          => _x( 'Hotels', 'taxonomy general name', 'cph' ),
+        'singular_name' => _x( 'Hotel', 'taxonomy singular name', 'cph' ),
+        'search_items'  => __( 'Search Hotels', 'cph' ),
+        'all_items'     => __( 'All Hotels', 'cph' ),
+        'edit_item'     => __( 'Edit Hotel', 'cph' ),
+        'update_item'   => __( 'Update Hotel', 'cph' ),
+        'add_new_item'  => __( 'Add New Hotel', 'cph' ),
+        'new_item_name' => __( 'New Hotel Name', 'cph' ),
+        'menu_name'     => __( 'Hotels', 'cph' ),
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => false,
+        'public'            => false,
+        'show_in_nav_menus' => false,
+        'show_in_rest'      => true,
+        'show_tagcloud'     => false,
+        'show_in_quick_edit'=> true,
+    );
+
+    register_taxonomy( 'cph_hotel_location', array( 'cph_room' ), $args );
+}
+add_action( 'init', 'cph_register_hotel_location_taxonomy', 0 );
+
 function cph_register_custom_blocks() {
     $block_paths = array(
         get_template_directory() . '/blocks/header',
@@ -276,6 +357,12 @@ function cph_register_custom_blocks() {
         get_template_directory() . '/blocks/hero',
         get_template_directory() . '/blocks/tabs',
         get_template_directory() . '/blocks/carousel',
+        get_template_directory() . '/blocks/contact-form',
+        get_template_directory() . '/blocks/room-card',
+        get_template_directory() . '/blocks/rooms-query',
+        get_template_directory() . '/blocks/room-gallery',
+        get_template_directory() . '/blocks/room-features',
+        get_template_directory() . '/blocks/room-booking',
     );
 
     foreach ( $block_paths as $block_path ) {

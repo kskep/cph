@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/contact-form",
+  "version": "1.0.0",
+  "title": "CPH Contact Form",
+  "category": "design",
+  "icon": "email",
+  "description": "A contact form for general inquiries. Bookings are handled via 3rd party.",
+  "textdomain": "cph",
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Get in Touch"
+    },
+    "sectionSubtitle": {
+      "type": "string",
+      "default": "Have a question? We'd love to hear from you."
+    },
+    "bookingNote": {
+      "type": "string",
+      "default": "For room reservations, please use our booking system above."
+    },
+    "nameLabel": {
+      "type": "string",
+      "default": "Full Name"
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "Email Address"
+    },
+    "phoneLabel": {
+      "type": "string",
+      "default": "Phone Number"
+    },
+    "subjectLabel": {
+      "type": "string",
+      "default": "Subject"
+    },
+    "messageLabel": {
+      "type": "string",
+      "default": "Your Message"
+    },
+    "submitLabel": {
+      "type": "string",
+      "default": "Send Message"
+    },
+    "successMessage": {
+      "type": "string",
+      "default": "Thank you for your message. We'll get back to you soon."
+    },
+    "recipientEmail": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "custom-white"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-contact-form.css",
+  "render": "file:./render.php"
+}

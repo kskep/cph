@@ -18,19 +18,29 @@
       "default": [
         {
           "eyebrow": "New Places to Stay and Play.",
+          "eyebrowMobile": "",
           "title": "CPH Barcelona",
+          "titleMobile": "",
           "location": "CPH BARCELONA",
+          "locationMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop",
           "imageAlt": "CPH Barcelona",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Visit",
           "ctaUrl": "#"
         },
         {
           "eyebrow": "New Places to Stay and Play.",
+          "eyebrowMobile": "",
           "title": "CPH NYC",
+          "titleMobile": "",
           "location": "CPH NYC",
+          "locationMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop",
           "imageAlt": "CPH NYC",
+          "imageMobileUrl": "",
+          "imageMobileAlt": "",
           "ctaLabel": "Visit",
           "ctaUrl": "#"
         }

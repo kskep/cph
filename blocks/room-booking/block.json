@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/room-booking",
+  "version": "1.0.0",
+  "title": "Room Booking",
+  "category": "design",
+  "icon": "calendar-alt",
+  "description": "Call-to-action block for room booking with external booking link.",
+  "textdomain": "cph",
+  "attributes": {
+    "bookingUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Check Availability"
+    },
+    "buttonStyle": {
+      "type": "string",
+      "default": "primary"
+    },
+    "additionalText": {
+      "type": "string",
+      "default": "Best price guaranteed • Free cancellation"
+    },
+    "showAdditionalText": {
+      "type": "boolean",
+      "default": true
+    },
+    "showHotelSwitcher": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string",
+      "default": "Book Your Stay"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Reserve this room directly with our preferred partners"
+    },
+    "layout": {
+      "type": "string",
+      "default": "vertical"
+    },
+    "stickyOnScroll": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide"],
+    "color": false,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:../../assets/css/components/cph-room-booking.css",
+  "render": "file:./render.php"
+}
