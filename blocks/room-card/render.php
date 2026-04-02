@@ -71,7 +71,8 @@ if ( ! empty( $attrs['roomId'] ) ) {
 // Image handling with mobile fallback
 $desktop_image_url = ! empty( $attrs['desktopImageUrl'] ) ? esc_url( $attrs['desktopImageUrl'] ) : 'https://via.placeholder.com/600x400?text=Room+Image';
 $desktop_image_alt = ! empty( $attrs['desktopImageAlt'] ) ? esc_attr( $attrs['desktopImageAlt'] ) : esc_attr( $room_title );
-$mobile_image_url  = ! empty( $attrs['mobileImageUrl'] ) ? esc_url( $attrs['mobileImageUrl'] ) : $desktop_image_url;
+$has_mobile_image  = ! empty( $attrs['mobileImageUrl'] ) && $attrs['mobileImageUrl'] !== $attrs['desktopImageUrl'];
+$mobile_image_url  = $has_mobile_image ? esc_url( $attrs['mobileImageUrl'] ) : '';
 $mobile_image_alt  = ! empty( $attrs['mobileImageAlt'] ) ? esc_attr( $attrs['mobileImageAlt'] ) : $desktop_image_alt;
 
 // Room details
@@ -104,13 +105,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
             class="cph-room-card__image cph-room-card__image--desktop"
             loading="lazy"
         >
-        <!-- Mobile Image (with fallback to desktop) -->
-        <img 
-            src="<?php echo $mobile_image_url; ?>" 
-            alt="<?php echo $mobile_image_alt; ?>" 
-            class="cph-room-card__image cph-room-card__image--mobile"
-            loading="lazy"
-        >
+        <?php if ( $has_mobile_image ) : ?>
+            <!-- Mobile Image -->
+            <img 
+                src="<?php echo $mobile_image_url; ?>" 
+                alt="<?php echo $mobile_image_alt; ?>" 
+                class="cph-room-card__image cph-room-card__image--mobile"
+                loading="lazy"
+            >
+        <?php endif; ?>
     </div>
     
     <div class="cph-room-card__content">

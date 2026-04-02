@@ -56,32 +56,45 @@ $wrapper_attributes = get_block_wrapper_attributes(
         <div class="cph-carousel-frame">
             <div class="cph-carousel-slides">
                 <?php foreach ( $slides as $index => $slide ) : 
-                    // Fallback logic for mobile content
-                    $slide_eyebrow_mobile  = ! empty( $slide['eyebrowMobile'] ) ? $slide['eyebrowMobile'] : $slide['eyebrow'];
-                    $slide_title_mobile    = ! empty( $slide['titleMobile'] ) ? $slide['titleMobile'] : $slide['title'];
-                    $slide_location_mobile = ! empty( $slide['locationMobile'] ) ? $slide['locationMobile'] : $slide['location'];
-                    $slide_image_mobile    = ! empty( $slide['imageMobileUrl'] ) ? $slide['imageMobileUrl'] : $slide['imageUrl'];
+                    $has_mobile_eyebrow = '' !== trim( (string) $slide['eyebrowMobile'] ) && $slide['eyebrowMobile'] !== $slide['eyebrow'];
+                    $has_mobile_title = '' !== trim( (string) $slide['titleMobile'] ) && $slide['titleMobile'] !== $slide['title'];
+                    $has_mobile_location = '' !== trim( (string) $slide['locationMobile'] ) && $slide['locationMobile'] !== $slide['location'];
+                    $has_mobile_image = '' !== trim( (string) $slide['imageMobileUrl'] ) && $slide['imageMobileUrl'] !== $slide['imageUrl'];
                     $slide_image_mobile_alt = ! empty( $slide['imageMobileAlt'] ) ? $slide['imageMobileAlt'] : $slide['imageAlt'];
                 ?>
                     <div class="cph-carousel-slide<?php echo 0 === $index ? ' is-active' : ''; ?>">
                         <div class="cph-carousel-slide__image cph-carousel-slide__image--desktop">
                             <img src="<?php echo esc_url( $slide['imageUrl'] ); ?>" alt="<?php echo esc_attr( $slide['imageAlt'] ); ?>" />
                         </div>
-                        <div class="cph-carousel-slide__image cph-carousel-slide__image--mobile">
-                            <img src="<?php echo esc_url( $slide_image_mobile ); ?>" alt="<?php echo esc_attr( $slide_image_mobile_alt ); ?>" />
-                        </div>
+                        <?php if ( $has_mobile_image ) : ?>
+                            <div class="cph-carousel-slide__image cph-carousel-slide__image--mobile">
+                                <img src="<?php echo esc_url( $slide['imageMobileUrl'] ); ?>" alt="<?php echo esc_attr( $slide_image_mobile_alt ); ?>" />
+                            </div>
+                        <?php endif; ?>
                         <div class="cph-carousel-slide__content">
                             <div class="cph-carousel-slide__overlay">
-                                <p class="cph-carousel-slide__eyebrow cph-carousel-slide__eyebrow--desktop"><?php echo esc_html( $slide['eyebrow'] ); ?></p>
-                                <p class="cph-carousel-slide__eyebrow cph-carousel-slide__eyebrow--mobile"><?php echo esc_html( $slide_eyebrow_mobile ); ?></p>
-                                <h3 class="cph-carousel-slide__title cph-carousel-slide__title--desktop"><?php echo esc_html( $slide['title'] ); ?></h3>
-                                <h3 class="cph-carousel-slide__title cph-carousel-slide__title--mobile"><?php echo esc_html( $slide_title_mobile ); ?></h3>
+                                <?php if ( $has_mobile_eyebrow ) : ?>
+                                    <p class="cph-carousel-slide__eyebrow cph-carousel-slide__eyebrow--desktop"><?php echo esc_html( $slide['eyebrow'] ); ?></p>
+                                    <p class="cph-carousel-slide__eyebrow cph-carousel-slide__eyebrow--mobile"><?php echo esc_html( $slide['eyebrowMobile'] ); ?></p>
+                                <?php else : ?>
+                                    <p class="cph-carousel-slide__eyebrow"><?php echo esc_html( $slide['eyebrow'] ); ?></p>
+                                <?php endif; ?>
+                                <?php if ( $has_mobile_title ) : ?>
+                                    <h3 class="cph-carousel-slide__title cph-carousel-slide__title--desktop"><?php echo esc_html( $slide['title'] ); ?></h3>
+                                    <h3 class="cph-carousel-slide__title cph-carousel-slide__title--mobile"><?php echo esc_html( $slide['titleMobile'] ); ?></h3>
+                                <?php else : ?>
+                                    <h3 class="cph-carousel-slide__title"><?php echo esc_html( $slide['title'] ); ?></h3>
+                                <?php endif; ?>
                                 <div class="wp-block-button is-style-text-btn cph-carousel-slide__link">
                                     <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $slide['ctaUrl'] ); ?>"><?php echo esc_html( $slide['ctaLabel'] ); ?></a>
                                 </div>
                             </div>
-                            <p class="cph-carousel-slide__location cph-carousel-slide__location--desktop"><?php echo esc_html( $slide['location'] ); ?></p>
-                            <p class="cph-carousel-slide__location cph-carousel-slide__location--mobile"><?php echo esc_html( $slide_location_mobile ); ?></p>
+                            <?php if ( $has_mobile_location ) : ?>
+                                <p class="cph-carousel-slide__location cph-carousel-slide__location--desktop"><?php echo esc_html( $slide['location'] ); ?></p>
+                                <p class="cph-carousel-slide__location cph-carousel-slide__location--mobile"><?php echo esc_html( $slide['locationMobile'] ); ?></p>
+                            <?php else : ?>
+                                <p class="cph-carousel-slide__location"><?php echo esc_html( $slide['location'] ); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>

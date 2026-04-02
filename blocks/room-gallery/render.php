@@ -55,7 +55,8 @@ if ( empty( $attrs['galleryImages'] ) && $is_room ) {
 
 // Prepare images
 $featured_desktop = ! empty( $attrs['featuredImageUrl'] ) ? esc_url( $attrs['featuredImageUrl'] ) : '';
-$featured_mobile  = ! empty( $attrs['featuredImageMobileUrl'] ) ? esc_url( $attrs['featuredImageMobileUrl'] ) : $featured_desktop;
+$has_featured_mobile = ! empty( $attrs['featuredImageMobileUrl'] ) && $attrs['featuredImageMobileUrl'] !== $attrs['featuredImageUrl'];
+$featured_mobile  = $has_featured_mobile ? esc_url( $attrs['featuredImageMobileUrl'] ) : '';
 $featured_alt     = ! empty( $attrs['featuredImageAlt'] ) ? esc_attr( $attrs['featuredImageAlt'] ) : __( 'Room featured image', 'cph' );
 $featured_alt_mobile = ! empty( $attrs['featuredImageMobileAlt'] ) ? esc_attr( $attrs['featuredImageMobileAlt'] ) : $featured_alt;
 
@@ -91,7 +92,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
                     class="cph-room-gallery__image cph-room-gallery__image--desktop cph-room-gallery__image--featured"
                     loading="lazy"
                 >
-                <?php if ( $featured_mobile ) : ?>
+                <?php if ( $has_featured_mobile ) : ?>
                     <img 
                         src="<?php echo $featured_mobile; ?>" 
                         alt="<?php echo $featured_alt_mobile; ?>" 
@@ -118,10 +119,10 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 $img_alt   = ! empty( $image['alt'] ) ? esc_attr( $image['alt'] ) : '';
                 $img_caption = ! empty( $image['caption'] ) ? esc_attr( $image['caption'] ) : '';
                 
-                // Get mobile fallback
-                $mobile_img = isset( $mobile_gallery[$index] ) && ! empty( $mobile_gallery[$index]['url'] ) 
-                    ? esc_url( $mobile_gallery[$index]['url'] ) 
-                    : $img_url;
+                $has_mobile_image = isset( $mobile_gallery[ $index ]['url'] )
+                    && ! empty( $mobile_gallery[ $index ]['url'] )
+                    && $mobile_gallery[ $index ]['url'] !== $image['url'];
+                $mobile_img = $has_mobile_image ? esc_url( $mobile_gallery[ $index ]['url'] ) : '';
                 $mobile_alt = isset( $mobile_gallery[$index] ) && ! empty( $mobile_gallery[$index]['alt'] ) 
                     ? esc_attr( $mobile_gallery[$index]['alt'] ) 
                     : $img_alt;
@@ -139,12 +140,14 @@ $wrapper_attributes = get_block_wrapper_attributes(
                             class="cph-room-gallery__image cph-room-gallery__image--desktop"
                             loading="lazy"
                         >
-                        <img 
-                            src="<?php echo $mobile_img; ?>" 
-                            alt="<?php echo $mobile_alt; ?>" 
-                            class="cph-room-gallery__image cph-room-gallery__image--mobile"
-                            loading="lazy"
-                        >
+                        <?php if ( $has_mobile_image ) : ?>
+                            <img 
+                                src="<?php echo $mobile_img; ?>" 
+                                alt="<?php echo $mobile_alt; ?>" 
+                                class="cph-room-gallery__image cph-room-gallery__image--mobile"
+                                loading="lazy"
+                            >
+                        <?php endif; ?>
                         <?php if ( $attrs['showCaptions'] && $img_caption ) : ?>
                             <span class="cph-room-gallery__caption"><?php echo esc_html( $img_caption ); ?></span>
                         <?php endif; ?>

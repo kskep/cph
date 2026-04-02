@@ -81,20 +81,23 @@ $wrapper_attributes = get_block_wrapper_attributes(
         </div>
         <div class="wp-block-buttons cph-tabs__buttons">
             <?php foreach ( $tabs as $index => $tab ) : 
-                $tab_label_mobile = ! empty( $tab['tabLabelMobile'] ) ? $tab['tabLabelMobile'] : $tab['tabLabel'];
+                $has_mobile_tab_label = '' !== trim( (string) $tab['tabLabelMobile'] ) && $tab['tabLabelMobile'] !== $tab['tabLabel'];
             ?>
                 <div class="wp-block-button is-style-text-btn cph-tab-trigger<?php echo 0 === $index ? ' is-active' : ''; ?>">
-                    <a class="wp-block-button__link wp-element-button cph-tab-trigger__desktop" href="#how-we-play"><?php echo esc_html( $tab['tabLabel'] ); ?></a>
-                    <a class="wp-block-button__link wp-element-button cph-tab-trigger__mobile" href="#how-we-play"><?php echo esc_html( $tab_label_mobile ); ?></a>
+                    <?php if ( $has_mobile_tab_label ) : ?>
+                        <a class="wp-block-button__link wp-element-button cph-tab-trigger__desktop" href="#how-we-play"><?php echo esc_html( $tab['tabLabel'] ); ?></a>
+                        <a class="wp-block-button__link wp-element-button cph-tab-trigger__mobile" href="#how-we-play"><?php echo esc_html( $tab['tabLabelMobile'] ); ?></a>
+                    <?php else : ?>
+                        <a class="wp-block-button__link wp-element-button" href="#how-we-play"><?php echo esc_html( $tab['tabLabel'] ); ?></a>
+                    <?php endif; ?>
                 </div>
             <?php endforeach; ?>
         </div>
         <div class="cph-tabs__panels">
             <?php foreach ( $tabs as $index => $tab ) : 
-                // Fallback logic for mobile content
-                $tab_title_mobile = ! empty( $tab['titleMobile'] ) ? $tab['titleMobile'] : $tab['title'];
-                $tab_copy_mobile    = ! empty( $tab['copyMobile'] ) ? $tab['copyMobile'] : $tab['copy'];
-                $tab_image_mobile   = ! empty( $tab['imageMobileUrl'] ) ? $tab['imageMobileUrl'] : $tab['imageUrl'];
+                $has_mobile_title = '' !== trim( (string) $tab['titleMobile'] ) && $tab['titleMobile'] !== $tab['title'];
+                $has_mobile_copy = '' !== trim( (string) $tab['copyMobile'] ) && $tab['copyMobile'] !== $tab['copy'];
+                $has_mobile_image = '' !== trim( (string) $tab['imageMobileUrl'] ) && $tab['imageMobileUrl'] !== $tab['imageUrl'];
                 $tab_image_mobile_alt = ! empty( $tab['imageMobileAlt'] ) ? $tab['imageMobileAlt'] : $tab['imageAlt'];
             ?>
                 <div class="cph-tab-panel<?php echo 0 === $index ? ' is-active' : ''; ?>">
@@ -103,16 +106,26 @@ $wrapper_attributes = get_block_wrapper_attributes(
                             <div class="cph-tab-panel__image cph-tab-panel__image--desktop">
                                 <img src="<?php echo esc_url( $tab['imageUrl'] ); ?>" alt="<?php echo esc_attr( $tab['imageAlt'] ); ?>" />
                             </div>
-                            <div class="cph-tab-panel__image cph-tab-panel__image--mobile">
-                                <img src="<?php echo esc_url( $tab_image_mobile ); ?>" alt="<?php echo esc_attr( $tab_image_mobile_alt ); ?>" />
-                            </div>
+                            <?php if ( $has_mobile_image ) : ?>
+                                <div class="cph-tab-panel__image cph-tab-panel__image--mobile">
+                                    <img src="<?php echo esc_url( $tab['imageMobileUrl'] ); ?>" alt="<?php echo esc_attr( $tab_image_mobile_alt ); ?>" />
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="wp-block-column is-vertically-aligned-center cph-tab-panel__content-column" style="flex-basis:50%">
                             <div class="cph-tab-panel__content">
-                                <h3 class="cph-tab-panel__title cph-tab-panel__title--desktop"><?php echo esc_html( $tab['title'] ); ?></h3>
-                                <h3 class="cph-tab-panel__title cph-tab-panel__title--mobile"><?php echo esc_html( $tab_title_mobile ); ?></h3>
-                                <p class="cph-tab-panel__copy cph-tab-panel__copy--desktop"><?php echo esc_html( $tab['copy'] ); ?></p>
-                                <p class="cph-tab-panel__copy cph-tab-panel__copy--mobile"><?php echo esc_html( $tab_copy_mobile ); ?></p>
+                                <?php if ( $has_mobile_title ) : ?>
+                                    <h3 class="cph-tab-panel__title cph-tab-panel__title--desktop"><?php echo esc_html( $tab['title'] ); ?></h3>
+                                    <h3 class="cph-tab-panel__title cph-tab-panel__title--mobile"><?php echo esc_html( $tab['titleMobile'] ); ?></h3>
+                                <?php else : ?>
+                                    <h3 class="cph-tab-panel__title"><?php echo esc_html( $tab['title'] ); ?></h3>
+                                <?php endif; ?>
+                                <?php if ( $has_mobile_copy ) : ?>
+                                    <p class="cph-tab-panel__copy cph-tab-panel__copy--desktop"><?php echo esc_html( $tab['copy'] ); ?></p>
+                                    <p class="cph-tab-panel__copy cph-tab-panel__copy--mobile"><?php echo esc_html( $tab['copyMobile'] ); ?></p>
+                                <?php else : ?>
+                                    <p class="cph-tab-panel__copy"><?php echo esc_html( $tab['copy'] ); ?></p>
+                                <?php endif; ?>
                                 <div class="wp-block-button is-style-text-btn cph-tab-panel__link">
                                     <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $tab['ctaUrl'] ); ?>"><?php echo esc_html( $tab['ctaLabel'] ); ?></a>
                                 </div>

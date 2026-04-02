@@ -67,7 +67,9 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 
                 // Get room images
                 $desktop_image = get_the_post_thumbnail_url( $room_id, 'large' );
-                $mobile_image  = get_post_meta( $room_id, 'mobile_image', true ) ?: $desktop_image;
+                $mobile_image_meta = get_post_meta( $room_id, 'mobile_image', true );
+                $has_mobile_image = ! empty( $mobile_image_meta ) && $mobile_image_meta !== $desktop_image;
+                $mobile_image  = $has_mobile_image ? $mobile_image_meta : '';
                 $desktop_alt   = get_post_meta( get_post_thumbnail_id( $room_id ), '_wp_attachment_image_alt', true );
                 $mobile_alt    = get_post_meta( $room_id, 'mobile_image_alt', true ) ?: $desktop_alt;
                 
@@ -92,7 +94,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
                                 loading="lazy"
                             >
                         <?php endif; ?>
-                        <?php if ( $mobile_image ) : ?>
+                        <?php if ( $has_mobile_image ) : ?>
                             <img 
                                 src="<?php echo esc_url( $mobile_image ); ?>" 
                                 alt="<?php echo esc_attr( $mobile_alt ); ?>" 
