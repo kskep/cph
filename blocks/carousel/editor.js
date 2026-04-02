@@ -1,6 +1,7 @@
 (function (wp) {
     var el = wp.element.createElement;
     var Fragment = wp.element.Fragment;
+    var getBlockType = wp.blocks.getBlockType;
     var registerBlockType = wp.blocks.registerBlockType;
     var InspectorControls = wp.blockEditor.InspectorControls;
     var MediaUpload = wp.blockEditor.MediaUpload;
@@ -8,6 +9,11 @@
     var PanelBody = wp.components.PanelBody;
     var TextControl = wp.components.TextControl;
     var Button = wp.components.Button;
+    var blockName = 'cph/carousel';
+
+    if (getBlockType(blockName)) {
+        return;
+    }
 
     var DEFAULT_SLIDES = [
         {
@@ -40,7 +46,7 @@
         }
     ];
 
-    registerBlockType('cph/carousel', {
+    registerBlockType(blockName, {
         edit: function (props) {
             var attributes = props.attributes;
             var setAttributes = props.setAttributes;

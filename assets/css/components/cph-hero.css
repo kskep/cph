@@ -5,10 +5,24 @@
 }
 
 .cph-hero {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.cph-hero__bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  position: absolute;
+}
+
+.cph-hero__bg--mobile {
+  display: none;
 }
 
 .cph-hero .wp-block-cover__image-background {
@@ -23,10 +37,12 @@
 
 .cph-hero__inner {
   position: relative;
+  width: 100%;
   min-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .cph-hero__tagline {
@@ -69,6 +85,12 @@
 }
 
 .cph-booking-bar {
+  display: none;
+}
+
+.cph-hero__tagline-line--mobile,
+.cph-hero__tagline-brand--mobile,
+.cph-booking-bar__title--mobile {
   display: none;
 }
 
@@ -161,29 +183,30 @@
 }
 
 @media (max-width: 1024px) {
-/* Mobile/Desktop Content Modifiers */
-.cph-hero__bg--mobile,
-.cph-hero__tagline-line--mobile,
-.cph-hero__tagline-brand--mobile,
-.cph-booking-bar__title--mobile {
-  display: none;
+  .cph-booking-bar {
+    margin-top: -2rem;
+  }
+
+  .cph-booking-bar__inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 782px) {
   .cph-hero__bg--desktop {
     display: none;
   }
-  
+
   .cph-hero__bg--mobile {
     display: block;
   }
-  
+
   .cph-hero__tagline-line--desktop,
   .cph-hero__tagline-brand--desktop,
   .cph-booking-bar__title--desktop {
     display: none;
   }
-  
+
   .cph-hero__tagline-line--mobile,
   .cph-hero__tagline-brand--mobile,
   .cph-booking-bar__title--mobile {
@@ -194,15 +217,6 @@
 @media (max-width: 1024px) {
   .cph-hero__tagline {
     display: block;
-  }
-}
-
-  .cph-booking-bar {
-    margin-top: -2rem;
-  }
-
-  .cph-booking-bar__inner {
-    grid-template-columns: 1fr 1fr;
   }
 }
 

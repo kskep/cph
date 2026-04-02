@@ -1,6 +1,7 @@
 (function (wp) {
     var el = wp.element.createElement;
     var Fragment = wp.element.Fragment;
+    var getBlockType = wp.blocks.getBlockType;
     var registerBlockType = wp.blocks.registerBlockType;
     var InspectorControls = wp.blockEditor.InspectorControls;
     var MediaUpload = wp.blockEditor.MediaUpload;
@@ -10,8 +11,13 @@
     var ToggleControl = wp.components.ToggleControl;
     var RangeControl = wp.components.RangeControl;
     var Button = wp.components.Button;
+    var blockName = 'cph/room-gallery';
 
-    registerBlockType('cph/room-gallery', {
+    if (getBlockType(blockName)) {
+        return;
+    }
+
+    registerBlockType(blockName, {
         edit: function (props) {
             var attributes = props.attributes;
             var setAttributes = props.setAttributes;

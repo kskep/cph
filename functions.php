@@ -367,11 +367,7 @@ function cph_register_custom_blocks() {
 
     foreach ( $block_paths as $block_path ) {
         if ( file_exists( $block_path . '/block.json' ) ) {
-            // Unregister if already registered to prevent duplicates
-            $block_data = json_decode( file_get_contents( $block_path . '/block.json' ), true );
-            if ( ! empty( $block_data['name'] ) && WP_Block_Type_Registry::get_instance()->is_registered( $block_data['name'] ) ) {
-                unregister_block_type( $block_data['name'] );
-            }
+            // Register each block once from its block.json metadata.
             register_block_type( $block_path );
         }
     }

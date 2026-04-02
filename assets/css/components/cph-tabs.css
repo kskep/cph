@@ -41,6 +41,13 @@
   flex: 1 1 auto;
 }
 
+.cph-tab-panel__image--mobile,
+.cph-tab-panel__title--mobile,
+.cph-tab-panel__copy--mobile,
+.cph-tab-trigger__mobile {
+  display: none;
+}
+
 .cph-tab-trigger .wp-block-button__link {
   background: transparent !important;
   border: 0 !important;
@@ -177,29 +184,20 @@
     max-height: 25rem;
   }
 
-/* Mobile/Desktop Content Modifiers */
-.cph-tab-panel__image--mobile,
-.cph-tab-panel__title--mobile,
-.cph-tab-panel__copy--mobile,
-.cph-tab-trigger__mobile {
-  display: none;
-}
-
-@media (max-width: 782px) {
   .cph-tab-panel__image--desktop {
     display: none;
   }
-  
+
   .cph-tab-panel__image--mobile {
     display: block;
   }
-  
+
   .cph-tab-panel__title--desktop,
   .cph-tab-panel__copy--desktop,
   .cph-tab-trigger__desktop {
     display: none;
   }
-  
+
   .cph-tab-panel__title--mobile,
   .cph-tab-panel__copy--mobile,
   .cph-tab-trigger__mobile {

@@ -1,6 +1,7 @@
 (function (wp) {
     var el = wp.element.createElement;
     var Fragment = wp.element.Fragment;
+    var getBlockType = wp.blocks.getBlockType;
     var registerBlockType = wp.blocks.registerBlockType;
     var InspectorControls = wp.blockEditor.InspectorControls;
     var PanelBody = wp.components.PanelBody;
@@ -8,8 +9,13 @@
     var TextareaControl = wp.components.TextareaControl;
     var SelectControl = wp.components.SelectControl;
     var useSelect = wp.data.useSelect;
+    var blockName = 'cph/footer';
 
-    registerBlockType('cph/footer', {
+    if (getBlockType(blockName)) {
+        return;
+    }
+
+    registerBlockType(blockName, {
         edit: function (props) {
             var attributes = props.attributes;
             var setAttributes = props.setAttributes;
