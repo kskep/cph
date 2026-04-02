@@ -36,10 +36,7 @@
 <!-- wp:button {"className":"is-style-text-btn cph-carousel-slide__link"} -->
 <div class="wp-block-button is-style-text-btn cph-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:group -->
-<!-- wp:paragraph {"className":"cph-carousel-slide__location","fontSize":"small"} -->
-<p class="cph-carousel-slide__location has-small-font-size">CPH BARCELONA</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
@@ -58,10 +55,7 @@
 <!-- wp:button {"className":"is-style-text-btn cph-carousel-slide__link"} -->
 <div class="wp-block-button is-style-text-btn cph-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>
 <!-- /wp:button --></div>
-<!-- /wp:group -->
-<!-- wp:paragraph {"className":"cph-carousel-slide__location","fontSize":"small"} -->
-<p class="cph-carousel-slide__location has-small-font-size">CPH NYC</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

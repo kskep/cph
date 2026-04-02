@@ -5,8 +5,6 @@ $default_slides = array(
         'eyebrowMobile'   => '',
         'title'           => 'CPH Barcelona',
         'titleMobile'     => '',
-        'location'        => 'CPH BARCELONA',
-        'locationMobile'  => '',
         'imageUrl'        => 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop',
         'imageAlt'        => 'CPH Barcelona',
         'imageMobileUrl'  => '',
@@ -19,8 +17,6 @@ $default_slides = array(
         'eyebrowMobile'   => '',
         'title'           => 'CPH NYC',
         'titleMobile'     => '',
-        'location'        => 'CPH NYC',
-        'locationMobile'  => '',
         'imageUrl'        => 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop',
         'imageAlt'        => 'CPH NYC',
         'imageMobileUrl'  => '',
@@ -58,7 +54,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 <?php foreach ( $slides as $index => $slide ) : 
                     $has_mobile_eyebrow = '' !== trim( (string) $slide['eyebrowMobile'] ) && $slide['eyebrowMobile'] !== $slide['eyebrow'];
                     $has_mobile_title = '' !== trim( (string) $slide['titleMobile'] ) && $slide['titleMobile'] !== $slide['title'];
-                    $has_mobile_location = '' !== trim( (string) $slide['locationMobile'] ) && $slide['locationMobile'] !== $slide['location'];
                     $has_mobile_image = '' !== trim( (string) $slide['imageMobileUrl'] ) && $slide['imageMobileUrl'] !== $slide['imageUrl'];
                     $slide_image_mobile_alt = ! empty( $slide['imageMobileAlt'] ) ? $slide['imageMobileAlt'] : $slide['imageAlt'];
                 ?>
@@ -89,12 +84,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
                                     <a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $slide['ctaUrl'] ); ?>"><?php echo esc_html( $slide['ctaLabel'] ); ?></a>
                                 </div>
                             </div>
-                            <?php if ( $has_mobile_location ) : ?>
-                                <p class="cph-carousel-slide__location cph-carousel-slide__location--desktop"><?php echo esc_html( $slide['location'] ); ?></p>
-                                <p class="cph-carousel-slide__location cph-carousel-slide__location--mobile"><?php echo esc_html( $slide['locationMobile'] ); ?></p>
-                            <?php else : ?>
-                                <p class="cph-carousel-slide__location"><?php echo esc_html( $slide['location'] ); ?></p>
-                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endforeach; ?>

@@ -21,8 +21,6 @@
             eyebrowMobile: '',
             title: 'CPH Barcelona',
             titleMobile: '',
-            location: 'CPH BARCELONA',
-            locationMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop',
             imageAlt: 'CPH Barcelona',
             imageMobileUrl: '',
@@ -35,8 +33,6 @@
             eyebrowMobile: '',
             title: 'CPH NYC',
             titleMobile: '',
-            location: 'CPH NYC',
-            locationMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop',
             imageAlt: 'CPH NYC',
             imageMobileUrl: '',
@@ -95,16 +91,6 @@
                                 label: 'Title - Mobile (optional)',
                                 value: slide.titleMobile || '',
                                 onChange: function (value) { updateSlide(index, 'titleMobile', value); }
-                            }),
-                            el(TextControl, {
-                                label: 'Location Label - Desktop',
-                                value: slide.location || '',
-                                onChange: function (value) { updateSlide(index, 'location', value); }
-                            }),
-                            el(TextControl, {
-                                label: 'Location Label - Mobile (optional)',
-                                value: slide.locationMobile || '',
-                                onChange: function (value) { updateSlide(index, 'locationMobile', value); }
                             }),
                             el(TextControl, {
                                 label: 'CTA Label',
@@ -190,8 +176,7 @@
                                 el('p', { className: 'cph-carousel-slide__eyebrow' }, slides[0].eyebrow || ''),
                                 el('h3', { className: 'cph-carousel-slide__title' }, slides[0].title || ''),
                                 el('span', { className: 'wp-block-button__link wp-element-button' }, slides[0].ctaLabel || '')
-                            ),
-                            el('p', { className: 'cph-carousel-slide__location' }, slides[0].location || '')
+                            )
                         ) : null
                     )
                 )
