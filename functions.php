@@ -419,6 +419,19 @@ function cph_add_room_amenity_term_fields() {
         <label for="cph-room-amenity-icon-value"><?php esc_html_e( 'Icon Class or Code', 'cph' ); ?></label>
         <input type="text" id="cph-room-amenity-icon-value" name="cph_room_amenity_icon_value" value="">
         <p><?php esc_html_e( 'Examples: fa-solid fa-wifi, dashicons dashicons-admin-site, or a theme icon class name.', 'cph' ); ?></p>
+        <p>
+            <a href="https://fontawesome.com/search?m=free" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Browse free Font Awesome icons', 'cph' ); ?></a>
+            <?php esc_html_e( 'or', 'cph' ); ?>
+            <a href="https://developer.wordpress.org/resource/dashicons/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'browse Dashicons', 'cph' ); ?></a>
+        </p>
+        <p>
+            <?php esc_html_e( 'Quick guide:', 'cph' ); ?>
+            <?php esc_html_e( 'pick an icon library above, open one of the links, copy the icon class, and paste it here.', 'cph' ); ?>
+            <?php esc_html_e( 'For Font Awesome use values like', 'cph' ); ?>
+            <code>fa-solid fa-wifi</code>.
+            <?php esc_html_e( 'For Dashicons use values like', 'cph' ); ?>
+            <code>dashicons dashicons-admin-site</code>.
+        </p>
     </div>
     <?php
 }
@@ -445,6 +458,19 @@ function cph_edit_room_amenity_term_fields( $term ) {
         <td>
             <input type="text" id="cph-room-amenity-icon-value" name="cph_room_amenity_icon_value" value="<?php echo esc_attr( $icon_value ); ?>" class="regular-text">
             <p class="description"><?php esc_html_e( 'Examples: fa-solid fa-wifi, dashicons dashicons-admin-site, or a theme icon class name.', 'cph' ); ?></p>
+            <p class="description">
+                <a href="https://fontawesome.com/search?m=free" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Browse free Font Awesome icons', 'cph' ); ?></a>
+                <?php esc_html_e( 'or', 'cph' ); ?>
+                <a href="https://developer.wordpress.org/resource/dashicons/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'browse Dashicons', 'cph' ); ?></a>
+            </p>
+            <p class="description">
+                <?php esc_html_e( 'Quick guide:', 'cph' ); ?>
+                <?php esc_html_e( 'pick an icon library above, open one of the links, copy the icon class, and paste it here.', 'cph' ); ?>
+                <?php esc_html_e( 'For Font Awesome use values like', 'cph' ); ?>
+                <code>fa-solid fa-wifi</code>.
+                <?php esc_html_e( 'For Dashicons use values like', 'cph' ); ?>
+                <code>dashicons dashicons-admin-site</code>.
+            </p>
         </td>
     </tr>
     <?php
