@@ -187,17 +187,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
                     <h4 class="cph-room-features__amenity-heading"><?php echo esc_html( $category_label ); ?></h4>
                     <ul class="cph-room-features__amenity-list">
                         <?php foreach ( $category_amenities as $amenity ) : 
-                            $amenity_icon  = ! empty( $amenity['icon'] ) ? esc_attr( $amenity['icon'] ) : '';
                             $amenity_label = ! empty( $amenity['label'] ) ? esc_html( $amenity['label'] ) : '';
-                            $amenity_font_family = ! empty( $amenity['fontFamily'] ) && 'inherit' !== $amenity['fontFamily'] ? $amenity['fontFamily'] : '';
-                            $amenity_label_style = $amenity_font_family ? 'font-family: ' . esc_attr( $amenity_font_family ) . ', sans-serif;' : '';
+                            $amenity_icon_markup = cph_render_amenity_icon( $amenity );
                             if ( ! $amenity_label ) continue;
                         ?>
                             <li class="cph-room-features__amenity-item">
-                                <?php if ( $attrs['showIcons'] && $amenity_icon ) : ?>
-                                    <span class="cph-room-features__amenity-icon icon-<?php echo $amenity_icon; ?>" aria-hidden="true"></span>
+                                <?php if ( $attrs['showIcons'] && $amenity_icon_markup ) : ?>
+                                    <span class="cph-room-features__amenity-icon"><?php echo wp_kses_post( $amenity_icon_markup ); ?></span>
                                 <?php endif; ?>
-                                <span class="cph-room-features__amenity-label"<?php echo $amenity_label_style ? ' style="' . $amenity_label_style . '"' : ''; ?>><?php echo $amenity_label; ?></span>
+                                <span class="cph-room-features__amenity-label"><?php echo $amenity_label; ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>

@@ -36,6 +36,8 @@ function starter_block_theme_enqueue_scripts() {
     
 	wp_enqueue_style( 'starter-css', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory() . '/style.css') );
     wp_enqueue_style( 'cph-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600;700&display=swap', array(), null );
+    wp_enqueue_style( 'font-awesome-free', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css', array(), null );
+    wp_enqueue_style( 'dashicons' );
 
 	// Disable this if you want don't want to include the CSS Framework
     wp_enqueue_style( 'css-framework', get_stylesheet_directory_uri() . '/assets/css/css-framework.css', [], filemtime(get_stylesheet_directory() . '/assets/css/css-framework.css') );
@@ -362,11 +364,12 @@ function cph_register_hotel_location_taxonomy() {
 }
 add_action( 'init', 'cph_register_hotel_location_taxonomy', 0 );
 
-function cph_get_amenity_font_family_choices() {
+function cph_get_amenity_icon_family_choices() {
     return array(
-        'inherit'    => __( 'Theme Default', 'cph' ),
-        'Montserrat' => 'Montserrat',
-        'Open Sans'  => 'Open Sans',
+        'none'            => __( 'No Icon', 'cph' ),
+        'icon-font'       => __( 'Theme Icon Font', 'cph' ),
+        'dashicons'       => __( 'Dashicons', 'cph' ),
+        'font-awesome'    => __( 'Font Awesome Free', 'cph' ),
     );
 }
 
@@ -401,34 +404,47 @@ function cph_register_room_amenity_taxonomy() {
 add_action( 'init', 'cph_register_room_amenity_taxonomy', 0 );
 
 function cph_add_room_amenity_term_fields() {
-    $font_families = cph_get_amenity_font_family_choices();
+    $icon_families = cph_get_amenity_icon_family_choices();
     ?>
-    <div class="form-field term-font-family-wrap">
-        <label for="cph-room-amenity-font-family"><?php esc_html_e( 'Font Family', 'cph' ); ?></label>
-        <select id="cph-room-amenity-font-family" name="cph_room_amenity_font_family">
-            <?php foreach ( $font_families as $value => $label ) : ?>
+    <div class="form-field term-icon-family-wrap">
+        <label for="cph-room-amenity-icon-family"><?php esc_html_e( 'Icon Family', 'cph' ); ?></label>
+        <select id="cph-room-amenity-icon-family" name="cph_room_amenity_icon_family">
+            <?php foreach ( $icon_families as $value => $label ) : ?>
                 <option value="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></option>
             <?php endforeach; ?>
         </select>
-        <p><?php esc_html_e( 'Used when this amenity label is displayed on room pages.', 'cph' ); ?></p>
+        <p><?php esc_html_e( 'Choose which icon library this amenity should use.', 'cph' ); ?></p>
+    </div>
+    <div class="form-field term-icon-value-wrap">
+        <label for="cph-room-amenity-icon-value"><?php esc_html_e( 'Icon Class or Code', 'cph' ); ?></label>
+        <input type="text" id="cph-room-amenity-icon-value" name="cph_room_amenity_icon_value" value="">
+        <p><?php esc_html_e( 'Examples: fa-solid fa-wifi, dashicons dashicons-admin-site, or a theme icon class name.', 'cph' ); ?></p>
     </div>
     <?php
 }
 add_action( 'cph_room_amenity_add_form_fields', 'cph_add_room_amenity_term_fields' );
 
 function cph_edit_room_amenity_term_fields( $term ) {
-    $selected      = get_term_meta( $term->term_id, 'font_family', true );
-    $font_families = cph_get_amenity_font_family_choices();
+    $selected      = get_term_meta( $term->term_id, 'icon_family', true );
+    $icon_value    = get_term_meta( $term->term_id, 'icon_value', true );
+    $icon_families = cph_get_amenity_icon_family_choices();
     ?>
-    <tr class="form-field term-font-family-wrap">
-        <th scope="row"><label for="cph-room-amenity-font-family"><?php esc_html_e( 'Font Family', 'cph' ); ?></label></th>
+    <tr class="form-field term-icon-family-wrap">
+        <th scope="row"><label for="cph-room-amenity-icon-family"><?php esc_html_e( 'Icon Family', 'cph' ); ?></label></th>
         <td>
-            <select id="cph-room-amenity-font-family" name="cph_room_amenity_font_family">
-                <?php foreach ( $font_families as $value => $label ) : ?>
-                    <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $selected ? $selected : 'inherit', $value ); ?>><?php echo esc_html( $label ); ?></option>
+            <select id="cph-room-amenity-icon-family" name="cph_room_amenity_icon_family">
+                <?php foreach ( $icon_families as $value => $label ) : ?>
+                    <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $selected ? $selected : 'none', $value ); ?>><?php echo esc_html( $label ); ?></option>
                 <?php endforeach; ?>
             </select>
-            <p class="description"><?php esc_html_e( 'Used when this amenity label is displayed on room pages.', 'cph' ); ?></p>
+            <p class="description"><?php esc_html_e( 'Choose which icon library this amenity should use.', 'cph' ); ?></p>
+        </td>
+    </tr>
+    <tr class="form-field term-icon-value-wrap">
+        <th scope="row"><label for="cph-room-amenity-icon-value"><?php esc_html_e( 'Icon Class or Code', 'cph' ); ?></label></th>
+        <td>
+            <input type="text" id="cph-room-amenity-icon-value" name="cph_room_amenity_icon_value" value="<?php echo esc_attr( $icon_value ); ?>" class="regular-text">
+            <p class="description"><?php esc_html_e( 'Examples: fa-solid fa-wifi, dashicons dashicons-admin-site, or a theme icon class name.', 'cph' ); ?></p>
         </td>
     </tr>
     <?php
@@ -436,14 +452,21 @@ function cph_edit_room_amenity_term_fields( $term ) {
 add_action( 'cph_room_amenity_edit_form_fields', 'cph_edit_room_amenity_term_fields' );
 
 function cph_save_room_amenity_term_fields( $term_id ) {
-    $font_families = cph_get_amenity_font_family_choices();
-    $font_family   = isset( $_POST['cph_room_amenity_font_family'] ) ? sanitize_text_field( wp_unslash( $_POST['cph_room_amenity_font_family'] ) ) : 'inherit';
+    $icon_families = cph_get_amenity_icon_family_choices();
+    $icon_family   = isset( $_POST['cph_room_amenity_icon_family'] ) ? sanitize_text_field( wp_unslash( $_POST['cph_room_amenity_icon_family'] ) ) : 'none';
+    $icon_value    = isset( $_POST['cph_room_amenity_icon_value'] ) ? sanitize_text_field( wp_unslash( $_POST['cph_room_amenity_icon_value'] ) ) : '';
 
-    if ( ! array_key_exists( $font_family, $font_families ) ) {
-        $font_family = 'inherit';
+    if ( ! array_key_exists( $icon_family, $icon_families ) ) {
+        $icon_family = 'none';
     }
 
-    update_term_meta( $term_id, 'font_family', $font_family );
+    update_term_meta( $term_id, 'icon_family', $icon_family );
+
+    if ( '' === $icon_value ) {
+        delete_term_meta( $term_id, 'icon_value' );
+    } else {
+        update_term_meta( $term_id, 'icon_value', $icon_value );
+    }
 }
 add_action( 'created_cph_room_amenity', 'cph_save_room_amenity_term_fields' );
 add_action( 'edited_cph_room_amenity', 'cph_save_room_amenity_term_fields' );
@@ -458,16 +481,33 @@ function cph_get_room_amenities_data( $room_id ) {
     $amenities = array();
 
     foreach ( $terms as $term ) {
-        $font_family = get_term_meta( $term->term_id, 'font_family', true );
+        $icon_family = get_term_meta( $term->term_id, 'icon_family', true );
+        $icon_value  = get_term_meta( $term->term_id, 'icon_value', true );
 
         $amenities[] = array(
             'label'       => $term->name,
             'category'    => 'general',
-            'fontFamily'  => $font_family ? $font_family : 'inherit',
+            'iconFamily'  => $icon_family ? $icon_family : 'none',
+            'iconValue'   => $icon_value,
         );
     }
 
     return $amenities;
+}
+
+function cph_render_amenity_icon( $amenity ) {
+    $icon_family = ! empty( $amenity['iconFamily'] ) ? $amenity['iconFamily'] : 'none';
+    $icon_value  = ! empty( $amenity['iconValue'] ) ? trim( $amenity['iconValue'] ) : '';
+
+    if ( 'none' === $icon_family || '' === $icon_value ) {
+        return '';
+    }
+
+    if ( 'font-awesome' === $icon_family || 'dashicons' === $icon_family || 'icon-font' === $icon_family ) {
+        return '<span class="cph-room-amenity-icon ' . esc_attr( $icon_value ) . '" aria-hidden="true"></span>';
+    }
+
+    return '';
 }
 
 function cph_add_room_details_meta_box() {
