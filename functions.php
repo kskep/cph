@@ -362,6 +362,114 @@ function cph_register_hotel_location_taxonomy() {
 }
 add_action( 'init', 'cph_register_hotel_location_taxonomy', 0 );
 
+function cph_get_amenity_font_family_choices() {
+    return array(
+        'inherit'    => __( 'Theme Default', 'cph' ),
+        'Montserrat' => 'Montserrat',
+        'Open Sans'  => 'Open Sans',
+    );
+}
+
+function cph_register_room_amenity_taxonomy() {
+    $labels = array(
+        'name'              => _x( 'Amenities', 'taxonomy general name', 'cph' ),
+        'singular_name'     => _x( 'Amenity', 'taxonomy singular name', 'cph' ),
+        'search_items'      => __( 'Search Amenities', 'cph' ),
+        'all_items'         => __( 'All Amenities', 'cph' ),
+        'edit_item'         => __( 'Edit Amenity', 'cph' ),
+        'update_item'       => __( 'Update Amenity', 'cph' ),
+        'add_new_item'      => __( 'Add New Amenity', 'cph' ),
+        'new_item_name'     => __( 'New Amenity Name', 'cph' ),
+        'menu_name'         => __( 'Amenities', 'cph' ),
+    );
+
+    register_taxonomy(
+        'cph_room_amenity',
+        array( 'cph_room' ),
+        array(
+            'hierarchical'      => false,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'show_admin_column' => false,
+            'show_in_rest'      => true,
+            'show_tagcloud'     => false,
+            'meta_box_cb'       => 'post_categories_meta_box',
+            'rewrite'           => false,
+        )
+    );
+}
+add_action( 'init', 'cph_register_room_amenity_taxonomy', 0 );
+
+function cph_add_room_amenity_term_fields() {
+    $font_families = cph_get_amenity_font_family_choices();
+    ?>
+    <div class="form-field term-font-family-wrap">
+        <label for="cph-room-amenity-font-family"><?php esc_html_e( 'Font Family', 'cph' ); ?></label>
+        <select id="cph-room-amenity-font-family" name="cph_room_amenity_font_family">
+            <?php foreach ( $font_families as $value => $label ) : ?>
+                <option value="<?php echo esc_attr( $value ); ?>"><?php echo esc_html( $label ); ?></option>
+            <?php endforeach; ?>
+        </select>
+        <p><?php esc_html_e( 'Used when this amenity label is displayed on room pages.', 'cph' ); ?></p>
+    </div>
+    <?php
+}
+add_action( 'cph_room_amenity_add_form_fields', 'cph_add_room_amenity_term_fields' );
+
+function cph_edit_room_amenity_term_fields( $term ) {
+    $selected      = get_term_meta( $term->term_id, 'font_family', true );
+    $font_families = cph_get_amenity_font_family_choices();
+    ?>
+    <tr class="form-field term-font-family-wrap">
+        <th scope="row"><label for="cph-room-amenity-font-family"><?php esc_html_e( 'Font Family', 'cph' ); ?></label></th>
+        <td>
+            <select id="cph-room-amenity-font-family" name="cph_room_amenity_font_family">
+                <?php foreach ( $font_families as $value => $label ) : ?>
+                    <option value="<?php echo esc_attr( $value ); ?>" <?php selected( $selected ? $selected : 'inherit', $value ); ?>><?php echo esc_html( $label ); ?></option>
+                <?php endforeach; ?>
+            </select>
+            <p class="description"><?php esc_html_e( 'Used when this amenity label is displayed on room pages.', 'cph' ); ?></p>
+        </td>
+    </tr>
+    <?php
+}
+add_action( 'cph_room_amenity_edit_form_fields', 'cph_edit_room_amenity_term_fields' );
+
+function cph_save_room_amenity_term_fields( $term_id ) {
+    $font_families = cph_get_amenity_font_family_choices();
+    $font_family   = isset( $_POST['cph_room_amenity_font_family'] ) ? sanitize_text_field( wp_unslash( $_POST['cph_room_amenity_font_family'] ) ) : 'inherit';
+
+    if ( ! array_key_exists( $font_family, $font_families ) ) {
+        $font_family = 'inherit';
+    }
+
+    update_term_meta( $term_id, 'font_family', $font_family );
+}
+add_action( 'created_cph_room_amenity', 'cph_save_room_amenity_term_fields' );
+add_action( 'edited_cph_room_amenity', 'cph_save_room_amenity_term_fields' );
+
+function cph_get_room_amenities_data( $room_id ) {
+    $terms = get_the_terms( $room_id, 'cph_room_amenity' );
+
+    if ( empty( $terms ) || is_wp_error( $terms ) ) {
+        return array();
+    }
+
+    $amenities = array();
+
+    foreach ( $terms as $term ) {
+        $font_family = get_term_meta( $term->term_id, 'font_family', true );
+
+        $amenities[] = array(
+            'label'       => $term->name,
+            'category'    => 'general',
+            'fontFamily'  => $font_family ? $font_family : 'inherit',
+        );
+    }
+
+    return $amenities;
+}
+
 function cph_add_room_details_meta_box() {
     add_meta_box(
         'cph-room-details',
@@ -385,19 +493,7 @@ function cph_render_room_details_meta_box( $post ) {
         'floor_level'   => get_post_meta( $post->ID, 'floor_level', true ),
         'booking_url'   => get_post_meta( $post->ID, 'booking_url', true ),
         'gallery_images'=> get_post_meta( $post->ID, 'gallery_images', true ),
-        'amenities'     => get_post_meta( $post->ID, 'amenities', true ),
     );
-
-    $amenities_lines = '';
-    if ( is_array( $fields['amenities'] ) ) {
-        $labels = array();
-        foreach ( $fields['amenities'] as $amenity ) {
-            if ( ! empty( $amenity['label'] ) ) {
-                $labels[] = $amenity['label'];
-            }
-        }
-        $amenities_lines = implode( "\n", $labels );
-    }
 
     $gallery_ids = '';
     if ( is_array( $fields['gallery_images'] ) ) {
@@ -438,15 +534,9 @@ function cph_render_room_details_meta_box( $post ) {
                     <p class="description"><?php esc_html_e( 'Optional. Enter media attachment IDs separated by commas for the gallery grid.', 'cph' ); ?></p>
                 </td>
             </tr>
-            <tr>
-                <th scope="row"><label for="cph-amenities"><?php esc_html_e( 'Amenities', 'cph' ); ?></label></th>
-                <td>
-                    <textarea id="cph-amenities" name="cph_room_details[amenities]" rows="6" class="large-text"><?php echo esc_textarea( $amenities_lines ); ?></textarea>
-                    <p class="description"><?php esc_html_e( 'One amenity per line.', 'cph' ); ?></p>
-                </td>
-            </tr>
         </tbody>
     </table>
+    <p><?php esc_html_e( 'Select room amenities from the Amenities box in the right sidebar.', 'cph' ); ?></p>
     <?php
 }
 
@@ -503,25 +593,6 @@ function cph_save_room_details_meta_box( $post_id ) {
         delete_post_meta( $post_id, 'gallery_images' );
     }
 
-    $amenities = array();
-    if ( ! empty( $raw_fields['amenities'] ) ) {
-        $lines = preg_split( '/\r\n|\r|\n/', $raw_fields['amenities'] );
-        foreach ( $lines as $line ) {
-            $label = sanitize_text_field( $line );
-            if ( '' !== $label ) {
-                $amenities[] = array(
-                    'icon'     => '',
-                    'label'    => $label,
-                    'category' => 'general',
-                );
-            }
-        }
-    }
-    if ( ! empty( $amenities ) ) {
-        update_post_meta( $post_id, 'amenities', $amenities );
-    } else {
-        delete_post_meta( $post_id, 'amenities' );
-    }
 }
 add_action( 'save_post_cph_room', 'cph_save_room_details_meta_box' );
 

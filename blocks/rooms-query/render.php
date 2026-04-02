@@ -72,12 +72,12 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 $mobile_alt    = get_post_meta( $room_id, 'mobile_image_alt', true ) ?: $desktop_alt;
                 
                 // Get amenities
-                $amenities = get_post_meta( $room_id, 'amenities', true );
-                if ( ! is_array( $amenities ) ) {
+                $amenities = cph_get_room_amenities_data( $room_id );
+                if ( empty( $amenities ) ) {
                     $amenities = array(
-                        array( 'icon' => 'wifi', 'label' => 'Free WiFi' ),
-                        array( 'icon' => 'ac', 'label' => 'Air Conditioning' ),
-                        array( 'icon' => 'tv', 'label' => 'Smart TV' ),
+                        array( 'icon' => 'wifi', 'label' => 'Free WiFi', 'fontFamily' => 'inherit' ),
+                        array( 'icon' => 'ac', 'label' => 'Air Conditioning', 'fontFamily' => 'inherit' ),
+                        array( 'icon' => 'tv', 'label' => 'Smart TV', 'fontFamily' => 'inherit' ),
                     );
                 }
                 $amenities_preview = array_slice( $amenities, 0, 4 );
@@ -141,13 +141,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
                                 <?php foreach ( $amenities_preview as $amenity ) : 
                                     $amenity_icon  = ! empty( $amenity['icon'] ) ? esc_attr( $amenity['icon'] ) : '';
                                     $amenity_label = ! empty( $amenity['label'] ) ? esc_html( $amenity['label'] ) : '';
+                                    $amenity_font_family = ! empty( $amenity['fontFamily'] ) && 'inherit' !== $amenity['fontFamily'] ? $amenity['fontFamily'] : '';
+                                    $amenity_label_style = $amenity_font_family ? 'font-family: ' . esc_attr( $amenity_font_family ) . ', sans-serif;' : '';
                                     if ( $amenity_label ) :
                                 ?>
                                     <span class="cph-room-card__amenity">
                                         <?php if ( $amenity_icon ) : ?>
                                             <i class="cph-room-card__amenity-icon icon-<?php echo $amenity_icon; ?>" aria-hidden="true"></i>
                                         <?php endif; ?>
-                                        <span class="cph-room-card__amenity-label"><?php echo $amenity_label; ?></span>
+                                        <span class="cph-room-card__amenity-label"<?php echo $amenity_label_style ? ' style="' . $amenity_label_style . '"' : ''; ?>><?php echo $amenity_label; ?></span>
                                     </span>
                                 <?php endif; endforeach; ?>
                             </div>

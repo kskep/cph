@@ -60,6 +60,11 @@ if ( ! empty( $attrs['roomId'] ) ) {
                 $attrs['desktopImageAlt'] = get_post_meta( get_post_thumbnail_id( $room_post ), '_wp_attachment_image_alt', true );
             }
         }
+
+        $term_amenities = cph_get_room_amenities_data( $room_post->ID );
+        if ( ! empty( $term_amenities ) ) {
+            $attrs['amenities'] = $term_amenities;
+        }
     }
 }
 
@@ -159,13 +164,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 <?php foreach ( $amenities_preview as $amenity ) : 
                     $amenity_icon  = ! empty( $amenity['icon'] ) ? esc_attr( $amenity['icon'] ) : '';
                     $amenity_label = ! empty( $amenity['label'] ) ? esc_html( $amenity['label'] ) : '';
+                    $amenity_font_family = ! empty( $amenity['fontFamily'] ) && 'inherit' !== $amenity['fontFamily'] ? $amenity['fontFamily'] : '';
+                    $amenity_label_style = $amenity_font_family ? 'font-family: ' . esc_attr( $amenity_font_family ) . ', sans-serif;' : '';
                     if ( $amenity_label ) :
                 ?>
                     <span class="cph-room-card__amenity">
                         <?php if ( $amenity_icon ) : ?>
                             <i class="cph-room-card__amenity-icon icon-<?php echo $amenity_icon; ?>" aria-hidden="true"></i>
                         <?php endif; ?>
-                        <span class="cph-room-card__amenity-label"><?php echo $amenity_label; ?></span>
+                        <span class="cph-room-card__amenity-label"<?php echo $amenity_label_style ? ' style="' . $amenity_label_style . '"' : ''; ?>><?php echo $amenity_label; ?></span>
                     </span>
                 <?php endif; endforeach; ?>
             </div>

@@ -61,9 +61,9 @@ if ( $is_room ) {
         $attrs['longDescription'] = get_the_content( null, false, $room_post );
     }
     
-    $meta_amenities = get_post_meta( $room_post->ID, 'amenities', true );
-    if ( ! empty( $meta_amenities ) && is_array( $meta_amenities ) ) {
-        $attrs['amenities'] = $meta_amenities;
+    $term_amenities = cph_get_room_amenities_data( $room_post->ID );
+    if ( ! empty( $term_amenities ) ) {
+        $attrs['amenities'] = $term_amenities;
     }
 }
 
@@ -189,13 +189,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
                         <?php foreach ( $category_amenities as $amenity ) : 
                             $amenity_icon  = ! empty( $amenity['icon'] ) ? esc_attr( $amenity['icon'] ) : '';
                             $amenity_label = ! empty( $amenity['label'] ) ? esc_html( $amenity['label'] ) : '';
+                            $amenity_font_family = ! empty( $amenity['fontFamily'] ) && 'inherit' !== $amenity['fontFamily'] ? $amenity['fontFamily'] : '';
+                            $amenity_label_style = $amenity_font_family ? 'font-family: ' . esc_attr( $amenity_font_family ) . ', sans-serif;' : '';
                             if ( ! $amenity_label ) continue;
                         ?>
                             <li class="cph-room-features__amenity-item">
                                 <?php if ( $attrs['showIcons'] && $amenity_icon ) : ?>
                                     <span class="cph-room-features__amenity-icon icon-<?php echo $amenity_icon; ?>" aria-hidden="true"></span>
                                 <?php endif; ?>
-                                <span class="cph-room-features__amenity-label"><?php echo $amenity_label; ?></span>
+                                <span class="cph-room-features__amenity-label"<?php echo $amenity_label_style ? ' style="' . $amenity_label_style . '"' : ''; ?>><?php echo $amenity_label; ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>
