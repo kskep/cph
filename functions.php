@@ -351,24 +351,8 @@ function cph_register_hotel_location_taxonomy() {
 add_action( 'init', 'cph_register_hotel_location_taxonomy', 0 );
 
 function cph_register_custom_blocks() {
-    $block_paths = array(
-        get_template_directory() . '/blocks/header',
-        get_template_directory() . '/blocks/footer',
-        get_template_directory() . '/blocks/hero',
-        get_template_directory() . '/blocks/tabs',
-        get_template_directory() . '/blocks/carousel',
-        get_template_directory() . '/blocks/contact-form',
-        get_template_directory() . '/blocks/room-card',
-        get_template_directory() . '/blocks/rooms-query',
-        get_template_directory() . '/blocks/room-gallery',
-        get_template_directory() . '/blocks/room-features',
-        get_template_directory() . '/blocks/room-booking',
-    );
-
-    foreach ( $block_paths as $block_path ) {
-        if ( file_exists( $block_path . '/block.json' ) ) {
-            register_block_type( $block_path );
-        }
-    }
+    // WordPress 6.8+ auto-discovers blocks from the blocks/ directory
+    // Only new blocks that need explicit registration go here
+    // Room blocks are auto-discovered via block.json files
 }
 add_action( 'init', 'cph_register_custom_blocks' );
