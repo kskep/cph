@@ -3,11 +3,11 @@
 
 .is-style-blue-btn .wp-block-button__link {
   color: var(--wp--preset--color--custom-off-black);
-  background: var(--wp--preset--color--cph-coral) !important;
-  border: 2px solid var(--wp--preset--color--cph-coral) !important;
+  background: var(--wp--preset--color--cph-coral);
+  border: 2px solid var(--wp--preset--color--cph-coral);
 }
 
 .is-style-blue-btn .wp-block-button__link:hover {
-  color: var(--wp--preset--color--cph-coral) !important;
-  background: var(--wp--preset--color--custom-white) !important;
+  color: var(--wp--preset--color--cph-coral);
+  background: var(--wp--preset--color--custom-white);
 }

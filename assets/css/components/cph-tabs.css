@@ -22,9 +22,9 @@
 }
 
 .cph-tabs__buttons {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   overflow-x: auto;
   border-bottom: 1px solid var(--wp--preset--color--custom-grey);
   gap: 0;
@@ -45,7 +45,7 @@
 .cph-tab-panel__title--mobile,
 .cph-tab-panel__copy--mobile,
 .cph-tab-trigger__mobile {
-  display: none !important;
+  display: none;
 }
 
 .cph-tab-trigger__desktop,
@@ -56,14 +56,14 @@
 }
 
 .cph-tab-trigger .wp-block-button__link {
-  background: transparent !important;
-  border: 0 !important;
-  border-bottom: 2px solid transparent !important;
-  border-radius: 0 !important;
-  color: var(--wp--preset--color--cph-ink) !important;
-  display: block !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--wp--preset--color--cph-ink);
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 0;
   padding: 1.15rem 1.5rem;
@@ -73,15 +73,15 @@
 }
 
 .cph-tab-trigger .wp-block-button__link:hover {
-  background: var(--wp--preset--color--custom-light-gray) !important;
-  border-color: var(--wp--preset--color--custom-grey) !important;
-  color: var(--wp--preset--color--cph-ink) !important;
+  background: var(--wp--preset--color--custom-light-gray);
+  border-color: var(--wp--preset--color--custom-grey);
+  color: var(--wp--preset--color--cph-ink);
 }
 
 .cph-tab-trigger.is-active .wp-block-button__link {
-  background: var(--wp--preset--color--cph-coral) !important;
-  border-color: var(--wp--preset--color--cph-coral) !important;
-  color: var(--wp--preset--color--custom-off-black) !important;
+  background: var(--wp--preset--color--cph-coral);
+  border-color: var(--wp--preset--color--cph-coral);
+  color: var(--wp--preset--color--custom-off-black);
 }
 
 .cph-tabs__panels {
@@ -97,10 +97,10 @@
 }
 
 .cph-tab-panel__layout {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: stretch !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
   gap: 0;
 }
 
@@ -183,7 +183,7 @@
   }
 
   .cph-tab-panel__layout {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   .cph-tab-panel__image img {
@@ -192,32 +192,32 @@
   }
 
   .cph-tab-panel__image--desktop {
-    display: none !important;
+    display: none;
   }
 
   .cph-tab-panel__image--mobile {
-    display: block !important;
+    display: block;
   }
 
   .cph-tab-panel__title--desktop,
   .cph-tab-panel__copy--desktop,
   .cph-tab-trigger__desktop {
-    display: none !important;
+    display: none;
   }
 
   /* Fallback for markup that renders paired trigger links without modifier classes. */
   .cph-tab-trigger .wp-block-button__link:first-of-type {
-    display: none !important;
+    display: none;
   }
 
   .cph-tab-trigger .wp-block-button__link:last-of-type {
-    display: block !important;
+    display: block;
   }
 
   .cph-tab-panel__title--mobile,
   .cph-tab-panel__copy--mobile,
   .cph-tab-trigger__mobile {
-    display: block !important;
+    display: block;
   }
 }
 

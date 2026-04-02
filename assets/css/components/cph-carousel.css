@@ -9,7 +9,7 @@
 }
 
 .cph-carousel-section__inner {
-  overflow: visible !important;
+  overflow: visible;
 }
 
 .cph-carousel-frame {
@@ -128,9 +128,9 @@
 }
 
 .cph-carousel-frame__arrows {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   inset: 50% 0 auto;
   padding: 0 1.5rem;
   position: absolute;

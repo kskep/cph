@@ -4,12 +4,12 @@
 
 .is-style-text-btn .wp-block-button__link {
   color: inherit;
-  background: transparent !important;
-  border: none !important;
+  background: transparent;
+  border: none;
 }
 
 .is-style-text-btn .wp-block-button__link {
-  border-bottom: 1px solid var(--wp--preset--color--custom-deep-grey) !important;
+  border-bottom: 1px solid var(--wp--preset--color--custom-deep-grey);
   padding-left: 0;
   padding-right: 0;
   border-radius: 0;
@@ -18,7 +18,7 @@
 }
 
 .is-style-text-btn .wp-block-button__link:hover {
-  border-color: transparent !important;
+  border-color: transparent;
 }
 
 /* This to use the Button Icon classes */

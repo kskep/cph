@@ -30,12 +30,12 @@ html, body {
 }
 
 /* z-index utility classes */
-.z-0 {z-index: 0 !important;}
-.z-1 {z-index: 1 !important;}
-.z-100 {z-index: 100 !important;}
-.z-200 {z-index: 200 !important;}
-.z-300 {z-index: 300 !important;}
-.z-99999 {z-index: 99999 !important;}
+.z-0 {z-index: 0;}
+.z-1 {z-index: 1;}
+.z-100 {z-index: 100;}
+.z-200 {z-index: 200;}
+.z-300 {z-index: 300;}
+.z-99999 {z-index: 99999;}
 
 /*  Reduced motion prefs  */
 @media screen and (prefers-reduced-motion: reduce) {
@@ -46,27 +46,27 @@ html, body {
 
 /*  Navigation Block Breakpoint. Credit: https://wpdocs.io/ */
 body .wp-block-navigation__responsive-container-open:not(.always-shown) {
-  display: block !important;
+  display: block;
 }
 
 body
   .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
     .is-menu-open
   ) {
-  display: none !important;
+  display: none;
 }
 
 /* Change the width to the breakpoint of the Nav */
 @media (min-width: 782px) {
   body .wp-block-navigation__responsive-container-open:not(.always-shown) {
-    display: none !important;
+    display: none;
   }
 
   body
     .wp-block-navigation__responsive-container:not(.hidden-by-default):not(
       .is-menu-open
     ) {
-    display: block !important;
+    display: block;
   }
 }
 
@@ -147,7 +147,7 @@ a {
 }
 
 a:hover:not(.wp-block-site-title a, .wp-block-button__link.wp-element-button) {
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
 /* Front-page modules should not inherit the default constrained group width. */

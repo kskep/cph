@@ -5,7 +5,7 @@ Best used with https://wordpress.org/plugins/css-class-manager/
 /* --- Icon Buttons --- */
 [class^="ic-btn-"] .wp-block-button__link::after,
 [class*=" ic-btn-"] .wp-block-button__link::after {
-  font-family: "Icon-Font" !important;
+  font-family: "Icon-Font";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -21,33 +21,33 @@ Best used with https://wordpress.org/plugins/css-class-manager/
 
 [class^="ic-btn-"] .wp-block-button__link,
 [class*=" ic-btn-"] .wp-block-button__link {
-  display: inline-flex !important;
-  align-items: center !important;
-  vertical-align: bottom !important;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom;
 }
 
 .ic-btn-arrow-right .wp-block-button__link::after {
-  content: "\e902" !important;
+  content: "\e902";
 }
 
 .ic-btn-chevron-right .wp-block-button__link::after {
-  content: "\e903" !important;
+  content: "\e903";
   padding-left: 0.3rem;
   width: 18px;
 }
 
 .ic-btn-download .wp-block-button__link::after {
-  content: "\e901" !important;
+  content: "\e901";
 }
 
 .ic-btn-external-link .wp-block-button__link::after {
-  content: "\e900" !important;
+  content: "\e900";
 }
 
 /* --- Icons Inlne --- */
 [class^="ic-inline-"]::after,
 [class*="ic-inline-"]::after {
-  font-family: "Icon-Font" !important;
+  font-family: "Icon-Font";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -63,12 +63,12 @@ Best used with https://wordpress.org/plugins/css-class-manager/
 
 [class^="ic-inline-"],
 [class*="ic-inline-"] {
-  display: inline-flex !important;
-  align-items: center !important;
-  vertical-align: bottom !important;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom;
   /* border-bottom: 1px solid; */
 }
 
 .ic-inline-external-link::after {
-  content: "\e900" !important;
+  content: "\e900";
 }

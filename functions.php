@@ -206,7 +206,7 @@ function starter_register_block_styles() {
             'label'        => __( 'margin-top-0', 'cph' ),
             'is_default'   => false,
             'inline_style' => '
-            .is-style-starter-group { margin-block-start: 0 !important; }
+            .is-style-starter-group { margin-block-start: 0; }
             ',
         ) 
     );
