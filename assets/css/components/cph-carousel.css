@@ -6,6 +6,9 @@
 
 .cph-carousel-section__label-wrap {
   margin-bottom: 2rem;
+   width:1200px;
+margin-left:auto;
+    margin-right:auto;
 }
 
 .cph-carousel-section__inner {
@@ -177,6 +180,8 @@
   min-width: 0.75rem;
   padding: 0;
 }
+
+
 
 .cph-carousel-dot.is-active .wp-block-button__link {
   background: var(--wp--preset--color--custom-white);
