@@ -25,6 +25,10 @@ body {
   --cph-container-max: 1200px;
 }
 
+main {
+    margin-top:0px;
+}
+
 html, body {
   overflow-x: hidden;
 }
