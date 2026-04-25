@@ -28,7 +28,11 @@ $wrapper_attributes = get_block_wrapper_attributes(
 );
 
 $has_navigation_ref = $navigation_ref > 0 && get_post_type( $navigation_ref ) === 'wp_navigation';
-if ( $has_navigation_ref ) {
+$has_inner_navigation = isset( $content ) && trim( $content ) !== '';
+
+if ( $has_inner_navigation ) {
+    $navigation_markup = $content;
+} elseif ( $has_navigation_ref ) {
     $navigation_markup = do_blocks(
         '<!-- wp:navigation {"ref":' . (int) $navigation_ref . ',"overlayMenu":"mobile","icon":"menu","className":"cph-header__nav","layout":{"type":"flex","justifyContent":"center"}} /-->'
     );

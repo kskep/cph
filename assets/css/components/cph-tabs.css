@@ -179,7 +179,11 @@
 
 @media (max-width: 782px) {
   .cph-tab-trigger {
-    flex-basis: 50%;
+    flex-basis: auto;
+  }
+
+  .cph-tab-trigger .wp-block-button__link {
+    padding: 1rem 1rem;
   }
 
   .cph-tab-panel__layout {
@@ -189,6 +193,11 @@
   .cph-tab-panel__image img {
     height: auto;
     max-height: 25rem;
+  }
+
+  .cph-tab-panel__content {
+    min-height: auto;
+    padding: 2rem 1.5rem;
   }
 
   .cph-tab-panel__image--desktop {

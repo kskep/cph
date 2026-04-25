@@ -3,6 +3,7 @@
     var Fragment = wp.element.Fragment;
     var getBlockType = wp.blocks.getBlockType;
     var registerBlockType = wp.blocks.registerBlockType;
+    var InnerBlocks = wp.blockEditor.InnerBlocks;
     var InspectorControls = wp.blockEditor.InspectorControls;
     var MediaUpload = wp.blockEditor.MediaUpload;
     var MediaUploadCheck = wp.blockEditor.MediaUploadCheck;
@@ -12,6 +13,26 @@
     var Button = wp.components.Button;
     var useSelect = wp.data.useSelect;
     var blockName = 'cph/header';
+    var navigationTemplate = [
+        ['core/navigation', {
+            overlayMenu: 'mobile',
+            icon: 'menu',
+            className: 'cph-header__nav',
+            layout: {
+                type: 'flex',
+                justifyContent: 'center'
+            },
+            style: {
+                spacing: {
+                    blockGap: '1.25rem'
+                }
+            }
+        }, [
+            ['core/navigation-link', { label: 'Places to Stay', url: '#book-your-stay', kind: 'custom' }],
+            ['core/navigation-link', { label: 'Explore CPH', url: '#how-we-play', kind: 'custom' }],
+            ['core/navigation-link', { label: 'Offers', url: '#bonvoy', kind: 'custom' }]
+        ]]
+    ];
 
     if (getBlockType(blockName)) {
         return;
@@ -77,9 +98,10 @@
                     ),
                     el(PanelBody, { title: 'Navigation', initialOpen: false },
                         el(SelectControl, {
-                            label: 'Navigation Menu',
+                            label: 'Legacy saved navigation fallback',
                             value: attributes.navigationRef || 0,
                             options: menuOptions,
+                            help: 'Leave this on fallback to edit the links directly inside the header block.',
                             onChange: function (value) { setAttributes({ navigationRef: Number(value) || 0 }); }
                         }),
                         el(TextControl, {
@@ -111,7 +133,11 @@
                                 )
                             ),
                             el('div', { className: 'cph-header__main' },
-                                el('div', { className: 'cph-header__nav' }, 'Selected menu renders on frontend.'),
+                                el(InnerBlocks, {
+                                    allowedBlocks: ['core/navigation'],
+                                    template: navigationTemplate,
+                                    templateLock: false
+                                }),
                                 el('div', { className: 'cph-header__actions' },
                                     el('span', { className: 'wp-block-button__link wp-element-button' }, attributes.ctaLabel || '')
                                 )
@@ -122,7 +148,7 @@
             );
         },
         save: function () {
-            return null;
+            return el(InnerBlocks.Content);
         }
     });
 })(window.wp);

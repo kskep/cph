@@ -121,8 +121,46 @@
 		restartAutoPlay();
 	}
 
+	function setupHeaderMobileCta() {
+		var header = document.querySelector('.js-cph-header');
+		if (!header) {
+			return;
+		}
+
+		var originalCta = header.querySelector('.cph-header__cta');
+		var nav = header.querySelector('.cph-header__nav');
+		if (!originalCta || !nav) {
+			return;
+		}
+
+		function maybeInjectCta() {
+			var openContainer = nav.querySelector('.wp-block-navigation__responsive-container.is-menu-open');
+			if (!openContainer) {
+				return;
+			}
+
+			var dialog = openContainer.querySelector('.wp-block-navigation__responsive-dialog');
+			if (!dialog || dialog.querySelector('.cph-header__cta--menu')) {
+				return;
+			}
+
+			var clone = originalCta.cloneNode(true);
+			clone.classList.remove('cph-header__cta');
+			clone.classList.add('cph-header__cta--menu');
+			dialog.appendChild(clone);
+		}
+
+		var observer = new MutationObserver(function () {
+			maybeInjectCta();
+		});
+
+		observer.observe(nav, { childList: true, subtree: true });
+		maybeInjectCta();
+	}
+
 	document.addEventListener('DOMContentLoaded', function () {
 		setupHeaderScroll(document.querySelector('.js-cph-header'));
+		setupHeaderMobileCta();
 		setupTabs(document.querySelector('.js-cph-tabs'));
 		setupCarousel(document.querySelector('.js-cph-carousel'));
 	});

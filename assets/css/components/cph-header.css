@@ -250,6 +250,30 @@ body.admin-bar .cph-header {
   }
 }
 
+@media (max-width: 781px) {
+  .cph-header__actions {
+    display: none;
+  }
+
+  .cph-header__cta--menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .cph-header__cta--menu .wp-block-button__link {
+    background: var(--wp--preset--color--cph-coral);
+    border-color: var(--wp--preset--color--cph-coral);
+    box-shadow: none;
+    color: var(--wp--preset--color--custom-off-black);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --cph-header-height: 5.5rem;
