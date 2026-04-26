@@ -2,11 +2,11 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "cph/header",
-  "version": "1.0.0",
-  "title": "CPH Header",
+  "version": "1.0.1",
+  "title": "CityPlus Header",
   "category": "design",
   "icon": "menu",
-  "description": "Locked site header with logo control, navigation menu selection, and scroll background behavior.",
+  "description": "Locked site header with logo control, editable navigation links, and scroll background behavior.",
   "textdomain": "cph",
   "attributes": {
     "logoUrl": {
@@ -15,7 +15,7 @@
     },
     "logoAlt": {
       "type": "string",
-      "default": "Citi Plus Hotels"
+      "default": "CityPlus Hotels"
     },
     "navigationRef": {
       "type": "number",

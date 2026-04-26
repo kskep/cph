@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "cph/hero",
   "version": "1.0.0",
-  "title": "CPH Hero",
+  "title": "CityPlus Hero",
   "category": "design",
   "icon": "cover-image",
-  "description": "Locked CPH hero section with editable text, image, and link fields only.",
+  "description": "Locked CityPlus Hotels hero section with editable text, image, and link fields only.",
   "textdomain": "cph",
   "attributes": {
     "heroImageUrl": {
@@ -15,7 +15,7 @@
     },
     "heroImageAlt": {
       "type": "string",
-      "default": "CPH hotel exterior"
+      "default": "CityPlus Hotels exterior"
     },
     "heroImageMobileUrl": {
       "type": "string",
@@ -35,7 +35,7 @@
     },
     "taglineLineTwo": {
       "type": "string",
-      "default": "#AtTheCPH"
+      "default": "#AtCityPlus"
     },
     "taglineLineTwoMobile": {
       "type": "string",
@@ -43,7 +43,7 @@
     },
     "brandLabel": {
       "type": "string",
-      "default": "CPH Hotels"
+      "default": "CityPlus Hotels"
     },
     "brandLabelMobile": {
       "type": "string",

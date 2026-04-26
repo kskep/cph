@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: CPH Now Playing
+ * Title: CityPlus Now Playing
  * Slug: cph/cph-now-playing
- * Description: New openings carousel for the CPH front page.
+ * Description: New openings carousel for the CityPlus Hotels front page.
  * Categories: cph/cph
- * Keywords: carousel, openings, CPH
+ * Keywords: carousel, openings, CityPlus
  * Viewport Width: 1440
  * Inserter: true
  */
@@ -23,7 +23,7 @@
 <div class="wp-block-group cph-carousel-frame"><!-- wp:group {"className":"cph-carousel-slides","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slides"><!-- wp:group {"className":"cph-carousel-slide is-active","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide is-active"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"cph-carousel-slide__image"} -->
-<figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&amp;h=900&amp;fit=crop" alt="CPH Barcelona"/></figure>
+<figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&amp;h=900&amp;fit=crop" alt="CityPlus Barcelona"/></figure>
 <!-- /wp:image -->
 <!-- wp:group {"className":"cph-carousel-slide__content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide__content"><!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
@@ -31,7 +31,7 @@
 <p class="cph-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"cph-carousel-slide__title","fontSize":"xx-large"} -->
-<h3 class="wp-block-heading cph-carousel-slide__title has-xx-large-font-size">CPH Barcelona</h3>
+<h3 class="wp-block-heading cph-carousel-slide__title has-xx-large-font-size">CityPlus Barcelona</h3>
 <!-- /wp:heading -->
 <!-- wp:button {"className":"is-style-text-btn cph-carousel-slide__link"} -->
 <div class="wp-block-button is-style-text-btn cph-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>
@@ -42,7 +42,7 @@
 
 <!-- wp:group {"className":"cph-carousel-slide","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"cph-carousel-slide__image"} -->
-<figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&amp;h=900&amp;fit=crop" alt="CPH NYC"/></figure>
+<figure class="wp-block-image size-full cph-carousel-slide__image"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&amp;h=900&amp;fit=crop" alt="CityPlus NYC"/></figure>
 <!-- /wp:image -->
 <!-- wp:group {"className":"cph-carousel-slide__content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-carousel-slide__content"><!-- wp:group {"className":"cph-carousel-slide__overlay","layout":{"type":"constrained"}} -->
@@ -50,7 +50,7 @@
 <p class="cph-carousel-slide__eyebrow has-xsmall-font-size">New Places to Stay and Play.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":3,"className":"cph-carousel-slide__title","fontSize":"xx-large"} -->
-<h3 class="wp-block-heading cph-carousel-slide__title has-xx-large-font-size">CPH NYC</h3>
+<h3 class="wp-block-heading cph-carousel-slide__title has-xx-large-font-size">CityPlus NYC</h3>
 <!-- /wp:heading -->
 <!-- wp:button {"className":"is-style-text-btn cph-carousel-slide__link"} -->
 <div class="wp-block-button is-style-text-btn cph-carousel-slide__link"><a class="wp-block-button__link wp-element-button" href="#">Visit</a></div>

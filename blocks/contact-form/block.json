@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "cph/contact-form",
   "version": "1.0.0",
-  "title": "CPH Contact Form",
+  "title": "CityPlus Contact Form",
   "category": "design",
   "icon": "email",
   "description": "A contact form for general inquiries. Bookings are handled via 3rd party.",

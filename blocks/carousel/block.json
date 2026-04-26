@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "cph/carousel",
   "version": "1.0.0",
-  "title": "CPH Carousel",
+  "title": "CityPlus Carousel",
   "category": "design",
   "icon": "images-alt2",
-  "description": "Locked CPH carousel section with editable text, image, and link fields only.",
+  "description": "Locked CityPlus Hotels carousel section with editable text, image, and link fields only.",
   "textdomain": "cph",
   "attributes": {
     "sectionTitle": {
@@ -19,10 +19,10 @@
         {
           "eyebrow": "New Places to Stay and Play.",
           "eyebrowMobile": "",
-          "title": "CPH Barcelona",
+          "title": "CityPlus Barcelona",
           "titleMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600&h=900&fit=crop",
-          "imageAlt": "CPH Barcelona",
+          "imageAlt": "CityPlus Barcelona",
           "imageMobileUrl": "",
           "imageMobileAlt": "",
           "ctaLabel": "Visit",
@@ -31,10 +31,10 @@
         {
           "eyebrow": "New Places to Stay and Play.",
           "eyebrowMobile": "",
-          "title": "CPH NYC",
+          "title": "CityPlus NYC",
           "titleMobile": "",
           "imageUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop",
-          "imageAlt": "CPH NYC",
+          "imageAlt": "CityPlus NYC",
           "imageMobileUrl": "",
           "imageMobileAlt": "",
           "ctaLabel": "Visit",

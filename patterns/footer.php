@@ -1,11 +1,11 @@
 <?php
 /**
- * Title: CPH Footer
+ * Title: CityPlus Footer
  * Slug: cph/footer
- * Description: Footer for the CPH front page.
+ * Description: Footer for the CityPlus Hotels front page.
  * Categories: footer, cph/cph
  * Block Types: core/template-part/footer
- * Keywords: footer, nav, CPH
+ * Keywords: footer, nav, CityPlus
  * Viewport Width: 1440
  * Post Types: wp_template
  * Inserter: true
@@ -30,7 +30,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:list {"className":"cph-footer__list"} -->
-<ul class="wp-block-list cph-footer__list"><li class="cph-footer__list-item"><a class="cph-footer__list-link" href="/jobs">Jobs</a></li><li class="cph-footer__list-item">About CPH</li><li class="cph-footer__list-item">Privacy Statement</li></ul>
+<ul class="wp-block-list cph-footer__list"><li class="cph-footer__list-item"><a class="cph-footer__list-link" href="/jobs">Jobs</a></li><li class="cph-footer__list-item">About CityPlus</li><li class="cph-footer__list-item">Privacy Statement</li></ul>
 <!-- /wp:list --></div>
 <!-- /wp:column -->
 

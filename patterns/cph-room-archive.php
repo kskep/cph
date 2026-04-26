@@ -18,7 +18,7 @@
         "heroImageAlt": "Luxury hotel rooms",
         "taglineLineOne": "Our Rooms",
         "taglineLineTwo": "Comfort & Style",
-        "brandLabel": "CPH Hotels"
+        "brandLabel": "CityPlus Hotels"
     } /-->
 
     <!-- wp:spacer {"height":"60px"} -->

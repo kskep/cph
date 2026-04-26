@@ -1,14 +1,14 @@
 <?php
 $defaults = array(
     'heroImageUrl'         => 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1920&h=1080&fit=crop',
-    'heroImageAlt'         => 'CPH hotel exterior',
+    'heroImageAlt'         => 'CityPlus Hotels exterior',
     'heroImageMobileUrl'   => '',
     'heroImageMobileAlt'   => '',
     'taglineLineOne'       => 'Play On',
     'taglineLineOneMobile' => '',
-    'taglineLineTwo'       => '#AtTheCPH',
+    'taglineLineTwo'       => '#AtCityPlus',
     'taglineLineTwoMobile' => '',
-    'brandLabel'           => 'CPH Hotels',
+    'brandLabel'           => 'CityPlus Hotels',
     'brandLabelMobile'     => '',
     'bookingTitle'         => "Book\nYour\nStay",
     'bookingTitleMobile'   => '',

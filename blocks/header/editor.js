@@ -29,7 +29,7 @@
             }
         }, [
             ['core/navigation-link', { label: 'Places to Stay', url: '#book-your-stay', kind: 'custom' }],
-            ['core/navigation-link', { label: 'Explore CPH', url: '#how-we-play', kind: 'custom' }],
+            ['core/navigation-link', { label: 'Explore CityPlus', url: '#how-we-play', kind: 'custom' }],
             ['core/navigation-link', { label: 'Offers', url: '#bonvoy', kind: 'custom' }]
         ]]
     ];
@@ -123,7 +123,7 @@
                                 ? el('a', { className: 'cph-header__logo-mark cph-header__logo-mark--image', href: '#' },
                                     el('img', { src: attributes.logoUrl, alt: attributes.logoAlt || '', style: { width: '100%', height: 'auto' } })
                                 )
-                                : el('a', { className: 'cph-header__logo-mark', href: '#' }, el('strong', {}, 'CPH'))
+                                : el('a', { className: 'cph-header__logo-mark', href: '#' }, el('strong', {}, 'CityPlus'))
                         ),
                         el('div', { className: 'cph-header__right' },
                             el('div', { className: 'cph-header__utility' },

@@ -1,7 +1,7 @@
 <?php
 $defaults = array(
     'logoUrl'       => '',
-    'logoAlt'       => 'Citi Plus Hotels',
+    'logoAlt'       => 'CityPlus Hotels',
     'navigationRef' => 0,
     'languageLabel' => 'English',
     'emailLabel'    => 'info@citiplushotels.gr',
@@ -40,7 +40,7 @@ if ( $has_inner_navigation ) {
     $navigation_markup = do_blocks(
         '<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","className":"cph-header__nav","layout":{"type":"flex","justifyContent":"center"}} -->
         <!-- wp:navigation-link {"label":"Places to Stay","url":"#book-your-stay","kind":"custom"} /-->
-        <!-- wp:navigation-link {"label":"Explore CPH","url":"#how-we-play","kind":"custom"} /-->
+        <!-- wp:navigation-link {"label":"Explore CityPlus","url":"#how-we-play","kind":"custom"} /-->
         <!-- wp:navigation-link {"label":"Offers","url":"#bonvoy","kind":"custom"} /-->
         <!-- /wp:navigation -->'
     );
@@ -54,11 +54,10 @@ if ( $has_inner_navigation ) {
                     <img src="<?php echo $logo_url; ?>" alt="<?php echo $logo_alt; ?>" />
                 </a>
             <?php else : ?>
-                <a class="cph-header__logo-mark" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="CPH Hotels home">
+                <a class="cph-header__logo-mark" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="CityPlus Hotels home">
                     <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M20 10L25 40L30 10H35L40 40L45 10H50L42.5 45H37.5L32.5 15L27.5 45H22.5L15 10H20Z" fill="currentColor"></path>
-                        <text x="55" y="35" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="24" fill="currentColor">CPH</text>
-                        <text x="55" y="45" font-family="Montserrat, Arial, sans-serif" font-weight="400" font-size="8" fill="currentColor" letter-spacing="2">HOTELS</text>
+                        <text x="10" y="30" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="20" fill="currentColor">CityPlus</text>
+                        <text x="12" y="43" font-family="Montserrat, Arial, sans-serif" font-weight="600" font-size="8" fill="currentColor" letter-spacing="2">HOTELS</text>
                     </svg>
                 </a>
             <?php endif; ?>

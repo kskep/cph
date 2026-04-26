@@ -35,7 +35,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
                 <h4 class="cph-footer__heading">Company</h4>
                 <ul class="cph-footer__list">
                     <li class="cph-footer__list-item"><a class="cph-footer__list-link" href="/jobs">Jobs</a></li>
-                    <li class="cph-footer__list-item">About CPH</li>
+                    <li class="cph-footer__list-item">About CityPlus</li>
                     <li class="cph-footer__list-item">Privacy Statement</li>
                 </ul>
             </div>

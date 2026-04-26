@@ -20,32 +20,32 @@
 			"palette": [
 				{
 					"color": "#F9C740",
-					"name": "CPH Accent",
+					"name": "CityPlus Accent",
 					"slug": "cph-coral"
 				},
 				{
 					"color": "#D9AB2F",
-					"name": "CPH Accent Dark",
+					"name": "CityPlus Accent Dark",
 					"slug": "cph-coral-dark"
 				},
 				{
 					"color": "#FCE8A1",
-					"name": "CPH Accent Light",
+					"name": "CityPlus Accent Light",
 					"slug": "cph-butter"
 				},
 				{
 					"color": "#ffffff",
-					"name": "CPH Cream",
+					"name": "CityPlus Cream",
 					"slug": "cph-cream"
 				},
 				{
 					"color": "#1F2223",
-					"name": "CPH Ink",
+					"name": "CityPlus Ink",
 					"slug": "cph-ink"
 				},
 				{
 					"color": "#161717",
-					"name": "CPH Charcoal",
+					"name": "CityPlus Charcoal",
 					"slug": "cph-charcoal"
 				},
 				{
@@ -144,12 +144,12 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Open Sans\", \"Helvetica Neue\", Arial, sans-serif",
-					"name": "CPH Sans",
+					"name": "CityPlus Sans",
 					"slug": "cph-sans"
 				},
 				{
 					"fontFamily": "\"Montserrat\", \"Helvetica Neue\", Arial, sans-serif",
-					"name": "CPH Display",
+					"name": "CityPlus Display",
 					"slug": "cph-display"
 				},
 				{

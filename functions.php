@@ -129,7 +129,7 @@ function cph_render_block_theme_reset_notice() {
     $count = absint( $_GET['cph_reset_fse_done'] );
     ?>
     <div class="notice notice-success is-dismissible">
-        <p><?php echo esc_html( sprintf( 'CPH CPH reset complete. Removed %d custom template override(s).', $count ) ); ?></p>
+        <p><?php echo esc_html( sprintf( 'CityPlus Hotels reset complete. Removed %d custom template override(s).', $count ) ); ?></p>
     </div>
     <?php
 }
@@ -270,7 +270,7 @@ function starter_register_block_pattern_categories() {
     register_block_pattern_category(
         'cph/cph',
         array(
-            'label'       => __( 'CPH Front Page', 'cph' ),
+            'label'       => __( 'CityPlus Hotels Front Page', 'cph' ),
         )
     );
     

@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: CPH Intro Strip
+ * Title: CityPlus Intro Strip
  * Slug: cph/cph-intro
- * Description: Intro strip for the CPH front page.
+ * Description: Intro strip for the CityPlus Hotels front page.
  * Categories: cph/cph
- * Keywords: intro, strip, CPH
+ * Keywords: intro, strip, CityPlus
  * Viewport Width: 1440
  * Inserter: true
  */
@@ -16,7 +16,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","className":"cph-intro__body","fontSize":"medium"} -->
-<p class="has-text-align-center cph-intro__body has-medium-font-size">At CPH Hotels, we don't take ourselves too seriously. But we're seriously into showing you a good time with small but smart rooms, stylish communal spaces and bars you'll love.</p>
+<p class="has-text-align-center cph-intro__body has-medium-font-size">At CityPlus Hotels, we don't take ourselves too seriously. But we're seriously into showing you a good time with small but smart rooms, stylish communal spaces and bars you'll love.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: CPH Destinations
+ * Title: CityPlus Destinations
  * Slug: cph/cph-destinations
- * Description: Where Can We Take You split section for the CPH front page.
+ * Description: Where Can We Take You split section for the CityPlus Hotels front page.
  * Categories: cph/cph
- * Keywords: destinations, bonvoy, CPH
+ * Keywords: destinations, bonvoy, CityPlus
  * Viewport Width: 1440
  * Inserter: true
  */
@@ -28,7 +28,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"cph-destinations__copy","fontSize":"small"} -->
-<p class="cph-destinations__copy has-small-font-size">Earn and redeem points for all your travels at CPH Hotels around the world.</p>
+<p class="cph-destinations__copy has-small-font-size">Earn and redeem points for all your travels at CityPlus Hotels around the world.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"cph-destinations__actions","layout":{"type":"flex","flexWrap":"wrap"}} -->

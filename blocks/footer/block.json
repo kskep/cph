@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "cph/footer",
   "version": "1.0.0",
-  "title": "CPH Footer",
+  "title": "CityPlus Footer",
   "category": "design",
   "icon": "editor-kitchensink",
   "description": "Locked site footer with controlled content fields and menu fallbacks.",

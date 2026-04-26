@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: CPH See All Locations
+ * Title: CityPlus See All Locations
  * Slug: cph/cph-see-all
  * Description: Off-white strip with a centred "See All Locations" CTA button.
  * Categories: cph/cph
- * Keywords: locations, cta, CPH
+ * Keywords: locations, cta, CityPlus
  * Viewport Width: 1440
  * Inserter: true
  */
