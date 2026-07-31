@@ -121,6 +121,38 @@
 		restartAutoPlay();
 	}
 
+	function setupImageSlider(root) {
+		var slides = Array.prototype.slice.call(root.querySelectorAll('.cph-tab-image-slider__slide'));
+		var dots = Array.prototype.slice.call(root.querySelectorAll('.cph-tab-image-slider__dot'));
+		var currentIndex = 0;
+
+		function show(index) {
+			currentIndex = (index + slides.length) % slides.length;
+			slides.forEach(function (slide, slideIndex) {
+				var active = slideIndex === currentIndex;
+				slide.classList.toggle('is-active', active);
+				slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+			});
+			dots.forEach(function (dot, dotIndex) {
+				var active = dotIndex === currentIndex;
+				dot.classList.toggle('is-active', active);
+				dot.setAttribute('aria-pressed', active ? 'true' : 'false');
+			});
+		}
+
+		root.querySelector('.cph-tab-image-slider__arrow--prev').addEventListener('click', function () {
+			show(currentIndex - 1);
+		});
+		root.querySelector('.cph-tab-image-slider__arrow--next').addEventListener('click', function () {
+			show(currentIndex + 1);
+		});
+		dots.forEach(function (dot, index) {
+			dot.addEventListener('click', function () {
+				show(index);
+			});
+		});
+	}
+
 	function setupHeaderMobileCta() {
 		var header = document.querySelector('.js-cph-header');
 		if (!header) {
@@ -161,7 +193,8 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		setupHeaderScroll(document.querySelector('.js-cph-header'));
 		setupHeaderMobileCta();
-		setupTabs(document.querySelector('.js-cph-tabs'));
+		Array.prototype.forEach.call(document.querySelectorAll('.js-cph-tabs'), setupTabs);
+		Array.prototype.forEach.call(document.querySelectorAll('.js-cph-image-slider'), setupImageSlider);
 		setupCarousel(document.querySelector('.js-cph-carousel'));
 	});
 })();

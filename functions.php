@@ -667,6 +667,7 @@ function cph_register_custom_blocks() {
         get_template_directory() . '/blocks/header',
         get_template_directory() . '/blocks/footer',
         get_template_directory() . '/blocks/hero',
+        get_template_directory() . '/blocks/about',
         get_template_directory() . '/blocks/tabs',
         get_template_directory() . '/blocks/carousel',
         get_template_directory() . '/blocks/contact-form',

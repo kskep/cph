@@ -39,8 +39,10 @@ if ( $has_inner_navigation ) {
 } else {
     $navigation_markup = do_blocks(
         '<!-- wp:navigation {"overlayMenu":"mobile","icon":"menu","className":"cph-header__nav","layout":{"type":"flex","justifyContent":"center"}} -->
-        <!-- wp:navigation-link {"label":"Places to Stay","url":"#book-your-stay","kind":"custom"} /-->
-        <!-- wp:navigation-link {"label":"Explore CityPlus","url":"#how-we-play","kind":"custom"} /-->
+        <!-- wp:navigation-submenu {"label":"CPH Hotels","url":"#","kind":"custom"} -->
+        <!-- wp:navigation-link {"label":"Rhodes Town","url":"/rhodes-town/","kind":"custom"} /-->
+        <!-- wp:navigation-link {"label":"Faliraki","url":"/faliraki/","kind":"custom"} /-->
+        <!-- /wp:navigation-submenu -->
         <!-- wp:navigation-link {"label":"Offers","url":"#bonvoy","kind":"custom"} /-->
         <!-- /wp:navigation -->'
     );

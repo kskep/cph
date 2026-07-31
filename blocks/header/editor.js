@@ -28,8 +28,10 @@
                 }
             }
         }, [
-            ['core/navigation-link', { label: 'Places to Stay', url: '#book-your-stay', kind: 'custom' }],
-            ['core/navigation-link', { label: 'Explore CityPlus', url: '#how-we-play', kind: 'custom' }],
+            ['core/navigation-submenu', { label: 'CPH Hotels', url: '#', kind: 'custom' }, [
+                ['core/navigation-link', { label: 'Rhodes Town', url: '/rhodes-town/', kind: 'custom' }],
+                ['core/navigation-link', { label: 'Faliraki', url: '/faliraki/', kind: 'custom' }]
+            ]],
             ['core/navigation-link', { label: 'Offers', url: '#bonvoy', kind: 'custom' }]
         ]]
     ];

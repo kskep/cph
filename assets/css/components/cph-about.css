@@ -1,0 +1,137 @@
+.cph-about {
+  background: var(--wp--preset--color--custom-white);
+  color: var(--wp--preset--color--cph-ink);
+  max-width: none !important;
+  overflow: clip;
+  padding: clamp(5rem, 9vw, 8.75rem) 0;
+  position: relative;
+  width: 100%;
+}
+
+.cph-about__inner {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.cph-about__header {
+  margin: 0 0 clamp(3rem, 6vw, 5rem);
+  padding-left: clamp(0rem, 6vw, 5rem);
+}
+
+.cph-about__heading {
+  font-family: var(--wp--preset--font-family--cph-display);
+  font-size: clamp(3.25rem, 8vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.88;
+  margin: 0;
+  max-width: 8ch;
+  text-transform: uppercase;
+}
+
+.cph-about__heading::after {
+  background: var(--wp--preset--color--cph-coral);
+  content: "";
+  display: block;
+  height: 0.5rem;
+  margin-top: clamp(1.25rem, 2vw, 1.75rem);
+  width: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.cph-about__layout {
+  align-items: start;
+  display: grid;
+  gap: clamp(3rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.cph-about__media {
+  aspect-ratio: 4 / 5;
+  background: var(--wp--preset--color--cph-charcoal);
+  margin: 0;
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--cph-header-height, 6.7rem) + 1.5rem);
+}
+
+.cph-about__media::after {
+  background: var(--wp--preset--color--cph-coral);
+  bottom: 0;
+  content: "";
+  height: 0.75rem;
+  position: absolute;
+  right: 0;
+  width: 32%;
+}
+
+.cph-about__media--fallback {
+  background-image: url("../../images/cph/cph-about-rhodes.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.cph-about__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.cph-about__story {
+  max-width: 41rem;
+}
+
+.cph-about__story p {
+  color: var(--wp--preset--color--custom-deep-grey);
+  font-family: var(--wp--preset--font-family--cph-sans);
+  font-size: clamp(1rem, 1.25vw, 1.075rem);
+  line-height: 1.78;
+  margin: 0 0 1.5rem;
+}
+
+.cph-about__story p:first-child {
+  color: var(--wp--preset--color--cph-ink);
+  font-size: clamp(1.18rem, 1.8vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.55;
+  margin-bottom: 2rem;
+}
+
+.cph-about__story p:last-child {
+  color: var(--wp--preset--color--cph-ink);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+@media (max-width: 782px) {
+  .cph-about {
+    padding: 4rem 0;
+  }
+
+  .cph-about__header {
+    margin-bottom: 2.5rem;
+    padding-left: 0;
+  }
+
+  .cph-about__heading {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+    max-width: 100%;
+  }
+
+  .cph-about__layout {
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .cph-about__media {
+    aspect-ratio: 4 / 5;
+    position: relative;
+    top: auto;
+  }
+
+  .cph-about__story {
+    max-width: none;
+  }
+}

@@ -28,7 +28,7 @@
 <div class="wp-block-button is-style-text-btn cph-tab-trigger"><a class="wp-block-button__link wp-element-button" href="#how-we-play">Not Your Average Lobby</a></div>
 <!-- /wp:button -->
 <!-- wp:button {"className":"is-style-text-btn cph-tab-trigger"} -->
-<div class="wp-block-button is-style-text-btn cph-tab-trigger"><a class="wp-block-button__link wp-element-button" href="#how-we-play">24/7 Beverages &amp; Bites</a></div>
+<div class="wp-block-button is-style-text-btn cph-tab-trigger"><a class="wp-block-button__link wp-element-button" href="#how-we-play">24/7 Beverages and Bites</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -42,11 +42,17 @@
 <!-- /wp:column -->
 <!-- wp:column {"verticalAlignment":"center","width":"50%","className":"cph-tab-panel__content-column"} -->
 <div class="wp-block-column is-vertically-aligned-center cph-tab-panel__content-column" style="flex-basis:50%"><!-- wp:group {"className":"cph-tab-panel__content","layout":{"type":"constrained"}} -->
-<div class="wp-block-group cph-tab-panel__content"><!-- wp:heading {"level":3,"className":"cph-tab-panel__title","fontSize":"x-large"} -->
-<h3 class="wp-block-heading cph-tab-panel__title has-x-large-font-size">Check in at the Bar</h3>
-<!-- /wp:heading -->
+<div class="wp-block-group cph-tab-panel__content"><!-- wp:paragraph {"className":"cph-tab-panel__eyebrow","fontSize":"small"} -->
+<p class="cph-tab-panel__eyebrow has-small-font-size">Check In and Start Exploring</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"cph-tab-panel__lead","fontSize":"small"} -->
+<p class="cph-tab-panel__lead has-small-font-size">Your #CityPlus experience begins here.</p>
+<!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"cph-tab-panel__copy","fontSize":"small"} -->
-<p class="cph-tab-panel__copy has-small-font-size">Forget the front desk. CityPlus instantly eases you into a playful stay with a cocktail (or mocktail) to go along with your room key when you check in at the bar. We're accommodating like that.</p>
+<p class="cph-tab-panel__copy has-small-font-size">A smooth arrival, a warm welcome and everything you need to start discovering Rhodes Island.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"cph-tab-panel__copy","fontSize":"small"} -->
+<p class="cph-tab-panel__copy has-small-font-size">Our reception team is available around the clock from April to October, and 16 hours daily from November to March, ensuring a smooth and comfortable experience throughout your stay.</p>
 <!-- /wp:paragraph -->
 <!-- wp:button {"className":"is-style-text-btn cph-tab-panel__link"} -->
 <div class="wp-block-button is-style-text-btn cph-tab-panel__link"><a class="wp-block-button__link wp-element-button" href="#">Details</a></div>
@@ -112,7 +118,7 @@
 <!-- wp:column {"verticalAlignment":"center","width":"50%","className":"cph-tab-panel__content-column"} -->
 <div class="wp-block-column is-vertically-aligned-center cph-tab-panel__content-column" style="flex-basis:50%"><!-- wp:group {"className":"cph-tab-panel__content","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cph-tab-panel__content"><!-- wp:heading {"level":3,"className":"cph-tab-panel__title","fontSize":"x-large"} -->
-<h3 class="wp-block-heading cph-tab-panel__title has-x-large-font-size">24/7 Beverages &amp; Bites</h3>
+<h3 class="wp-block-heading cph-tab-panel__title has-x-large-font-size">24/7 Beverages and Bites</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"className":"cph-tab-panel__copy","fontSize":"small"} -->
 <p class="cph-tab-panel__copy has-small-font-size">Hungry at midnight? Thirsty at dawn? Our grab-and-go options and bar service keep you fueled around the clock, because hunger doesn't check the time.</p>

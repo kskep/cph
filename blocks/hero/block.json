@@ -27,7 +27,7 @@
     },
     "taglineLineOne": {
       "type": "string",
-      "default": "Play On"
+      "default": "Stay Smart"
     },
     "taglineLineOneMobile": {
       "type": "string",
@@ -35,7 +35,7 @@
     },
     "taglineLineTwo": {
       "type": "string",
-      "default": "#AtCityPlus"
+      "default": "#Stay Plus"
     },
     "taglineLineTwoMobile": {
       "type": "string",
@@ -43,7 +43,7 @@
     },
     "brandLabel": {
       "type": "string",
-      "default": "CityPlus Hotels"
+      "default": "CPH Hotels"
     },
     "brandLabelMobile": {
       "type": "string",

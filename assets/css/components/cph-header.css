@@ -212,6 +212,14 @@ body.admin-bar .cph-header {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.cph-header__nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+  color: var(--wp--preset--color--custom-off-black);
+}
+
+.cph-header__nav .wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .cph-header__cta .wp-block-button__link {
   background: var(--wp--preset--color--cph-coral);
   border-color: var(--wp--preset--color--cph-coral);

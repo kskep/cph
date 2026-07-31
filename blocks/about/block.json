@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cph/about",
+  "version": "1.0.0",
+  "title": "CityPlus About",
+  "category": "design",
+  "icon": "groups",
+  "description": "Editorial About section with one story and one image.",
+  "textdomain": "cph",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "About Us"
+    },
+    "body": {
+      "type": "string",
+      "default": "<p>Founded in 2022 in Rhodes, CityPlus Hotels was born from the vision of three brothers who shared a passion for hospitality and a desire to create a new generation of city hotels. Built on family values, dedication, and a personal approach, our company represents the perfect balance between authentic Greek hospitality and modern travel experiences.</p><p>As a family-owned business, we believe that the smallest details create the biggest impressions. Every decision we make is guided by our commitment to providing comfortable spaces, thoughtful services, and a welcoming environment where every guest feels at home.</p><p>Our journey began in the heart of Rhodes, a destination where history, culture, nature, and modern lifestyle come together. Inspired by the island’s unique character, we created a hospitality concept designed for today’s travelers, guests who seek comfort, convenience, authentic experiences, and a connection with the destination they visit.</p><p>From our first property, our goal has always been to build more than just a hotel. We aim to create a recognizable hospitality brand based on quality, consistency, and genuine care. The CityPlus philosophy reflects our belief that every stay should offer something extra: more comfort, more convenience, more experiences, and more reasons to return.</p><p>Driven by our family spirit and entrepreneurial mindset, we continue to grow with the ambition of expanding CityPlus Hotels into a wider hotel collection across Greece and beyond. Each future destination will carry the same values that shaped our beginning in Rhodes: personal hospitality, modern design, and attention to every guest’s needs.</p><p>CityPlus Hotels is not only a place to stay. It is a family story, a passion for hospitality, and a journey that has just begun.</p>"
+    },
+    "imageId": {
+      "type": "integer",
+      "default": 0
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": "Hotel team member preparing a breakfast table in a Rhodes courtyard"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": false,
+    "spacing": false,
+    "typography": false,
+    "border": false,
+    "customClassName": false
+  },
+  "editorScript": "file:./editor.js",
+  "style": "file:../../assets/css/components/cph-about.css",
+  "editorStyle": "file:../../assets/css/components/cph-about.css",
+  "render": "file:./render.php"
+}

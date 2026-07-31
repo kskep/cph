@@ -20,12 +20,16 @@
         {
             tabLabel: 'Check in at the Bar',
             tabLabelMobile: '',
-            title: 'Check in at the Bar',
+            eyebrow: 'Check In and Start Exploring',
+            title: '',
             titleMobile: '',
-            copy: 'Forget the front desk. CityPlus instantly eases you into a playful stay with a cocktail (or mocktail) to go along with your room key when you check in at the bar. We\'re accommodating like that.',
+            lead: 'Your #CityPlus experience begins here.',
+            copy: 'A smooth arrival, a warm welcome and everything you need to start discovering Rhodes Island.',
+            copySecondary: 'Our reception team is available around the clock from April to October, and 16 hours daily from November to March, ensuring a smooth and comfortable experience throughout your stay.',
             copyMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=1000&fit=crop',
             imageAlt: 'Cocktail at the CityPlus bar',
+            additionalImages: [],
             imageMobileUrl: '',
             imageMobileAlt: '',
             ctaLabel: 'Details',
@@ -40,6 +44,7 @@
             copyMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=1000&fit=crop',
             imageAlt: 'Modern CityPlus guest room',
+            additionalImages: [],
             imageMobileUrl: '',
             imageMobileAlt: '',
             ctaLabel: 'Details',
@@ -54,20 +59,22 @@
             copyMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=1000&fit=crop',
             imageAlt: 'CityPlus lobby',
+            additionalImages: [],
             imageMobileUrl: '',
             imageMobileAlt: '',
             ctaLabel: 'Details',
             ctaUrl: '#'
         },
         {
-            tabLabel: '24/7 Beverages & Bites',
+            tabLabel: '24/7 Beverages and Bites',
             tabLabelMobile: '',
-            title: '24/7 Beverages & Bites',
+            title: '24/7 Beverages and Bites',
             titleMobile: '',
             copy: 'Hungry at midnight? Thirsty at dawn? Our grab-and-go options and bar service keep you fueled around the clock, because hunger does not check the time.',
             copyMobile: '',
             imageUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&h=1000&fit=crop',
             imageAlt: 'CityPlus beverages and bites',
+            additionalImages: [],
             imageMobileUrl: '',
             imageMobileAlt: '',
             ctaLabel: 'Details',
@@ -116,6 +123,11 @@
                                 onChange: function (value) { updateTab(index, 'tabLabelMobile', value); }
                             }),
                             el(TextControl, {
+                                label: 'Eyebrow',
+                                value: tab.eyebrow || '',
+                                onChange: function (value) { updateTab(index, 'eyebrow', value); }
+                            }),
+                            el(TextControl, {
                                 label: 'Title - Desktop',
                                 value: tab.title || '',
                                 onChange: function (value) { updateTab(index, 'title', value); }
@@ -126,10 +138,20 @@
                                 onChange: function (value) { updateTab(index, 'titleMobile', value); }
                             }),
                             el('h4', {}, 'Copy Text'),
+                            el(TextControl, {
+                                label: 'Lead',
+                                value: tab.lead || '',
+                                onChange: function (value) { updateTab(index, 'lead', value); }
+                            }),
                             el(TextareaControl, {
                                 label: 'Copy - Desktop',
                                 value: tab.copy || '',
                                 onChange: function (value) { updateTab(index, 'copy', value); }
+                            }),
+                            el(TextareaControl, {
+                                label: 'Copy Secondary - Desktop',
+                                value: tab.copySecondary || '',
+                                onChange: function (value) { updateTab(index, 'copySecondary', value); }
                             }),
                             el(TextareaControl, {
                                 label: 'Copy - Mobile (optional)',
@@ -174,6 +196,45 @@
                                     }
                                 })
                             ),
+                            el(MediaUploadCheck, {},
+                                el(MediaUpload, {
+                                    onSelect: function (media) {
+                                        updateTab(index, 'additionalImages', (Array.isArray(media) ? media : [media]).map(function (image) {
+                                            return {
+                                                id: image.id,
+                                                url: image.url,
+                                                alt: image.alt || ''
+                                            };
+                                        }));
+                                    },
+                                    allowedTypes: ['image'],
+                                    multiple: true,
+                                    gallery: true,
+                                    value: (tab.additionalImages || []).map(function (image) { return image.id; }),
+                                    render: function (mediaProps) {
+                                        return el(Button, {
+                                            variant: 'secondary',
+                                            onClick: mediaProps.open,
+                                            style: { marginTop: '8px' }
+                                        }, (tab.additionalImages || []).length ? 'Edit Slider Images' : 'Add Slider Images');
+                                    }
+                                })
+                            ),
+                            (tab.additionalImages || []).length > 0 && el('div', {
+                                style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(3, 1fr)',
+                                    gap: '8px',
+                                    marginTop: '8px'
+                                }
+                            }, (tab.additionalImages || []).map(function (image) {
+                                return el('img', {
+                                    key: image.id || image.url,
+                                    src: image.url,
+                                    alt: image.alt || '',
+                                    style: { width: '100%', height: '60px', objectFit: 'cover' }
+                                });
+                            })),
                             el('hr', { style: { margin: '16px 0' } }),
                             el('h4', {}, 'Mobile Image (optional)'),
                             el(TextControl, {
