@@ -207,7 +207,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
                                         <p class="cph-tab-panel__copy"><?php echo nl2br( esc_html( trim( $copy_paragraph ) ) ); ?></p>
                                     <?php endforeach; ?>
                                     <?php if ( '' !== $tab_copy_secondary ) : ?>
-                                        <p class="cph-tab-panel__copy"><?php echo esc_html( $tab_copy_secondary ); ?></p>
+                                        <p class="cph-tab-panel__copy"><?php echo nl2br( esc_html( $tab_copy_secondary ) ); ?></p>
                                     <?php endif; ?>
                                 <?php endif; ?>
                                 <div class="wp-block-button is-style-text-btn cph-tab-panel__link">
