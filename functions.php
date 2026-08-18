@@ -30,21 +30,6 @@ function starter_block_theme_setup() {
 
 add_action( 'after_setup_theme', 'starter_block_theme_setup' );
 
-/**
- * Remove the legacy standalone header pattern.
- *
- * The site uses the Header template part in parts/header.html as its single
- * global header source. The old cph/header pattern may still be registered by
- * a cached or database-saved editor state, so unregister it explicitly.
- */
-function cph_unregister_legacy_header_pattern() {
-	if ( function_exists( 'unregister_block_pattern' ) ) {
-		unregister_block_pattern( 'cph/header' );
-	}
-}
-add_action( 'init', 'cph_unregister_legacy_header_pattern', 100 );
-
-
 // Loads styles and scripts
 function starter_block_theme_enqueue_scripts() {
     
