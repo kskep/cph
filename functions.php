@@ -119,9 +119,9 @@ function cph_reset_block_theme_overrides() {
 }
 add_action( 'init', 'cph_reset_block_theme_overrides' );
 
-// Removes only the saved Header template-part override when requested by an administrator.
-function cph_reset_header_template_part_override() {
-    if ( empty( $_GET['cph_reset_header'] ) || ! is_user_logged_in() || ! current_user_can( 'edit_theme_options' ) ) {
+// Removes saved standard page-template overrides when requested by an administrator.
+function cph_reset_inner_page_template_overrides() {
+    if ( empty( $_GET['cph_reset_inner_pages'] ) || ! is_user_logged_in() || ! current_user_can( 'edit_theme_options' ) ) {
         return;
     }
 
@@ -132,9 +132,9 @@ function cph_reset_header_template_part_override() {
     $theme_slug = get_stylesheet();
     $post_ids   = get_posts(
         array(
-            'post_type'      => 'wp_template_part',
+            'post_type'      => 'wp_template',
             'post_status'    => 'any',
-            'name'           => 'header',
+            'post_name__in'  => array( 'page', 'index' ),
             'numberposts'    => -1,
             'fields'         => 'ids',
             'suppress_filters' => false,
@@ -155,13 +155,13 @@ function cph_reset_header_template_part_override() {
         }
     }
 
-    $redirect_url = remove_query_arg( 'cph_reset_header' );
-    $redirect_url = add_query_arg( 'cph_reset_header_done', $deleted_count, $redirect_url );
+    $redirect_url = remove_query_arg( 'cph_reset_inner_pages' );
+    $redirect_url = add_query_arg( 'cph_reset_inner_pages_done', $deleted_count, $redirect_url );
 
     wp_safe_redirect( $redirect_url );
     exit;
 }
-add_action( 'init', 'cph_reset_header_template_part_override' );
+add_action( 'init', 'cph_reset_inner_page_template_overrides' );
 
 
 function cph_render_block_theme_reset_notice() {
