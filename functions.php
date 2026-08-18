@@ -119,6 +119,50 @@ function cph_reset_block_theme_overrides() {
 }
 add_action( 'init', 'cph_reset_block_theme_overrides' );
 
+// Removes only the saved Header template-part override when requested by an administrator.
+function cph_reset_header_template_part_override() {
+    if ( empty( $_GET['cph_reset_header'] ) || ! is_user_logged_in() || ! current_user_can( 'edit_theme_options' ) ) {
+        return;
+    }
+
+    if ( wp_doing_ajax() ) {
+        return;
+    }
+
+    $theme_slug = get_stylesheet();
+    $post_ids   = get_posts(
+        array(
+            'post_type'      => 'wp_template_part',
+            'post_status'    => 'any',
+            'name'           => 'header',
+            'numberposts'    => -1,
+            'fields'         => 'ids',
+            'suppress_filters' => false,
+            'tax_query'      => array(
+                array(
+                    'taxonomy' => 'wp_theme',
+                    'field'    => 'slug',
+                    'terms'    => $theme_slug,
+                ),
+            ),
+        )
+    );
+
+    $deleted_count = 0;
+    foreach ( $post_ids as $post_id ) {
+        if ( wp_delete_post( $post_id, true ) ) {
+            $deleted_count++;
+        }
+    }
+
+    $redirect_url = remove_query_arg( 'cph_reset_header' );
+    $redirect_url = add_query_arg( 'cph_reset_header_done', $deleted_count, $redirect_url );
+
+    wp_safe_redirect( $redirect_url );
+    exit;
+}
+add_action( 'init', 'cph_reset_header_template_part_override' );
+
 
 function cph_render_block_theme_reset_notice() {
     if ( ! is_admin() || ! current_user_can( 'edit_theme_options' ) || ! isset( $_GET['cph_reset_fse_done'] ) ) {
