@@ -6,38 +6,8 @@
   "title": "CityPlus Footer",
   "category": "design",
   "icon": "editor-kitchensink",
-  "description": "Locked site footer with controlled content fields and menu fallbacks.",
+  "description": "Editable four-column site footer.",
   "textdomain": "cph",
-  "attributes": {
-    "menuOneRef": {
-      "type": "number",
-      "default": 0
-    },
-    "menuTwoRef": {
-      "type": "number",
-      "default": 0
-    },
-    "socialHeading": {
-      "type": "string",
-      "default": "Stay Connected"
-    },
-    "promoCopy": {
-      "type": "string",
-      "default": "Explore the possibilities. What you need, when you need it."
-    },
-    "promoButtonLabel": {
-      "type": "string",
-      "default": "Learn More"
-    },
-    "promoButtonUrl": {
-      "type": "string",
-      "default": "https://mobileapp.marriott.com/"
-    },
-    "legalCopy": {
-      "type": "string",
-      "default": "Copyright © 2026 CityPlusHotels, Rhodes, Greece"
-    }
-  },
   "supports": {
     "html": false,
     "align": false,

@@ -49,6 +49,12 @@
   padding: 0;
 }
 
+.cph-footer__list > li {
+  list-style: none;
+}
+
+.cph-footer__list > li,
+.cph-footer__list > li > a,
 .cph-footer__list-item,
 .cph-footer__list-link {
   color: var(--wp--preset--color--custom-off-black);
@@ -61,7 +67,15 @@
   text-transform: uppercase;
 }
 
+.cph-footer__list > li > a {
+  text-decoration: none;
+}
+
 .cph-footer__list-link:hover {
+  text-decoration: underline;
+}
+
+.cph-footer__list > li > a:hover {
   text-decoration: underline;
 }
 
